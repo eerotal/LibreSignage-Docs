@@ -1,0 +1,39 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node41 [label="Exception",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node41 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="libresignage\\api\\APIException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1api_1_1APIException.html"];
+  Node41 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="libresignage\\common\l\\php\\auth\\exceptions\l\\UserNotFoundException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1auth_1_1exceptions_1_1UserNotFoundException.html"];
+  Node41 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="libresignage\\common\l\\php\\auth\\QuotaException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1auth_1_1QuotaException.html"];
+  Node41 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="libresignage\\common\l\\php\\exceptions\\ArgException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1exceptions_1_1ArgException.html"];
+  Node41 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="libresignage\\common\l\\php\\exceptions\\ConfigException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1exceptions_1_1ConfigException.html"];
+  Node41 -> Node47 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="libresignage\\common\l\\php\\exceptions\\FileTypeException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1exceptions_1_1FileTypeException.html"];
+  Node41 -> Node48 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="libresignage\\common\l\\php\\exceptions\\IntException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1exceptions_1_1IntException.html"];
+  Node41 -> Node49 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node49 [label="libresignage\\common\l\\php\\exceptions\\JSONException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1exceptions_1_1JSONException.html"];
+  Node41 -> Node50 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node50 [label="libresignage\\common\l\\php\\exceptions\\LimitException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1exceptions_1_1LimitException.html"];
+  Node41 -> Node51 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node51 [label="libresignage\\common\l\\php\\exportable\\exceptions\l\\ExportableException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1exportable_1_1exceptions_1_1ExportableException.html"];
+  Node41 -> Node52 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 [label="libresignage\\common\l\\php\\exportable\\migration\l\\exceptions\\MigrationException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1exceptions_1_1MigrationException.html"];
+  Node41 -> Node53 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node53 [label="libresignage\\common\l\\php\\queue\\exceptions\l\\QueueNotFoundException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1queue_1_1exceptions_1_1QueueNotFoundException.html"];
+  Node41 -> Node54 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node54 [label="libresignage\\common\l\\php\\slide\\exceptions\l\\SlideLockException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1slide_1_1exceptions_1_1SlideLockException.html"];
+  Node41 -> Node55 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node55 [label="libresignage\\common\l\\php\\slide\\exceptions\l\\SlideNotFoundException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1slide_1_1exceptions_1_1SlideNotFoundException.html"];
+  Node41 -> Node56 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node56 [label="libresignage\\common\l\\php\\thumbnail\\ThumbnailGenerator\lException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorException.html"];
+  Node41 -> Node57 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node57 [label="libresignage\\tests\l\\common\\classes\\APIInterface\lException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterfaceException.html"];
+}

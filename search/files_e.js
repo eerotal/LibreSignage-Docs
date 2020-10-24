@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['server_5flimits_2ephp',['server_limits.php',['../src_2public_2api_2endpoint_2general_2server__limits_8php.html',1,'(Global Namespace)'],['../tests_2api_2endpoint_2general_2server__limits_8php.html',1,'(Global Namespace)']]],
+  ['session_2ephp',['Session.php',['../Session_8php.html',1,'']]],
+  ['sessionmigration_2ephp',['SessionMigration.php',['../v1__0__0_2SessionMigration_8php.html',1,'(Global Namespace)'],['../v1__1__0_2SessionMigration_8php.html',1,'(Global Namespace)']]],
+  ['slide_2ephp',['Slide.php',['../Slide_8php.html',1,'']]],
+  ['slide_5fdup_2ephp',['slide_dup.php',['../src_2public_2api_2endpoint_2slide_2slide__dup_8php.html',1,'(Global Namespace)'],['../tests_2api_2endpoint_2slide_2slide__dup_8php.html',1,'(Global Namespace)']]],
+  ['slide_5fget_2ephp',['slide_get.php',['../src_2public_2api_2endpoint_2slide_2slide__get_8php.html',1,'(Global Namespace)'],['../tests_2api_2endpoint_2slide_2slide__get_8php.html',1,'(Global Namespace)']]],
+  ['slide_5fget_5fasset_2ephp',['slide_get_asset.php',['../src_2public_2api_2endpoint_2slide_2asset_2slide__get__asset_8php.html',1,'(Global Namespace)'],['../tests_2api_2endpoint_2slide_2asset_2slide__get__asset_8php.html',1,'(Global Namespace)']]],
+  ['slide_5fget_5fasset_5fthumb_2ephp',['slide_get_asset_thumb.php',['../src_2public_2api_2endpoint_2slide_2asset_2slide__get__asset__thumb_8php.html',1,'(Global Namespace)'],['../tests_2api_2endpoint_2slide_2asset_2slide__get__asset__thumb_8php.html',1,'(Global Namespace)']]],
+  ['slide_5flist_2ephp',['slide_list.php',['../src_2public_2api_2endpoint_2slide_2slide__list_8php.html',1,'(Global Namespace)'],['../tests_2api_2endpoint_2slide_2slide__list_8php.html',1,'(Global Namespace)']]],
+  ['slide_5flock_5facquire_2ephp',['slide_lock_acquire.php',['../src_2public_2api_2endpoint_2slide_2slide__lock__acquire_8php.html',1,'(Global Namespace)'],['../tests_2api_2endpoint_2slide_2slide__lock__acquire_8php.html',1,'(Global Namespace)']]],
+  ['slide_5flock_5frelease_2ephp',['slide_lock_release.php',['../src_2public_2api_2endpoint_2slide_2slide__lock__release_8php.html',1,'(Global Namespace)'],['../tests_2api_2endpoint_2slide_2slide__lock__release_8php.html',1,'(Global Namespace)']]],
+  ['slide_5fremove_5fasset_2ephp',['slide_remove_asset.php',['../src_2public_2api_2endpoint_2slide_2asset_2slide__remove__asset_8php.html',1,'(Global Namespace)'],['../tests_2api_2endpoint_2slide_2asset_2slide__remove__asset_8php.html',1,'(Global Namespace)']]],
+  ['slide_5frm_2ephp',['slide_rm.php',['../src_2public_2api_2endpoint_2slide_2slide__rm_8php.html',1,'(Global Namespace)'],['../tests_2api_2endpoint_2slide_2slide__rm_8php.html',1,'(Global Namespace)']]],
+  ['slide_5fsave_2ephp',['slide_save.php',['../src_2public_2api_2endpoint_2slide_2slide__save_8php.html',1,'(Global Namespace)'],['../tests_2api_2endpoint_2slide_2slide__save_8php.html',1,'(Global Namespace)']]],
+  ['slide_5fupload_5fasset_2ephp',['slide_upload_asset.php',['../src_2public_2api_2endpoint_2slide_2asset_2slide__upload__asset_8php.html',1,'(Global Namespace)'],['../tests_2api_2endpoint_2slide_2asset_2slide__upload__asset_8php.html',1,'(Global Namespace)']]],
+  ['slideasset_2ephp',['SlideAsset.php',['../SlideAsset_8php.html',1,'']]],
+  ['slideassetmigration_2ephp',['SlideAssetMigration.php',['../v1__0__0_2SlideAssetMigration_8php.html',1,'(Global Namespace)'],['../v1__1__0_2SlideAssetMigration_8php.html',1,'(Global Namespace)']]],
+  ['slidelock_2ephp',['SlideLock.php',['../SlideLock_8php.html',1,'']]],
+  ['slidelockexception_2ephp',['SlideLockException.php',['../SlideLockException_8php.html',1,'']]],
+  ['slidelockmigration_2ephp',['SlideLockMigration.php',['../v1__0__0_2SlideLockMigration_8php.html',1,'(Global Namespace)'],['../v1__1__0_2SlideLockMigration_8php.html',1,'(Global Namespace)']]],
+  ['slidemigration_2ephp',['SlideMigration.php',['../v1__0__0_2SlideMigration_8php.html',1,'(Global Namespace)'],['../v1__1__0_2SlideMigration_8php.html',1,'(Global Namespace)']]],
+  ['slidenotfoundexception_2ephp',['SlideNotFoundException.php',['../SlideNotFoundException_8php.html',1,'']]],
+  ['slideutils_2ephp',['SlideUtils.php',['../SlideUtils_8php.html',1,'']]]
+];
