@@ -1,0 +1,858 @@
+\hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User}{}\section{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}User Class Reference}
+\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User}\index{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User@{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User}}
+
+
+Inheritance diagram for libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}User\+:
+% FIG 0
+
+
+Collaboration diagram for libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}User\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a9edc67cbbe0d5ccc9a12e91e16b86733}{\+\_\+\+\_\+construct} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ae0a863601a2494297950220e5a48ade7}{\+\_\+\+\_\+exportable\+\_\+set} (string \$name, \$value)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a34a529c11ff99973e6e592432e8dceeb}{\+\_\+\+\_\+exportable\+\_\+get} (string \$name)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aa52cfafebd570b33f4d0eaf2f7794538}{\+\_\+\+\_\+exportable\+\_\+write} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a814c438b1299f1c13f89c9caef1f63a7}{load} (string \$name)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a2119c5c129dc4e88b887e111b0b8566d}{remove} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a9999be727981f0fef395fe0e95b6314d}{write} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a1e1d5197720b85b2e47966fa5567d0b5}{session\+\_\+new} (string \$who, string \$from, bool \$permanent=F\+A\+L\+SE)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a091ceafd0b7d8a0b5c2d8fec268c49de}{session\+\_\+rm} (string \$id)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ab937b7fb2f9dc26bf6459cc14f2c678a}{session\+\_\+n\+\_\+rm} (string \$id)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a74a4a47352df10199181c93bebbd802e}{session\+\_\+token\+\_\+verify} (string \$token)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a0bebd7aa87fafd09205aee203ac18df5}{session\+\_\+get} (string \$id)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a009ed0d4437ea0b21469f78be4cb8a0d}{set\+\_\+groups} (array \$groups=N\+U\+LL)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a98764627a6fe14a59e969bd7c95995da}{is\+\_\+in\+\_\+group} (\$groups)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ac6e46144a84ca797b3337b825288e0fe}{set\+\_\+password} (string \$password)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ad6dc80c1da90d6b31960a34efb49380c}{verify\+\_\+password} (string \$pass)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a59108ef890101d9f9dd34a93d7a7e520}{set\+\_\+hash} (string \$hash)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a51df58a997c3011452f357f7c98fca36}{set\+\_\+name} (string \$name)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_abeb413eb8851221e2ee032ef8954f8c7}{is\+\_\+user} (\$\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ade3e97db7135ba04fa33c4e3aa763d74}{names})
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ad5123dcc183a0f7e4761b1b323c6b967}{get\+\_\+sessions} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a400eaa5ab78f2adea417ca51e10c7343}{get\+\_\+groups} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a44cb3b60aaa0fa11a90b23fb6dd205f9}{get\+\_\+hash} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a8a51c5ecce5ad1061696f92879bc2296}{get\+\_\+name} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a8fde10a44d1b12833e26ca5b3dcd78b1}{get\+\_\+quota} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a3e80c96fd680e00db0180cc99e789c0d}{is\+\_\+passwordless} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a02a5ffc7778a503b2baf2ce26397ec40}{\+\_\+\+\_\+exportable\+\_\+private} ()
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ae318f34411e98ae8970e569a2bda20e0}{\+\_\+\+\_\+exportable\+\_\+public} ()
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a46971866d7e0f29606df5c2ac6f58285}{validate\+\_\+groups} (array \$groups)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aed34cefd4acec8df2201a784185f21c2}{validate\+\_\+password} (string \$password)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aa7f7b7f85ff1e6b115dbff844bde4d30}{validate\+\_\+hash} (string \$hash)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aaa1e2c403cf7dedd68c2e832719bc852}{validate\+\_\+name} (string \$name)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a2e06cc5de5496d8cc87bc4fa74042162}{all} ()
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ade3e97db7135ba04fa33c4e3aa763d74}{names} ()
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a29b2b1bfa6e43685782cdffd4e862918}{exists} (string \$user)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_afbec721eea17c9c4102a1f1716c393c1}{U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+R\+E\+G\+EX} = \textquotesingle{}/$^\wedge$\mbox{[}A-\/Za-\/z0-\/9\+\_\+\mbox{]}+\$/\textquotesingle{}
+\item 
+const \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ac3255ceb6caad837e60acfdec44fe65b}{G\+R\+O\+U\+P\+S\+\_\+\+R\+E\+G\+EX} = \textquotesingle{}/$^\wedge$\mbox{[}A-\/Za-\/z0-\/9\+\_\+\mbox{]}+\$/\textquotesingle{}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a87f9e6639bbe95bb89cfa6996e587792}{session\+\_\+cleanup} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aa6c0fd2532bcf877a6392156e429f459}{get\+\_\+dir\+\_\+path} (string \$user)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a87034185abaed27656df9b9639ce106a}{get\+\_\+data\+\_\+file\+\_\+path} (string \$user)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aac73d8e991a937e5dc556e15273e94e6}{\$user} = \textquotesingle{}\textquotesingle{}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ab486d67acc7f7ae2194b340f4dd1fd56}{\$hash} = N\+U\+LL
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a80ccede4c911355ecc04c02bd9d5abfd}{\$groups} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aa572dab234239ab84897d315b1275c48}{\$sessions} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ad23315889150c2628978cf461b543645}{\$quota} = N\+U\+LL
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a4f8dbed54f1bba59933f4d952e839926}{\$passwordless} = T\+R\+UE
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file User.\+php.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a9edc67cbbe0d5ccc9a12e91e16b86733}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a9edc67cbbe0d5ccc9a12e91e16b86733}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file User.\+php.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a34a529c11ff99973e6e592432e8dceeb}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a34a529c11ff99973e6e592432e8dceeb}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!\+\_\+\+\_\+exportable\+\_\+get@{\+\_\+\+\_\+exportable\+\_\+get}}
+\index{\+\_\+\+\_\+exportable\+\_\+get@{\+\_\+\+\_\+exportable\+\_\+get}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+get()}{\_\_exportable\_get()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\+\_\+\+\_\+exportable\+\_\+get (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a02a5ffc7778a503b2baf2ce26397ec40}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a02a5ffc7778a503b2baf2ce26397ec40}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!\+\_\+\+\_\+exportable\+\_\+private@{\+\_\+\+\_\+exportable\+\_\+private}}
+\index{\+\_\+\+\_\+exportable\+\_\+private@{\+\_\+\+\_\+exportable\+\_\+private}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+private()}{\_\_exportable\_private()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\+\_\+\+\_\+exportable\+\_\+private (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 45 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ae318f34411e98ae8970e569a2bda20e0}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ae318f34411e98ae8970e569a2bda20e0}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!\+\_\+\+\_\+exportable\+\_\+public@{\+\_\+\+\_\+exportable\+\_\+public}}
+\index{\+\_\+\+\_\+exportable\+\_\+public@{\+\_\+\+\_\+exportable\+\_\+public}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+public()}{\_\_exportable\_public()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\+\_\+\+\_\+exportable\+\_\+public (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 56 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ae0a863601a2494297950220e5a48ade7}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ae0a863601a2494297950220e5a48ade7}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!\+\_\+\+\_\+exportable\+\_\+set@{\+\_\+\+\_\+exportable\+\_\+set}}
+\index{\+\_\+\+\_\+exportable\+\_\+set@{\+\_\+\+\_\+exportable\+\_\+set}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+set()}{\_\_exportable\_set()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\+\_\+\+\_\+exportable\+\_\+set (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aa52cfafebd570b33f4d0eaf2f7794538}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aa52cfafebd570b33f4d0eaf2f7794538}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!\+\_\+\+\_\+exportable\+\_\+write@{\+\_\+\+\_\+exportable\+\_\+write}}
+\index{\+\_\+\+\_\+exportable\+\_\+write@{\+\_\+\+\_\+exportable\+\_\+write}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+write()}{\_\_exportable\_write()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\+\_\+\+\_\+exportable\+\_\+write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a2e06cc5de5496d8cc87bc4fa74042162}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a2e06cc5de5496d8cc87bc4fa74042162}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!all@{all}}
+\index{all@{all}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{all()}{all()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get an array of all the existing user objects.
+
+\begin{DoxyReturn}{Returns}
+array An array of \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User}{User} objects. 
+\end{DoxyReturn}
+
+
+Definition at line 457 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a29b2b1bfa6e43685782cdffd4e862918}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a29b2b1bfa6e43685782cdffd4e862918}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!exists@{exists}}
+\index{exists@{exists}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::exists (\begin{DoxyParamCaption}\item[{string}]{\$user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Check whether \$user exists.
+
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE if \$user exists, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 502 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a87034185abaed27656df9b9639ce106a}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a87034185abaed27656df9b9639ce106a}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!get\+\_\+data\+\_\+file\+\_\+path@{get\+\_\+data\+\_\+file\+\_\+path}}
+\index{get\+\_\+data\+\_\+file\+\_\+path@{get\+\_\+data\+\_\+file\+\_\+path}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+file\+\_\+path()}{get\_data\_file\_path()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::get\+\_\+data\+\_\+file\+\_\+path (\begin{DoxyParamCaption}\item[{string}]{\$user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Get the data file path for a user.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$user} & The username to get the path for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The data file path. 
+\end{DoxyReturn}
+
+
+Definition at line 139 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aa6c0fd2532bcf877a6392156e429f459}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aa6c0fd2532bcf877a6392156e429f459}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!get\+\_\+dir\+\_\+path@{get\+\_\+dir\+\_\+path}}
+\index{get\+\_\+dir\+\_\+path@{get\+\_\+dir\+\_\+path}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{get\+\_\+dir\+\_\+path()}{get\_dir\_path()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::get\+\_\+dir\+\_\+path (\begin{DoxyParamCaption}\item[{string}]{\$user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Get the data directory path for a user.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$user} & The username to get the path for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The directory path. 
+\end{DoxyReturn}
+
+
+Definition at line 124 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a400eaa5ab78f2adea417ca51e10c7343}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a400eaa5ab78f2adea417ca51e10c7343}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!get\+\_\+groups@{get\+\_\+groups}}
+\index{get\+\_\+groups@{get\+\_\+groups}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{get\+\_\+groups()}{get\_groups()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::get\+\_\+groups (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 446 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a44cb3b60aaa0fa11a90b23fb6dd205f9}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a44cb3b60aaa0fa11a90b23fb6dd205f9}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!get\+\_\+hash@{get\+\_\+hash}}
+\index{get\+\_\+hash@{get\+\_\+hash}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{get\+\_\+hash()}{get\_hash()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::get\+\_\+hash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 447 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a8a51c5ecce5ad1061696f92879bc2296}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a8a51c5ecce5ad1061696f92879bc2296}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{get\+\_\+name()}{get\_name()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 448 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a8fde10a44d1b12833e26ca5b3dcd78b1}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a8fde10a44d1b12833e26ca5b3dcd78b1}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!get\+\_\+quota@{get\+\_\+quota}}
+\index{get\+\_\+quota@{get\+\_\+quota}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{get\+\_\+quota()}{get\_quota()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::get\+\_\+quota (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 449 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ad5123dcc183a0f7e4761b1b323c6b967}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ad5123dcc183a0f7e4761b1b323c6b967}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!get\+\_\+sessions@{get\+\_\+sessions}}
+\index{get\+\_\+sessions@{get\+\_\+sessions}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{get\+\_\+sessions()}{get\_sessions()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::get\+\_\+sessions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 445 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a98764627a6fe14a59e969bd7c95995da}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a98764627a6fe14a59e969bd7c95995da}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!is\+\_\+in\+\_\+group@{is\+\_\+in\+\_\+group}}
+\index{is\+\_\+in\+\_\+group@{is\+\_\+in\+\_\+group}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{is\+\_\+in\+\_\+group()}{is\_in\_group()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::is\+\_\+in\+\_\+group (\begin{DoxyParamCaption}\item[{}]{\$groups }\end{DoxyParamCaption})}
+
+Check whether a user is in a a group or in an array of groups. Strict comparison is used when comparing groups (strings).
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$groups} & A group or an array of groups (strings) to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE if the loaded user is in \$groups, F\+A\+L\+SE otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & if \$groups is not a string or an array. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 304 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a3e80c96fd680e00db0180cc99e789c0d}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a3e80c96fd680e00db0180cc99e789c0d}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!is\+\_\+passwordless@{is\+\_\+passwordless}}
+\index{is\+\_\+passwordless@{is\+\_\+passwordless}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{is\+\_\+passwordless()}{is\_passwordless()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::is\+\_\+passwordless (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 450 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_abeb413eb8851221e2ee032ef8954f8c7}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_abeb413eb8851221e2ee032ef8954f8c7}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!is\+\_\+user@{is\+\_\+user}}
+\index{is\+\_\+user@{is\+\_\+user}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{is\+\_\+user()}{is\_user()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::is\+\_\+user (\begin{DoxyParamCaption}\item[{}]{\$names }\end{DoxyParamCaption})}
+
+Check whether a user is a specific user or in a list of users. Strict comparison is used when comparing usernames.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | string & {\em \$names} & A username or an array of usernames (strings).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE if the loaded user is in \$names.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & if \$names is not a string or an array. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 436 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a814c438b1299f1c13f89c9caef1f63a7}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a814c438b1299f1c13f89c9caef1f63a7}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!load@{load}}
+\index{load@{load}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::load (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Load user from file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name of the user to load.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em User\+Not\+Found\+Exception} & if no user named \$name exists. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 73 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ade3e97db7135ba04fa33c4e3aa763d74}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ade3e97db7135ba04fa33c4e3aa763d74}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!names@{names}}
+\index{names@{names}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get an array of all the existing usernames.
+
+\begin{DoxyReturn}{Returns}
+array An array of usernames.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Int\+Exception} & if scandir() fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 475 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a2119c5c129dc4e88b887e111b0b8566d}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a2119c5c129dc4e88b887e111b0b8566d}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!remove@{remove}}
+\index{remove@{remove}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Remove the loaded user from file.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Int\+Exception} & if the loaded user doesn\textquotesingle{}t exist anymore. \\
+\hline
+{\em Int\+Exception} & if removing the user data fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 88 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a87f9e6639bbe95bb89cfa6996e587792}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a87f9e6639bbe95bb89cfa6996e587792}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!session\+\_\+cleanup@{session\+\_\+cleanup}}
+\index{session\+\_\+cleanup@{session\+\_\+cleanup}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{session\+\_\+cleanup()}{session\_cleanup()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::session\+\_\+cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Cleanup all expired sessions. 
+
+Definition at line 204 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a0bebd7aa87fafd09205aee203ac18df5}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a0bebd7aa87fafd09205aee203ac18df5}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!session\+\_\+get@{session\+\_\+get}}
+\index{session\+\_\+get@{session\+\_\+get}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{session\+\_\+get()}{session\_get()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::session\+\_\+get (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Get a session by its ID. N\+U\+LL is returned if a session with the supplied ID doesn\textquotesingle{}t exist.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The session ID to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Session$\vert$\+N\+U\+LL The matching \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Session}{Session} or N\+U\+LL if no session matches. 
+\end{DoxyReturn}
+
+
+Definition at line 237 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ab937b7fb2f9dc26bf6459cc14f2c678a}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ab937b7fb2f9dc26bf6459cc14f2c678a}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!session\+\_\+n\+\_\+rm@{session\+\_\+n\+\_\+rm}}
+\index{session\+\_\+n\+\_\+rm@{session\+\_\+n\+\_\+rm}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{session\+\_\+n\+\_\+rm()}{session\_n\_rm()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::session\+\_\+n\+\_\+rm (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+\textquotesingle{}Inverted\textquotesingle{} \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a091ceafd0b7d8a0b5c2d8fec268c49de}{session\+\_\+rm()}. Remove all sessions except the session corresponding to the session ID \textquotesingle{}id\textquotesingle{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The session ID that\textquotesingle{}s N\+OT removed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 193 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a1e1d5197720b85b2e47966fa5567d0b5}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a1e1d5197720b85b2e47966fa5567d0b5}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!session\+\_\+new@{session\+\_\+new}}
+\index{session\+\_\+new@{session\+\_\+new}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{session\+\_\+new()}{session\_new()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::session\+\_\+new (\begin{DoxyParamCaption}\item[{string}]{\$who,  }\item[{string}]{\$from,  }\item[{bool}]{\$permanent = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Create a new session. This function returns an array with the keys \textquotesingle{}session\textquotesingle{} and \textquotesingle{}token\textquotesingle{}. \textquotesingle{}session\textquotesingle{} contains the new \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Session}{Session} object and \textquotesingle{}token\textquotesingle{} contains the generated session token.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$who} & A string describing the caller. \\
+\hline
+string & {\em \$from} & The IP address of the caller. \\
+\hline
+bool & {\em \$permanent} & (optional) T\+R\+UE = Create a permanent session.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array with the created session object and a session token. 
+\end{DoxyReturn}
+
+
+Definition at line 156 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a091ceafd0b7d8a0b5c2d8fec268c49de}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a091ceafd0b7d8a0b5c2d8fec268c49de}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!session\+\_\+rm@{session\+\_\+rm}}
+\index{session\+\_\+rm@{session\+\_\+rm}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{session\+\_\+rm()}{session\_rm()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::session\+\_\+rm (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Remove an existing session with the session ID \textquotesingle{}id\textquotesingle{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The ID of the session to remove. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if a session with ID \$id doesn\textquotesingle{}t exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 176 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a74a4a47352df10199181c93bebbd802e}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a74a4a47352df10199181c93bebbd802e}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!session\+\_\+token\+\_\+verify@{session\+\_\+token\+\_\+verify}}
+\index{session\+\_\+token\+\_\+verify@{session\+\_\+token\+\_\+verify}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{session\+\_\+token\+\_\+verify()}{session\_token\_verify()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::session\+\_\+token\+\_\+verify (\begin{DoxyParamCaption}\item[{string}]{\$token }\end{DoxyParamCaption})}
+
+Verify a session token against the sessions of this user. If a session matches the token, the \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Session}{Session} object for the matching session is returned. Otherwise N\+U\+LL is returned.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$token} & The session token to verify. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Session$\vert$\+N\+U\+LL The matching \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Session}{Session} or N\+U\+LL if not session matches. 
+\end{DoxyReturn}
+
+
+Definition at line 222 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a009ed0d4437ea0b21469f78be4cb8a0d}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a009ed0d4437ea0b21469f78be4cb8a0d}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!set\+\_\+groups@{set\+\_\+groups}}
+\index{set\+\_\+groups@{set\+\_\+groups}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{set\+\_\+groups()}{set\_groups()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::set\+\_\+groups (\begin{DoxyParamCaption}\item[{array}]{\$groups = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Set the groups of a \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User}{User}. Calling this function with \$groups = N\+U\+LL removes the \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User}{User} from all groups.
+
+\begin{DoxySeeAlso}{See also}
+User\+::validate\+\_\+group() For validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1auth_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$groups} & An array of groups or N\+U\+LL for no groups. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 285 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a59108ef890101d9f9dd34a93d7a7e520}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a59108ef890101d9f9dd34a93d7a7e520}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!set\+\_\+hash@{set\+\_\+hash}}
+\index{set\+\_\+hash@{set\+\_\+hash}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{set\+\_\+hash()}{set\_hash()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::set\+\_\+hash (\begin{DoxyParamCaption}\item[{string}]{\$hash }\end{DoxyParamCaption})}
+
+Set the password hash of the loaded user.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aa7f7b7f85ff1e6b115dbff844bde4d30}{User\+::validate\+\_\+hash()} For validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1auth_1_1exceptions}{exceptions}. 
+\end{DoxySeeAlso}
+
+
+Definition at line 386 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a51df58a997c3011452f357f7c98fca36}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a51df58a997c3011452f357f7c98fca36}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!set\+\_\+name@{set\+\_\+name}}
+\index{set\+\_\+name@{set\+\_\+name}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{set\+\_\+name()}{set\_name()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Set the username of the loaded user.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aaa1e2c403cf7dedd68c2e832719bc852}{User\+::validate\+\_\+name()} for validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1auth_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The new username. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 421 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ac6e46144a84ca797b3337b825288e0fe}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ac6e46144a84ca797b3337b825288e0fe}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!set\+\_\+password@{set\+\_\+password}}
+\index{set\+\_\+password@{set\+\_\+password}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{set\+\_\+password()}{set\_password()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::set\+\_\+password (\begin{DoxyParamCaption}\item[{string}]{\$password }\end{DoxyParamCaption})}
+
+Set the password of the loaded user.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aed34cefd4acec8df2201a784185f21c2}{User\+::validate\+\_\+password()} For validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1auth_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$password} & The new password. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Int\+Exception} & if password\+\_\+hash() fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 340 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a46971866d7e0f29606df5c2ac6f58285}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a46971866d7e0f29606df5c2ac6f58285}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!validate\+\_\+groups@{validate\+\_\+groups}}
+\index{validate\+\_\+groups@{validate\+\_\+groups}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{validate\+\_\+groups()}{validate\_groups()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::validate\+\_\+groups (\begin{DoxyParamCaption}\item[{array}]{\$groups }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Validate that the \$groups array contains valid group names.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$groups} & The groups array.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if count(\$groups) $>$ M\+A\+X\+\_\+\+U\+S\+E\+R\+\_\+\+G\+R\+O\+U\+PS. \\
+\hline
+{\em Arg\+Exception} & if there are non-\/string elements in \$groups. \\
+\hline
+{\em Arg\+Exception} & if \$groups contains empty strings. \\
+\hline
+{\em Arg\+Exception} & if there\textquotesingle{}s a group longer than M\+A\+X\+\_\+\+U\+S\+E\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+L\+EN. \\
+\hline
+{\em Arg\+Exception} & if a group name contains invalid chars. \\
+\hline
+{\em Int\+Exception} & if preg\+\_\+match() fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 256 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aa7f7b7f85ff1e6b115dbff844bde4d30}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aa7f7b7f85ff1e6b115dbff844bde4d30}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!validate\+\_\+hash@{validate\+\_\+hash}}
+\index{validate\+\_\+hash@{validate\+\_\+hash}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{validate\+\_\+hash()}{validate\_hash()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::validate\+\_\+hash (\begin{DoxyParamCaption}\item[{string}]{\$hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Make sure \$hash is a valid password hash.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$hash} & A password hash. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if \$hash is empty. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 375 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aaa1e2c403cf7dedd68c2e832719bc852}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aaa1e2c403cf7dedd68c2e832719bc852}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!validate\+\_\+name@{validate\+\_\+name}}
+\index{validate\+\_\+name@{validate\+\_\+name}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{validate\+\_\+name()}{validate\_name()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::validate\+\_\+name (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Make sure \$name is a valid username.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The username to validate. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if the username is empty. \\
+\hline
+{\em Arg\+Exception} & if strlen(\$name) $>$ U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN. \\
+\hline
+{\em Arg\+Exception} & if the username contains invalid chars. \\
+\hline
+{\em Int\+Exception} & if preg\+\_\+match() fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 400 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aed34cefd4acec8df2201a784185f21c2}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aed34cefd4acec8df2201a784185f21c2}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!validate\+\_\+password@{validate\+\_\+password}}
+\index{validate\+\_\+password@{validate\+\_\+password}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{validate\+\_\+password()}{validate\_password()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::validate\+\_\+password (\begin{DoxyParamCaption}\item[{string}]{\$password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Make sure \$password is a valid password string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$password} & The password to validate. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if \$password is empty. \\
+\hline
+{\em Arg\+Exception} & if strlen(\$password) $>$ P\+A\+S\+S\+W\+O\+R\+D\+\_\+\+M\+A\+X\+\_\+\+L\+EN. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 324 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ad6dc80c1da90d6b31960a34efb49380c}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ad6dc80c1da90d6b31960a34efb49380c}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!verify\+\_\+password@{verify\+\_\+password}}
+\index{verify\+\_\+password@{verify\+\_\+password}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{verify\+\_\+password()}{verify\_password()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::verify\+\_\+password (\begin{DoxyParamCaption}\item[{string}]{\$pass }\end{DoxyParamCaption})}
+
+Verify the password \$pass against the loaded user.
+
+If the password hash in \$this-\/$>$hash is N\+U\+LL, this method always returns T\+R\+UE. This makes it possible to create \char`\"{}no login\char`\"{} users.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$pass} & The password to verify. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE if the password is correct, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 360 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a9999be727981f0fef395fe0e95b6314d}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a9999be727981f0fef395fe0e95b6314d}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!write@{write}}
+\index{write@{write}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Write the user data into file.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Limit\+Exception} & if the maximum amount of users is reached. A Limit\+Exception won\textquotesingle{}t be thrown if the saved user already exists since the number of users doesn\textquotesingle{}t increase. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 105 of file User.\+php.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a80ccede4c911355ecc04c02bd9d5abfd}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a80ccede4c911355ecc04c02bd9d5abfd}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!\$groups@{\$groups}}
+\index{\$groups@{\$groups}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{\$groups}{$groups}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\$groups = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 21 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ab486d67acc7f7ae2194b340f4dd1fd56}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ab486d67acc7f7ae2194b340f4dd1fd56}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!\$hash@{\$hash}}
+\index{\$hash@{\$hash}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{\$hash}{$hash}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\$hash = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 20 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a4f8dbed54f1bba59933f4d952e839926}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_a4f8dbed54f1bba59933f4d952e839926}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!\$passwordless@{\$passwordless}}
+\index{\$passwordless@{\$passwordless}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{\$passwordless}{$passwordless}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\$passwordless = T\+R\+UE\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 24 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ad23315889150c2628978cf461b543645}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ad23315889150c2628978cf461b543645}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!\$quota@{\$quota}}
+\index{\$quota@{\$quota}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{\$quota}{$quota}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\$quota = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 23 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aa572dab234239ab84897d315b1275c48}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aa572dab234239ab84897d315b1275c48}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!\$sessions@{\$sessions}}
+\index{\$sessions@{\$sessions}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{\$sessions}{$sessions}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\$sessions = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 22 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aac73d8e991a937e5dc556e15273e94e6}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_aac73d8e991a937e5dc556e15273e94e6}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!\$user@{\$user}}
+\index{\$user@{\$user}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{\$user}{$user}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\$user = \textquotesingle{}\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 19 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ac3255ceb6caad837e60acfdec44fe65b}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_ac3255ceb6caad837e60acfdec44fe65b}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!G\+R\+O\+U\+P\+S\+\_\+\+R\+E\+G\+EX@{G\+R\+O\+U\+P\+S\+\_\+\+R\+E\+G\+EX}}
+\index{G\+R\+O\+U\+P\+S\+\_\+\+R\+E\+G\+EX@{G\+R\+O\+U\+P\+S\+\_\+\+R\+E\+G\+EX}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{G\+R\+O\+U\+P\+S\+\_\+\+R\+E\+G\+EX}{GROUPS\_REGEX}}
+{\footnotesize\ttfamily const libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\+G\+R\+O\+U\+P\+S\+\_\+\+R\+E\+G\+EX = \textquotesingle{}/$^\wedge$\mbox{[}A-\/Za-\/z0-\/9\+\_\+\mbox{]}+\$/\textquotesingle{}}
+
+
+
+Definition at line 27 of file User.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1User_afbec721eea17c9c4102a1f1716c393c1}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1User_afbec721eea17c9c4102a1f1716c393c1}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}!U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+R\+E\+G\+EX@{U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+R\+E\+G\+EX}}
+\index{U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+R\+E\+G\+EX@{U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+R\+E\+G\+EX}!libresignage\+::common\+::php\+::auth\+::\+User@{libresignage\+::common\+::php\+::auth\+::\+User}}
+\subsubsection{\texorpdfstring{U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+R\+E\+G\+EX}{USERNAME\_REGEX}}
+{\footnotesize\ttfamily const libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+::\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+R\+E\+G\+EX = \textquotesingle{}/$^\wedge$\mbox{[}A-\/Za-\/z0-\/9\+\_\+\mbox{]}+\$/\textquotesingle{}}
+
+
+
+Definition at line 26 of file User.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/common/php/auth/\hyperlink{User_8php}{User.\+php}\end{DoxyCompactItemize}

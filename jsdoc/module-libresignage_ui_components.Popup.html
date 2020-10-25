@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: Popup</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: Popup</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="module-libresignage_ui_components.html">libresignage/ui/components</a>.</span>Popup<span class="signature">(The)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description">A UI component for displaying popups.</div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="Popup"><span class="type-signature"></span>new Popup<span class="signature">(The)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Construct a new Popup object.
+
+Popups work by wrapping an existing HTML element inside a popup
+container and displaying it.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>The</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">HTML element to wrap in a popup.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="node_modules_libresignage_ui_components_Popup_Popup.js.html">node_modules/libresignage/ui/components/Popup/Popup.js</a>, <a href="node_modules_libresignage_ui_components_Popup_Popup.js.html#line6">line 6</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".make_html"><span class="type-signature">(static) </span>make_html<span class="signature">(content)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Create the Popup wrapper HTML.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The text/html of the popup.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="node_modules_libresignage_ui_components_Popup_Popup.js.html">node_modules/libresignage/ui/components/Popup/Popup.js</a>, <a href="node_modules_libresignage_ui_components_Popup_Popup.js.html#line37">line 37</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The generated HTML.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="visible"><span class="type-signature"></span>visible<span class="signature">(state)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Show/hide a popup.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>state</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">True = visible, false = hidden.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="node_modules_libresignage_ui_components_Popup_Popup.js.html">node_modules/libresignage/ui/components/Popup/Popup.js</a>, <a href="node_modules_libresignage_ui_components_Popup_Popup.js.html#line57">line 57</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-libresignage_api.html">libresignage/api</a></li><li><a href="module-libresignage_misc.html">libresignage/misc</a></li><li><a href="module-libresignage_queue.html">libresignage/queue</a></li><li><a href="module-libresignage_slide.html">libresignage/slide</a></li><li><a href="module-libresignage_ui_components.html">libresignage/ui/components</a></li><li><a href="module-libresignage_ui_components_Dialog.html">libresignage/ui/components/Dialog</a></li><li><a href="module-libresignage_ui_controller.html">libresignage/ui/controller</a></li><li><a href="module-libresignage_ui_validator.html">libresignage/ui/validator</a></li><li><a href="module-libresignage_user.html">libresignage/user</a></li><li><a href="module-libresignage_util.html">libresignage/util</a></li></ul><h3>Namespaces</h3><ul><li><a href="module-libresignage_api.APIEndpoints.html">APIEndpoints</a></li><li><a href="module-libresignage_api.HTTPStatus.html">HTTPStatus</a></li><li><a href="module-libresignage_slide.Animations.html">Animations</a></li></ul><h3>Classes</h3><ul><li><a href="APIInterface.html">APIInterface</a></li><li><a href="AssetList.html">AssetList</a></li><li><a href="AssetUploader.html">AssetUploader</a></li><li><a href="AssetUploaderController.html">AssetUploaderController</a></li><li><a href="ControlPanelController.html">ControlPanelController</a></li><li><a href="ControlPanelView.html">ControlPanelView</a></li><li><a href="DisplayController.html">DisplayController</a></li><li><a href="DisplayView.html">DisplayView</a></li><li><a href="EditorController.html">EditorController</a></li><li><a href="LoginController.html">LoginController</a></li><li><a href="LoginView.html">LoginView</a></li><li><a href="LogoutController.html">LogoutController</a></li><li><a href="LogoutView.html">LogoutView</a></li><li><a href="module-libresignage_api.APIError.html">APIError</a></li><li><a href="module-libresignage_api.APISession.html">APISession</a></li><li><a href="module-libresignage_misc.Shortcut.html">Shortcut</a></li><li><a href="module-libresignage_misc.ShortcutController.html">ShortcutController</a></li><li><a href="module-libresignage_misc.Timeout.html">Timeout</a></li><li><a href="module-libresignage_queue.Queue.html">Queue</a></li><li><a href="module-libresignage_queue.SlideList.html">SlideList</a></li><li><a href="module-libresignage_queue.SlideListIterator.html">SlideListIterator</a></li><li><a href="module-libresignage_slide.Slide.html">Slide</a></li><li><a href="module-libresignage_ui_components.BaseComponent.html">BaseComponent</a></li><li><a href="module-libresignage_ui_components.DropConfirm.html">DropConfirm</a></li><li><a href="module-libresignage_ui_components.DropSelect.html">DropSelect</a></li><li><a href="module-libresignage_ui_components.MultiSelect.html">MultiSelect</a></li><li><a href="module-libresignage_ui_components.Popup.html">Popup</a></li><li><a href="module-libresignage_ui_components_Dialog.AlertDialog.html">AlertDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.APIErrorDialog.html">APIErrorDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.BaseDialog.html">BaseDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.ConfirmDialog.html">ConfirmDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.PromptDialog.html">PromptDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.SelectDialog.html">SelectDialog</a></li><li><a href="module-libresignage_ui_controller.UIButton.html">UIButton</a></li><li><a href="module-libresignage_ui_controller.UIElem.html">UIElem</a></li><li><a href="module-libresignage_ui_controller.UIInput.html">UIInput</a></li><li><a href="module-libresignage_ui_controller.UIStatic.html">UIStatic</a></li><li><a href="module-libresignage_ui_validator.BaseValidator.html">BaseValidator</a></li><li><a href="module-libresignage_ui_validator.BlacklistValidator.html">BlacklistValidator</a></li><li><a href="module-libresignage_ui_validator.EqValidator.html">EqValidator</a></li><li><a href="module-libresignage_ui_validator.FileSelectorValidator.html">FileSelectorValidator</a></li><li><a href="module-libresignage_ui_validator.NumValidator.html">NumValidator</a></li><li><a href="module-libresignage_ui_validator.StrValidator.html">StrValidator</a></li><li><a href="module-libresignage_ui_validator.ValidatorController.html">ValidatorController</a></li><li><a href="module-libresignage_ui_validator.ValidatorSelector.html">ValidatorSelector</a></li><li><a href="module-libresignage_ui_validator.ValidatorTrigger.html">ValidatorTrigger</a></li><li><a href="module-libresignage_ui_validator.WhitelistValidator.html">WhitelistValidator</a></li><li><a href="module-libresignage_user.Quota.html">Quota</a></li><li><a href="module-libresignage_user.User.html">User</a></li><li><a href="module-libresignage_util.Cookie.html">Cookie</a></li><li><a href="module-libresignage_util.UIUtil.html">UIUtil</a></li><li><a href="module-libresignage_util.Util.html">Util</a></li><li><a href="Preview.html">Preview</a></li><li><a href="QueueSelector.html">QueueSelector</a></li><li><a href="SessionList.html">SessionList</a></li><li><a href="SlideAsset.html">SlideAsset</a></li><li><a href="Timeline.html">Timeline</a></li><li><a href="UIController.html">UIController</a></li><li><a href="UserController.html">UserController</a></li><li><a href="UserList.html">UserList</a></li><li><a href="UserListEntry.html">UserListEntry</a></li><li><a href="UserManagerController.html">UserManagerController</a></li><li><a href="UserManagerView.html">UserManagerView</a></li><li><a href="UserValidators.html">UserValidators</a></li><li><a href="UserView.html">UserView</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun Oct 25 2020 10:27:27 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

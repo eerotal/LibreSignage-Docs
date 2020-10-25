@@ -1,0 +1,100 @@
+\hypertarget{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface}{}\section{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}Thumbnail\+Generator\+Interface Interface Reference}
+\label{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface}\index{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Thumbnail\+Generator\+Interface@{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Thumbnail\+Generator\+Interface}}
+
+
+Inheritance diagram for libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}Thumbnail\+Generator\+Interface\+:
+% FIG 0
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface_a2fe5cbf9b09b7ef8416cfa86999aaab8}{provides\+\_\+import} ()
+\item 
+static \hyperlink{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface_a8740f912c85094c22b397f7df0142cde}{provides\+\_\+export} ()
+\item 
+static \hyperlink{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface_ada1412d696863bb01ad24dd47a3eba41}{ensure\+\_\+prerequisites\+\_\+met} ()
+\item 
+static \hyperlink{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface_ac4301d4bc3ac1011243a81a9ad8c68d5}{create} (string \$src, string \$dest, int \$wmax, int \$hmax)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for implementing thumbnail generators for different file formats. 
+
+Definition at line 9 of file Thumbnail\+Generator\+Interface.\+php.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface_ac4301d4bc3ac1011243a81a9ad8c68d5}\label{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface_ac4301d4bc3ac1011243a81a9ad8c68d5}} 
+\index{libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface@{libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface}!create@{create}}
+\index{create@{create}!libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface@{libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Thumbnail\+Generator\+Interface\+::create (\begin{DoxyParamCaption}\item[{string}]{\$src,  }\item[{string}]{\$dest,  }\item[{int}]{\$wmax,  }\item[{int}]{\$hmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Generate a thumbnail from \$src that fits in a rectangle of size \$wmax x \$hmax. The resulting thumbnail is written into \$dest.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$src} & The source path. \\
+\hline
+string & {\em \$dest} & The destionation path. \\
+\hline
+int & {\em \$wmax} & Maximum width. \\
+\hline
+int & {\em \$hmax} & Maximum height\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classlibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorException}{Thumbnail\+Generator\+Exception}} & if the M\+I\+ME type of \$src is not supported. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classlibresignage_1_1common_1_1php_1_1thumbnail_1_1VidThumbnailGenerator_a175338bc954004ef585a4cafd21bbb98}{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Vid\+Thumbnail\+Generator}, and \hyperlink{classlibresignage_1_1common_1_1php_1_1thumbnail_1_1ImgThumbnailGenerator_aa988f6ec383e43ddf2d1c017e1a0af4f}{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Img\+Thumbnail\+Generator}.
+
+\mbox{\Hypertarget{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface_ada1412d696863bb01ad24dd47a3eba41}\label{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface_ada1412d696863bb01ad24dd47a3eba41}} 
+\index{libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface@{libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface}!ensure\+\_\+prerequisites\+\_\+met@{ensure\+\_\+prerequisites\+\_\+met}}
+\index{ensure\+\_\+prerequisites\+\_\+met@{ensure\+\_\+prerequisites\+\_\+met}!libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface@{libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface}}
+\subsubsection{\texorpdfstring{ensure\+\_\+prerequisites\+\_\+met()}{ensure\_prerequisites\_met()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Thumbnail\+Generator\+Interface\+::ensure\+\_\+prerequisites\+\_\+met (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Ensure that any prerequisites for a thumbnail generator are met. This function should throw a \hyperlink{classlibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorException}{Thumbnail\+Generator\+Exception} if prerequisites are not met. 
+
+Implemented in \hyperlink{classlibresignage_1_1common_1_1php_1_1thumbnail_1_1VidThumbnailGenerator_a8c1e2627c46e1e14db021d803b610773}{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Vid\+Thumbnail\+Generator}, and \hyperlink{classlibresignage_1_1common_1_1php_1_1thumbnail_1_1ImgThumbnailGenerator_aaf9ec891b0098f04280029338054438d}{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Img\+Thumbnail\+Generator}.
+
+\mbox{\Hypertarget{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface_a8740f912c85094c22b397f7df0142cde}\label{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface_a8740f912c85094c22b397f7df0142cde}} 
+\index{libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface@{libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface}!provides\+\_\+export@{provides\+\_\+export}}
+\index{provides\+\_\+export@{provides\+\_\+export}!libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface@{libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface}}
+\subsubsection{\texorpdfstring{provides\+\_\+export()}{provides\_export()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Thumbnail\+Generator\+Interface\+::provides\+\_\+export (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get an array of export M\+I\+ME types the thumbnail generator supports.
+
+\begin{DoxyReturn}{Returns}
+array An array of export M\+I\+ME types (strings). 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classlibresignage_1_1common_1_1php_1_1thumbnail_1_1VidThumbnailGenerator_a068f440ec5762055c439534a93a01ce1}{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Vid\+Thumbnail\+Generator}, and \hyperlink{classlibresignage_1_1common_1_1php_1_1thumbnail_1_1ImgThumbnailGenerator_a03672f0562ba75288c0a1774642b0b70}{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Img\+Thumbnail\+Generator}.
+
+\mbox{\Hypertarget{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface_a2fe5cbf9b09b7ef8416cfa86999aaab8}\label{interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface_a2fe5cbf9b09b7ef8416cfa86999aaab8}} 
+\index{libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface@{libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface}!provides\+\_\+import@{provides\+\_\+import}}
+\index{provides\+\_\+import@{provides\+\_\+import}!libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface@{libresignage\+::common\+::php\+::thumbnail\+::\+Thumbnail\+Generator\+Interface}}
+\subsubsection{\texorpdfstring{provides\+\_\+import()}{provides\_import()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Thumbnail\+Generator\+Interface\+::provides\+\_\+import (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get an array of import M\+I\+ME types the thumbnail generator supports.
+
+\begin{DoxyReturn}{Returns}
+array An array of import M\+I\+ME types (strings). 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classlibresignage_1_1common_1_1php_1_1thumbnail_1_1VidThumbnailGenerator_ac425e90b4944a08c887d99d5cc72f3ff}{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Vid\+Thumbnail\+Generator}, and \hyperlink{classlibresignage_1_1common_1_1php_1_1thumbnail_1_1ImgThumbnailGenerator_a3fc7c9aedf448fcc6959ce18ffca35cb}{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}thumbnail\textbackslash{}\+Img\+Thumbnail\+Generator}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/common/php/thumbnail/\hyperlink{ThumbnailGeneratorInterface_8php}{Thumbnail\+Generator\+Interface.\+php}\end{DoxyCompactItemize}

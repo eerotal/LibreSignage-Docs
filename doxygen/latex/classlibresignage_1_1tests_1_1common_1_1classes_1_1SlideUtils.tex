@@ -1,0 +1,216 @@
+\hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils}{}\section{libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}Slide\+Utils Class Reference}
+\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils}\index{libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+Slide\+Utils@{libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+Slide\+Utils}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a77cb868fff118096632abccd9a8ad58a}{lock} (\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} \$api, string \$id)
+\item 
+static \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a44efce21d77a7523dd240c3d5ee2ee67}{release} (\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} \$api, string \$id)
+\item 
+static \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_aeeef7df2a56d96fdb8455b40abd6b28c}{save} (\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} \$api, \$id, string \$name, int \$index, int \$duration, string \$markup, bool \$enabled, bool \$sched, int \$sched\+\_\+t\+\_\+s, int \$sched\+\_\+t\+\_\+e, int \$animation, string \$queue\+\_\+name, array \$collaborators)
+\item 
+static \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a54dfe7ef2953cf074420d902116d5b6b}{remove} (\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} \$api, string \$id)
+\item 
+static \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a106e2422a9edc3e59eca468ccad17c74}{upload\+\_\+asset} (\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} \$api, string \$id, string \$path)
+\item 
+static \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a4b07bdeb0b0da8c33d74e3821314e6bd}{remove\+\_\+asset} (\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} \$api, string \$id, string \$name)
+\item 
+static \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a6dfbbb847934c6a212fa2aeb5a1bcd14}{get\+\_\+asset} (\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} \$api, string \$id, string \$name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Slide utility functions. These are mainly supposed to be used in test setup and teardown code where actually testing the endpoint is not intended. 
+
+Definition at line 15 of file Slide\+Utils.\+php.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a6dfbbb847934c6a212fa2aeb5a1bcd14}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a6dfbbb847934c6a212fa2aeb5a1bcd14}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}!get\+\_\+asset@{get\+\_\+asset}}
+\index{get\+\_\+asset@{get\+\_\+asset}!libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}}
+\subsubsection{\texorpdfstring{get\+\_\+asset()}{get\_asset()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+Slide\+Utils\+::get\+\_\+asset (\begin{DoxyParamCaption}\item[{\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface}}]{\$api,  }\item[{string}]{\$id,  }\item[{string}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get a slide asset.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} & {\em \$api} & An \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} object. \\
+\hline
+string & {\em \$id} & The id of the slide. \\
+\hline
+string & {\em \$name} & The name of the file get.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response The A\+PI response. 
+\end{DoxyReturn}
+
+
+Definition at line 206 of file Slide\+Utils.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a77cb868fff118096632abccd9a8ad58a}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a77cb868fff118096632abccd9a8ad58a}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}!lock@{lock}}
+\index{lock@{lock}!libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}}
+\subsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+Slide\+Utils\+::lock (\begin{DoxyParamCaption}\item[{\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface}}]{\$api,  }\item[{string}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Lock a slide.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} & {\em \$api} & An \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} object. \\
+\hline
+string & {\em \$id} & The ID of the slide to lock.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response The A\+PI response. 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file Slide\+Utils.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a44efce21d77a7523dd240c3d5ee2ee67}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a44efce21d77a7523dd240c3d5ee2ee67}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}!release@{release}}
+\index{release@{release}!libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}}
+\subsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+Slide\+Utils\+::release (\begin{DoxyParamCaption}\item[{\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface}}]{\$api,  }\item[{string}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Release a slide lock.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} & {\em \$api} & An \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} object. \\
+\hline
+string & {\em \$id} & The ID of the slide to release\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response The A\+PI response. 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file Slide\+Utils.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a54dfe7ef2953cf074420d902116d5b6b}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a54dfe7ef2953cf074420d902116d5b6b}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}!remove@{remove}}
+\index{remove@{remove}!libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+Slide\+Utils\+::remove (\begin{DoxyParamCaption}\item[{\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface}}]{\$api,  }\item[{string}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Remove a slide.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} & {\em \$api} & An \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} object. \\
+\hline
+string & {\em \$id} & The ID of the slide to remove.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response The A\+PI response. 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file Slide\+Utils.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a4b07bdeb0b0da8c33d74e3821314e6bd}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a4b07bdeb0b0da8c33d74e3821314e6bd}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}!remove\+\_\+asset@{remove\+\_\+asset}}
+\index{remove\+\_\+asset@{remove\+\_\+asset}!libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}}
+\subsubsection{\texorpdfstring{remove\+\_\+asset()}{remove\_asset()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+Slide\+Utils\+::remove\+\_\+asset (\begin{DoxyParamCaption}\item[{\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface}}]{\$api,  }\item[{string}]{\$id,  }\item[{string}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Remove a slide asset.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} & {\em \$api} & An \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} object. \\
+\hline
+string & {\em \$id} & The id of the destination slide. \\
+\hline
+string & {\em \$name} & The name of the file to remove.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response The A\+PI response. 
+\end{DoxyReturn}
+
+
+Definition at line 180 of file Slide\+Utils.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_aeeef7df2a56d96fdb8455b40abd6b28c}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_aeeef7df2a56d96fdb8455b40abd6b28c}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}!save@{save}}
+\index{save@{save}!libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+Slide\+Utils\+::save (\begin{DoxyParamCaption}\item[{\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface}}]{\$api,  }\item[{}]{\$id,  }\item[{string}]{\$name,  }\item[{int}]{\$index,  }\item[{int}]{\$duration,  }\item[{string}]{\$markup,  }\item[{bool}]{\$enabled,  }\item[{bool}]{\$sched,  }\item[{int}]{\$sched\+\_\+t\+\_\+s,  }\item[{int}]{\$sched\+\_\+t\+\_\+e,  }\item[{int}]{\$animation,  }\item[{string}]{\$queue\+\_\+name,  }\item[{array}]{\$collaborators }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Save a slide.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} & {\em \$api} & An \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} object. \\
+\hline
+string | N\+U\+LL & {\em \$id} & \\
+\hline
+string & {\em \$name} & \\
+\hline
+int & {\em \$index} & \\
+\hline
+int & {\em \$duration} & \\
+\hline
+string & {\em \$markup} & \\
+\hline
+bool & {\em \$enabled} & \\
+\hline
+bool & {\em \$sched} & \\
+\hline
+int & {\em \$sched\+\_\+t\+\_\+s} & \\
+\hline
+int & {\em \$sched\+\_\+t\+\_\+e} & \\
+\hline
+int & {\em \$animation} & \\
+\hline
+string & {\em \$queue\+\_\+name} & \\
+\hline
+array & {\em \$collaborators} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response The A\+PI response. 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file Slide\+Utils.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a106e2422a9edc3e59eca468ccad17c74}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1SlideUtils_a106e2422a9edc3e59eca468ccad17c74}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}!upload\+\_\+asset@{upload\+\_\+asset}}
+\index{upload\+\_\+asset@{upload\+\_\+asset}!libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils@{libresignage\+::tests\+::common\+::classes\+::\+Slide\+Utils}}
+\subsubsection{\texorpdfstring{upload\+\_\+asset()}{upload\_asset()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+Slide\+Utils\+::upload\+\_\+asset (\begin{DoxyParamCaption}\item[{\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface}}]{\$api,  }\item[{string}]{\$id,  }\item[{string}]{\$path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Upload an asset to a slide.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} & {\em \$api} & An \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} object. \\
+\hline
+string & {\em \$id} & The id of the destination slide. \\
+\hline
+string & {\em \$path} & The path of the file to upload.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response The A\+PI response. 
+\end{DoxyReturn}
+
+
+Definition at line 144 of file Slide\+Utils.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/common/classes/\hyperlink{SlideUtils_8php}{Slide\+Utils.\+php}\end{DoxyCompactItemize}

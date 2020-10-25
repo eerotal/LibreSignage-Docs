@@ -1,0 +1,131 @@
+\hypertarget{classlibresignage_1_1common_1_1php_1_1ErrorHandler}{}\section{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}Error\+Handler Class Reference}
+\label{classlibresignage_1_1common_1_1php_1_1ErrorHandler}\index{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}\+Error\+Handler@{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}\+Error\+Handler}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1ErrorHandler_ae28265e454a8a9137e1971a14242c1b0}{set\+\_\+debug} (bool \$debug)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1ErrorHandler_ab190662494c323e5ba7c7d9953b4127b}{setup} ()
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1ErrorHandler_ad0b9b209b9050178ca7fb80940d086bd}{handle} (int \$code, \textbackslash{}Throwable \$e=N\+U\+LL)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classlibresignage_1_1common_1_1php_1_1ErrorHandler_a4c0a076d9365e17271df419a5a821221}{N\+O\+T\+\_\+\+F\+O\+U\+ND} = 404
+\item 
+const \hyperlink{classlibresignage_1_1common_1_1php_1_1ErrorHandler_af0646311186ddbe7d2b5944c37b84bc1}{F\+O\+R\+B\+I\+D\+D\+EN} = 403
+\item 
+const \hyperlink{classlibresignage_1_1common_1_1php_1_1ErrorHandler_a0ce95528b49d64764d9525e041458378}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+E\+R\+R\+OR} = 500
+\item 
+const \hyperlink{classlibresignage_1_1common_1_1php_1_1ErrorHandler_a4116c0eb668b7f2d2564f3fde2b36424}{E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+GS}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file Error\+Handler.\+php.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1ErrorHandler_ad0b9b209b9050178ca7fb80940d086bd}\label{classlibresignage_1_1common_1_1php_1_1ErrorHandler_ad0b9b209b9050178ca7fb80940d086bd}} 
+\index{libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}!handle@{handle}}
+\index{handle@{handle}!libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}}
+\subsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}\+Error\+Handler\+::handle (\begin{DoxyParamCaption}\item[{int}]{\$code,  }\item[{\textbackslash{}Throwable}]{\$e = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Redirect the client to the error page corresponding to the H\+T\+TP error code \$code. Additionally echo the exception \$e to the client if \$\+E\+R\+R\+O\+R\+\_\+\+D\+E\+B\+UG == T\+R\+UE and \$e != N\+U\+LL. If \$\+E\+R\+R\+O\+R\+\_\+\+D\+E\+B\+UG == F\+A\+L\+SE, the exception is logged instead of echoing.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$code} & The H\+T\+TP error code.\\
+\hline
+Throwable & {\em \$e} & Optional error object to show to the caller. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 72 of file Error\+Handler.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1ErrorHandler_ae28265e454a8a9137e1971a14242c1b0}\label{classlibresignage_1_1common_1_1php_1_1ErrorHandler_ae28265e454a8a9137e1971a14242c1b0}} 
+\index{libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}!set\+\_\+debug@{set\+\_\+debug}}
+\index{set\+\_\+debug@{set\+\_\+debug}!libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}}
+\subsubsection{\texorpdfstring{set\+\_\+debug()}{set\_debug()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}\+Error\+Handler\+::set\+\_\+debug (\begin{DoxyParamCaption}\item[{bool}]{\$debug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Turn on/off debugging.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$debug} & T\+R\+UE = debug on, F\+A\+L\+SE = debug off. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file Error\+Handler.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1ErrorHandler_ab190662494c323e5ba7c7d9953b4127b}\label{classlibresignage_1_1common_1_1php_1_1ErrorHandler_ab190662494c323e5ba7c7d9953b4127b}} 
+\index{libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}!setup@{setup}}
+\index{setup@{setup}!libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}\+Error\+Handler\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Set the default exeption and error handler functions. Note that these may be overridden in other places. The A\+PI system, for example, uses it\textquotesingle{}s own exception handler. 
+
+Definition at line 49 of file Error\+Handler.\+php.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1ErrorHandler_a4116c0eb668b7f2d2564f3fde2b36424}\label{classlibresignage_1_1common_1_1php_1_1ErrorHandler_a4116c0eb668b7f2d2564f3fde2b36424}} 
+\index{libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}!E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+GS@{E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+GS}}
+\index{E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+GS@{E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+GS}!libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}}
+\subsubsection{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+GS}{ERROR\_STRINGS}}
+{\footnotesize\ttfamily const libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}\+Error\+Handler\+::\+E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+GS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= [
+        \hyperlink{classlibresignage_1_1common_1_1php_1_1ErrorHandler_a4c0a076d9365e17271df419a5a821221}{ErrorHandler::NOT\_FOUND} => \textcolor{stringliteral}{'404 Not Found'}
+\end{DoxyCode}
+
+
+Definition at line 16 of file Error\+Handler.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1ErrorHandler_af0646311186ddbe7d2b5944c37b84bc1}\label{classlibresignage_1_1common_1_1php_1_1ErrorHandler_af0646311186ddbe7d2b5944c37b84bc1}} 
+\index{libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}!F\+O\+R\+B\+I\+D\+D\+EN@{F\+O\+R\+B\+I\+D\+D\+EN}}
+\index{F\+O\+R\+B\+I\+D\+D\+EN@{F\+O\+R\+B\+I\+D\+D\+EN}!libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}}
+\subsubsection{\texorpdfstring{F\+O\+R\+B\+I\+D\+D\+EN}{FORBIDDEN}}
+{\footnotesize\ttfamily const libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}\+Error\+Handler\+::\+F\+O\+R\+B\+I\+D\+D\+EN = 403}
+
+
+
+Definition at line 13 of file Error\+Handler.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1ErrorHandler_a0ce95528b49d64764d9525e041458378}\label{classlibresignage_1_1common_1_1php_1_1ErrorHandler_a0ce95528b49d64764d9525e041458378}} 
+\index{libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+E\+R\+R\+OR@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+E\+R\+R\+OR}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+E\+R\+R\+OR@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+E\+R\+R\+OR}!libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}}
+\subsubsection{\texorpdfstring{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+E\+R\+R\+OR}{INTERNAL\_SERVER\_ERROR}}
+{\footnotesize\ttfamily const libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}\+Error\+Handler\+::\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+E\+R\+R\+OR = 500}
+
+
+
+Definition at line 14 of file Error\+Handler.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1ErrorHandler_a4c0a076d9365e17271df419a5a821221}\label{classlibresignage_1_1common_1_1php_1_1ErrorHandler_a4c0a076d9365e17271df419a5a821221}} 
+\index{libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}!N\+O\+T\+\_\+\+F\+O\+U\+ND@{N\+O\+T\+\_\+\+F\+O\+U\+ND}}
+\index{N\+O\+T\+\_\+\+F\+O\+U\+ND@{N\+O\+T\+\_\+\+F\+O\+U\+ND}!libresignage\+::common\+::php\+::\+Error\+Handler@{libresignage\+::common\+::php\+::\+Error\+Handler}}
+\subsubsection{\texorpdfstring{N\+O\+T\+\_\+\+F\+O\+U\+ND}{NOT\_FOUND}}
+{\footnotesize\ttfamily const libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}\+Error\+Handler\+::\+N\+O\+T\+\_\+\+F\+O\+U\+ND = 404}
+
+
+
+Definition at line 12 of file Error\+Handler.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/common/php/\hyperlink{ErrorHandler_8php}{Error\+Handler.\+php}\end{DoxyCompactItemize}

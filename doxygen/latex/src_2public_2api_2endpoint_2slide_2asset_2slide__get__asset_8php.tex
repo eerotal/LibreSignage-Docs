@@ -1,0 +1,50 @@
+\hypertarget{src_2public_2api_2endpoint_2slide_2asset_2slide__get__asset_8php}{}\section{src/public/api/endpoint/slide/asset/slide\+\_\+get\+\_\+asset.php File Reference}
+\label{src_2public_2api_2endpoint_2slide_2asset_2slide__get__asset_8php}\index{src/public/api/endpoint/slide/asset/slide\+\_\+get\+\_\+asset.\+php@{src/public/api/endpoint/slide/asset/slide\+\_\+get\+\_\+asset.\+php}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1slide_1_1asset}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}slide\textbackslash{}asset}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Get an asset of a slide.
+
+You can (and probably should) pass the asset hash in the \textquotesingle{}hash\textquotesingle{} request parameter to prevent problems loading cached versions of assets when the asset has changed. The server does send the proper E\+Tag headers but H\+T\+ML  tags, for example, don\textquotesingle{}t seem to obey them.
+
+\begin{DoxyParagraph}{H\+T\+TP Method}
+G\+ET 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Authentication}
+By cookie or token 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Allowed groups}
+{\ttfamily admin$\vert$editor$\vert$display} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Rate limiting}
+This endpoint is rate limited. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Cache}
+This endpoint supports H\+T\+TP caching.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Parameters}
+application/json
+\begin{DoxyItemize}
+\item {\ttfamily string} {\bfseries id} The ID of the slide. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily string} {\bfseries name} The name of the asset. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily string} {\bfseries hash} The asset hash (see description). \mbox{[}{\itshape optional}\mbox{]}
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Response}
+The requested asset.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Status}
+
+\begin{DoxyItemize}
+\item {\bfseries 200} On success.
+\item {\bfseries 400} If the request parameters are invalid.
+\item {\bfseries 401} If the caller is not allowed to get assets.
+\item {\bfseries 404} If the asset doesn\textquotesingle{}t exist.
+\item {\bfseries 404} If the slide doesn\textquotesingle{}t exist. 
+\end{DoxyItemize}
+\end{DoxyParagraph}

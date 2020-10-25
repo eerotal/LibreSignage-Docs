@@ -1,0 +1,78 @@
+\hypertarget{classlibresignage_1_1api_1_1modules_1_1APIJSONValidatorModule}{}\section{libresignage\textbackslash{}api\textbackslash{}modules\textbackslash{}A\+P\+I\+J\+S\+O\+N\+Validator\+Module Class Reference}
+\label{classlibresignage_1_1api_1_1modules_1_1APIJSONValidatorModule}\index{libresignage\textbackslash{}api\textbackslash{}modules\textbackslash{}\+A\+P\+I\+J\+S\+O\+N\+Validator\+Module@{libresignage\textbackslash{}api\textbackslash{}modules\textbackslash{}\+A\+P\+I\+J\+S\+O\+N\+Validator\+Module}}
+
+
+Inheritance diagram for libresignage\textbackslash{}api\textbackslash{}modules\textbackslash{}A\+P\+I\+J\+S\+O\+N\+Validator\+Module\+:
+% FIG 0
+
+
+Collaboration diagram for libresignage\textbackslash{}api\textbackslash{}modules\textbackslash{}A\+P\+I\+J\+S\+O\+N\+Validator\+Module\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibresignage_1_1api_1_1modules_1_1APIJSONValidatorModule_a2c609f4338c3bf3f2b35f4daf6728a40}{run} (\hyperlink{classlibresignage_1_1api_1_1APIEndpoint}{A\+P\+I\+Endpoint} \$e, array \$args)
+\item 
+\hyperlink{classlibresignage_1_1api_1_1modules_1_1APIJSONValidatorModule_a72e941a65c34a98c8767f515ef9f9157}{validate} (string \$json, \$schema)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PI module for validating and decoding a request with a J\+S\+ON body. 
+
+Definition at line 19 of file A\+P\+I\+J\+S\+O\+N\+Validator\+Module.\+php.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1api_1_1modules_1_1APIJSONValidatorModule_a2c609f4338c3bf3f2b35f4daf6728a40}\label{classlibresignage_1_1api_1_1modules_1_1APIJSONValidatorModule_a2c609f4338c3bf3f2b35f4daf6728a40}} 
+\index{libresignage\+::api\+::modules\+::\+A\+P\+I\+J\+S\+O\+N\+Validator\+Module@{libresignage\+::api\+::modules\+::\+A\+P\+I\+J\+S\+O\+N\+Validator\+Module}!run@{run}}
+\index{run@{run}!libresignage\+::api\+::modules\+::\+A\+P\+I\+J\+S\+O\+N\+Validator\+Module@{libresignage\+::api\+::modules\+::\+A\+P\+I\+J\+S\+O\+N\+Validator\+Module}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}api\textbackslash{}modules\textbackslash{}\+A\+P\+I\+J\+S\+O\+N\+Validator\+Module\+::run (\begin{DoxyParamCaption}\item[{\hyperlink{classlibresignage_1_1api_1_1APIEndpoint}{A\+P\+I\+Endpoint}}]{\$e,  }\item[{array}]{\$args }\end{DoxyParamCaption})}
+
+Decode and validate the request body J\+S\+ON.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1api_1_1APIModule}{A\+P\+I\+Module} for argument and \hyperlink{quota_200-default_8php_ae057f510746f2e7dcbd7d8ccfaf92a45}{return} value descriptions.
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classlibresignage_1_1api_1_1APIException}{A\+P\+I\+Exception}} & if the request Content-\/\+Type is not application/json. \\
+\hline
+{\em \hyperlink{classlibresignage_1_1api_1_1APIException}{A\+P\+I\+Exception}} & if decoding the request J\+S\+ON fails. \\
+\hline
+{\em \hyperlink{classlibresignage_1_1api_1_1APIException}{A\+P\+I\+Exception}} & if the request J\+S\+ON doesn\textquotesingle{}t match the provided J\+S\+ON schema. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 30 of file A\+P\+I\+J\+S\+O\+N\+Validator\+Module.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1api_1_1modules_1_1APIJSONValidatorModule_a72e941a65c34a98c8767f515ef9f9157}\label{classlibresignage_1_1api_1_1modules_1_1APIJSONValidatorModule_a72e941a65c34a98c8767f515ef9f9157}} 
+\index{libresignage\+::api\+::modules\+::\+A\+P\+I\+J\+S\+O\+N\+Validator\+Module@{libresignage\+::api\+::modules\+::\+A\+P\+I\+J\+S\+O\+N\+Validator\+Module}!validate@{validate}}
+\index{validate@{validate}!libresignage\+::api\+::modules\+::\+A\+P\+I\+J\+S\+O\+N\+Validator\+Module@{libresignage\+::api\+::modules\+::\+A\+P\+I\+J\+S\+O\+N\+Validator\+Module}}
+\subsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}api\textbackslash{}modules\textbackslash{}\+A\+P\+I\+J\+S\+O\+N\+Validator\+Module\+::validate (\begin{DoxyParamCaption}\item[{string}]{\$json,  }\item[{}]{\$schema }\end{DoxyParamCaption})}
+
+Decode a J\+S\+ON string and validate the resulting object against a J\+S\+ON schema.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$json} & The J\+S\+ON input string. \\
+\hline
+object | array & {\em \$schema} & The J\+S\+ON schema.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object The decoded and validated J\+S\+ON. 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file A\+P\+I\+J\+S\+O\+N\+Validator\+Module.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/api/modules/\hyperlink{APIJSONValidatorModule_8php}{A\+P\+I\+J\+S\+O\+N\+Validator\+Module.\+php}\end{DoxyCompactItemize}

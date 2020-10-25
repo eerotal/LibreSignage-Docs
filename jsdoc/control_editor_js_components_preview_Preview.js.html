@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: control/editor/js/components/preview/Preview.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: control/editor/js/components/preview/Preview.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var markup = require('ls-markup');
+var Assert = require('assert');
+
+/**
+* Slide preview component.
+*/
+class Preview {
+	/**
+	* Construct a new Slide preview.
+	*
+	* @param {HTMLElement} container The HTML element where the Preview
+	*                                is created.
+	*/
+	constructor(container) {
+		this.valid_ratios = ['4x3', '16x9', '4x3-fit', '16x9-fit'];
+
+		this.container = container;
+		this.ratio = null;
+	}
+
+	/**
+	* Initialize a new preview.
+	*
+	* @return {Promise} A promise that resolves once all stylesheets
+	*                   are loaded.
+	*/
+	async init() {
+		let ret = null;
+		let template = document.createElement('template');
+		template.innerHTML = '&lt;iframe class="preview rounded">&lt;/iframe>';
+
+		/*
+		* NOTE!
+		*
+		* Firefox doesn't allow adding content to iframes before a load
+		* event is fired on them, which is why the code below is wrapped
+		* in an event listener. Other browsers, however, don't even fire
+		* the load event so the event is fired manually after creating
+		* the event listener.
+		*/
+		ret = new Promise((resolve, reject) => {
+			let iframe = template.content.querySelector('iframe');
+
+			let hook = () => {
+				let head = null;
+				let promises = [];
+
+				/*
+				* Workaround for odd Firefox behaviour where the 'load'
+				* event is fired twice for the iframe. Once when the
+				* document readyState == 'uninitialized' and again when
+				* readyState == 'complete'. This if statement skips the
+				* uninitialized step to make the modified iframe contents
+				* actually persist.
+				*/
+				if (iframe.contentDocument.readyState !== 'complete') {
+					return;
+				}
+				iframe.removeEventListener('load', hook);
+
+				// Add meta tags and stylesheets.
+				head = iframe.contentDocument.querySelector('head');
+				head.innerHTML = `
+					&lt;meta
+						charset="utf-8">
+					&lt;meta
+						name="viewport"
+						content="width=device-width, initial-scale=1">
+					&lt;link
+						rel="stylesheet"
+						type="text/css"
+						href="/app/css/display.css">&lt;/link>
+				`;
+
+				for (let e of head.querySelectorAll('link')) {
+					promises.push(new Promise((resolve, reject) => {
+						e.addEventListener('load', resolve);
+					}));
+				}
+
+				this.set_ratio('16x9');
+				Promise.all(promises).then(resolve);
+			};
+
+			iframe.addEventListener('load', hook);
+		});
+		this.container.appendChild(template.content);
+
+		if (
+			window.navigator === null
+			|| window.navigator.userAgent === null
+			|| !window.navigator.userAgent.match('/mozilla/i')
+		) {
+			this.container
+				.querySelector('iframe')
+				.dispatchEvent(new Event('load'));
+		}
+		return ret;
+	}
+
+	/**
+	* Render a Preview.
+	*
+	* @param {string} m The markup to render.
+	*/
+	render(m) {
+		let html = markup.parse(m);
+		let template = null;
+
+		if (html != null) {
+			template = document.createElement('template');
+			template.innerHTML = html;
+
+			// Don't autoplay video.
+			for (let e of template.content.querySelectorAll('video')) {
+				e.setAttribute('autoplay', false);
+			}
+
+			this.container
+				.querySelector('iframe')
+				.contentDocument
+				.body
+				.innerHTML = "";
+			this.container
+				.querySelector('iframe')
+				.contentDocument
+				.querySelector('body')
+				.appendChild(document.importNode(template.content, true))
+		}
+	}
+
+	/**
+	* Set the aspect ratio of a Preview.
+	*
+	* @param {string} ratio The ratio to use. This should be one of the strings
+	*                       defined in Preview.valid_ratios.
+	*
+	* @throws {AssertionError} If the supplied ratio is not valid.
+	*/
+	set_ratio(ratio) {
+		Assert.ok(this.valid_ratios.includes(ratio));
+		this.ratio = ratio;
+
+		for (let r of this.valid_ratios) {
+			this.container.classList.remove(`preview-${r}`);
+		}
+		this.container.classList.add(`preview-${ratio}`);
+	}
+
+	/**
+	* Get the current aspect ratio of a Preview.
+	*
+	* @return {string} The current aspect ratio.
+	*/
+	get_ratio() {
+		return this.ratio;
+	}
+}
+module.exports = Preview;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-libresignage_api.html">libresignage/api</a></li><li><a href="module-libresignage_misc.html">libresignage/misc</a></li><li><a href="module-libresignage_queue.html">libresignage/queue</a></li><li><a href="module-libresignage_slide.html">libresignage/slide</a></li><li><a href="module-libresignage_ui_components.html">libresignage/ui/components</a></li><li><a href="module-libresignage_ui_components_Dialog.html">libresignage/ui/components/Dialog</a></li><li><a href="module-libresignage_ui_controller.html">libresignage/ui/controller</a></li><li><a href="module-libresignage_ui_validator.html">libresignage/ui/validator</a></li><li><a href="module-libresignage_user.html">libresignage/user</a></li><li><a href="module-libresignage_util.html">libresignage/util</a></li></ul><h3>Namespaces</h3><ul><li><a href="module-libresignage_api.APIEndpoints.html">APIEndpoints</a></li><li><a href="module-libresignage_api.HTTPStatus.html">HTTPStatus</a></li><li><a href="module-libresignage_slide.Animations.html">Animations</a></li></ul><h3>Classes</h3><ul><li><a href="APIInterface.html">APIInterface</a></li><li><a href="AssetList.html">AssetList</a></li><li><a href="AssetUploader.html">AssetUploader</a></li><li><a href="AssetUploaderController.html">AssetUploaderController</a></li><li><a href="ControlPanelController.html">ControlPanelController</a></li><li><a href="ControlPanelView.html">ControlPanelView</a></li><li><a href="DisplayController.html">DisplayController</a></li><li><a href="DisplayView.html">DisplayView</a></li><li><a href="EditorController.html">EditorController</a></li><li><a href="LoginController.html">LoginController</a></li><li><a href="LoginView.html">LoginView</a></li><li><a href="LogoutController.html">LogoutController</a></li><li><a href="LogoutView.html">LogoutView</a></li><li><a href="module-libresignage_api.APIError.html">APIError</a></li><li><a href="module-libresignage_api.APISession.html">APISession</a></li><li><a href="module-libresignage_misc.Shortcut.html">Shortcut</a></li><li><a href="module-libresignage_misc.ShortcutController.html">ShortcutController</a></li><li><a href="module-libresignage_misc.Timeout.html">Timeout</a></li><li><a href="module-libresignage_queue.Queue.html">Queue</a></li><li><a href="module-libresignage_queue.SlideList.html">SlideList</a></li><li><a href="module-libresignage_queue.SlideListIterator.html">SlideListIterator</a></li><li><a href="module-libresignage_slide.Slide.html">Slide</a></li><li><a href="module-libresignage_ui_components.BaseComponent.html">BaseComponent</a></li><li><a href="module-libresignage_ui_components.DropConfirm.html">DropConfirm</a></li><li><a href="module-libresignage_ui_components.DropSelect.html">DropSelect</a></li><li><a href="module-libresignage_ui_components.MultiSelect.html">MultiSelect</a></li><li><a href="module-libresignage_ui_components.Popup.html">Popup</a></li><li><a href="module-libresignage_ui_components_Dialog.AlertDialog.html">AlertDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.APIErrorDialog.html">APIErrorDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.BaseDialog.html">BaseDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.ConfirmDialog.html">ConfirmDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.PromptDialog.html">PromptDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.SelectDialog.html">SelectDialog</a></li><li><a href="module-libresignage_ui_controller.UIButton.html">UIButton</a></li><li><a href="module-libresignage_ui_controller.UIElem.html">UIElem</a></li><li><a href="module-libresignage_ui_controller.UIInput.html">UIInput</a></li><li><a href="module-libresignage_ui_controller.UIStatic.html">UIStatic</a></li><li><a href="module-libresignage_ui_validator.BaseValidator.html">BaseValidator</a></li><li><a href="module-libresignage_ui_validator.BlacklistValidator.html">BlacklistValidator</a></li><li><a href="module-libresignage_ui_validator.EqValidator.html">EqValidator</a></li><li><a href="module-libresignage_ui_validator.FileSelectorValidator.html">FileSelectorValidator</a></li><li><a href="module-libresignage_ui_validator.NumValidator.html">NumValidator</a></li><li><a href="module-libresignage_ui_validator.StrValidator.html">StrValidator</a></li><li><a href="module-libresignage_ui_validator.ValidatorController.html">ValidatorController</a></li><li><a href="module-libresignage_ui_validator.ValidatorSelector.html">ValidatorSelector</a></li><li><a href="module-libresignage_ui_validator.ValidatorTrigger.html">ValidatorTrigger</a></li><li><a href="module-libresignage_ui_validator.WhitelistValidator.html">WhitelistValidator</a></li><li><a href="module-libresignage_user.Quota.html">Quota</a></li><li><a href="module-libresignage_user.User.html">User</a></li><li><a href="module-libresignage_util.Cookie.html">Cookie</a></li><li><a href="module-libresignage_util.UIUtil.html">UIUtil</a></li><li><a href="module-libresignage_util.Util.html">Util</a></li><li><a href="Preview.html">Preview</a></li><li><a href="QueueSelector.html">QueueSelector</a></li><li><a href="SessionList.html">SessionList</a></li><li><a href="SlideAsset.html">SlideAsset</a></li><li><a href="Timeline.html">Timeline</a></li><li><a href="UIController.html">UIController</a></li><li><a href="UserController.html">UserController</a></li><li><a href="UserList.html">UserList</a></li><li><a href="UserListEntry.html">UserListEntry</a></li><li><a href="UserManagerController.html">UserManagerController</a></li><li><a href="UserManagerView.html">UserManagerView</a></li><li><a href="UserValidators.html">UserValidators</a></li><li><a href="UserView.html">UserView</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun Oct 25 2020 10:27:27 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

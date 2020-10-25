@@ -1,0 +1,56 @@
+\hypertarget{doc_2index_8php}{}\section{src/public/doc/index.php File Reference}
+\label{doc_2index_8php}\index{src/public/doc/index.\+php@{src/public/doc/index.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{doc_2index_8php_a1376c54809af7c3da5f6eda73f04cfa3}{\$docs}
+\item 
+\hyperlink{login_2index_8php_ab51de40bbba7bda6a6baf15c5564dc16}{if}(!empty(\$\+\_\+\+G\+ET\mbox{[}\textquotesingle{}doc\textquotesingle{}\mbox{]})) \hyperlink{doc_2index_8php_adf992fc38f1b4874925237c49f72cab7}{else}
+\item 
+\hyperlink{doc_2index_8php_a1d555c22cda9d5e40ac4f0c35b5eafc4}{if} ( \$include\+\_\+file !=\textquotesingle{}index.\+html\textquotesingle{}) = array\+\_\+diff(\$docs, \mbox{[}\textquotesingle{}.\textquotesingle{}, \textquotesingle{}..\textquotesingle{}\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{doc_2index_8php_a1376c54809af7c3da5f6eda73f04cfa3}\label{doc_2index_8php_a1376c54809af7c3da5f6eda73f04cfa3}} 
+\index{doc/index.\+php@{doc/index.\+php}!\$docs@{\$docs}}
+\index{\$docs@{\$docs}!doc/index.\+php@{doc/index.\+php}}
+\subsubsection{\texorpdfstring{\$docs}{$docs}}
+{\footnotesize\ttfamily \hyperlink{login_2index_8php_ab51de40bbba7bda6a6baf15c5564dc16}{if} ( \$docs===F\+A\+L\+SE) \$docs}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= scandir(
+        Config::config(\textcolor{stringliteral}{'LIBRESIGNAGE\_ROOT'}).
+        Config::config(\textcolor{stringliteral}{'DOC\_HTML\_DIR'})
+    )
+\end{DoxyCode}
+
+
+Definition at line 11 of file index.\+php.
+
+\mbox{\Hypertarget{doc_2index_8php_adf992fc38f1b4874925237c49f72cab7}\label{doc_2index_8php_adf992fc38f1b4874925237c49f72cab7}} 
+\index{doc/index.\+php@{doc/index.\+php}!else@{else}}
+\index{else@{else}!doc/index.\+php@{doc/index.\+php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \hyperlink{login_2index_8php_ab51de40bbba7bda6a6baf15c5564dc16}{if} (!empty( \$\+\_\+\+G\+ET\mbox{[} \textquotesingle{}doc\textquotesingle{}\mbox{]})) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        $include\_file = \textcolor{stringliteral}{'index.html'}
+\end{DoxyCode}
+
+
+Definition at line 42 of file index.\+php.
+
+\mbox{\Hypertarget{doc_2index_8php_a1d555c22cda9d5e40ac4f0c35b5eafc4}\label{doc_2index_8php_a1d555c22cda9d5e40ac4f0c35b5eafc4}} 
+\index{doc/index.\+php@{doc/index.\+php}!if@{if}}
+\index{if@{if}!doc/index.\+php@{doc/index.\+php}}
+\subsubsection{\texorpdfstring{if}{if}}
+{\footnotesize\ttfamily if = array\+\_\+diff(\$docs, \mbox{[}\textquotesingle{}.\textquotesingle{}, \textquotesingle{}..\textquotesingle{}\mbox{]})}
+
+
+
+Definition at line 69 of file index.\+php.
+

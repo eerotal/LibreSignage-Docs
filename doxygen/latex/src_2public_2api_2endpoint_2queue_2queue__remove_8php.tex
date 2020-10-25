@@ -1,0 +1,41 @@
+\hypertarget{src_2public_2api_2endpoint_2queue_2queue__remove_8php}{}\section{src/public/api/endpoint/queue/queue\+\_\+remove.php File Reference}
+\label{src_2public_2api_2endpoint_2queue_2queue__remove_8php}\index{src/public/api/endpoint/queue/queue\+\_\+remove.\+php@{src/public/api/endpoint/queue/queue\+\_\+remove.\+php}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1queue}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}queue}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Remove a slide queue and all slides in it.
+
+The operation is allowed if the caller is in the \textquotesingle{}admin\textquotesingle{} group or if the caller is in the editor group and owns all the slides in the queue.
+
+\begin{DoxyParagraph}{H\+T\+TP Method}
+P\+O\+ST 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Authentication}
+By token 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Allowed groups}
+{\ttfamily admin$\vert$editor} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Rate limiting}
+This endpoint is rate limited.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Parameters}
+application/json
+\begin{DoxyItemize}
+\item {\ttfamily string} {\bfseries name} The name of the queue to remove. \mbox{[}{\itshape required}\mbox{]}
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Status}
+
+\begin{DoxyItemize}
+\item {\bfseries 200} On success.
+\item {\bfseries 401} If the user is not allowed to remove the queue.
+\item {\bfseries 400} If the request parameters are invalid.
+\item {\bfseries 404} If the requested queue doesn\textquotesingle{}t exist. 
+\end{DoxyItemize}
+\end{DoxyParagraph}

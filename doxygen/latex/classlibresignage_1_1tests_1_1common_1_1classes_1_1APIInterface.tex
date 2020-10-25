@@ -1,0 +1,344 @@
+\hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{}\section{libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}A\+P\+I\+Interface Class Reference}
+\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}\index{libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface@{libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_abed318dd391fefec1148901f0dd696f9}{\+\_\+\+\_\+construct} (string \$host, bool \$dump\+\_\+zombie\+\_\+info=T\+R\+UE)
+\item 
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a6b7ea59abeb97427bff353ee40845523}{report\+\_\+zombie\+\_\+sessions} ()
+\item 
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a4922d43f3978e809ea26fae489e88277}{call} (string \$method, string \$url, \$data, array \$headers=\mbox{[}$\,$\mbox{]}, bool \$use\+\_\+auth=F\+A\+L\+SE, callable \$fallback\+\_\+encoder=N\+U\+LL)
+\item 
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_ad2962eb1c1c57d2b7c4e76ef376dc595}{call\+\_\+return\+\_\+raw\+\_\+response} (string \$method, string \$url, \$data, array \$headers=\mbox{[}$\,$\mbox{]}, bool \$use\+\_\+auth=F\+A\+L\+SE, callable \$fallback\+\_\+encoder=N\+U\+LL)
+\item 
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_aaee5adad4f40c475eaa472b624dd1c25}{authenticate\+\_\+request} (Request \$req)
+\item 
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a0049321b0683529a56c098e368026376}{pop\+\_\+sessions\+\_\+of} (string \$user)
+\item 
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_aa7fa5c284db7062b8f8fcc016f92b302}{add\+\_\+session} (\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APISession}{A\+P\+I\+Session} \$session)
+\item 
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a30d3c3b05f1f1874a6051938a8630fa4}{pop\+\_\+session} (int \$count=1)
+\item 
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a8ab272b9afcb2f6835ef082464e61ec7}{get\+\_\+session} (int \$n=N\+U\+LL)
+\item 
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a4208eec9f6b0baf114732a4b0790de38}{login} (string \$user, string \$pass)
+\item 
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_acf56932b37c278f1f82c4e754926478c}{logout} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_ad37b605173dc47cb56ea75cf65ec1e18}{encode\+\_\+raw\+\_\+request} (string \$method, string \$url, \$data, array \$headers, \$fallback=N\+U\+LL)
+\item 
+static \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a7488fc7def8ea478483e3334b0906517}{decode\+\_\+raw\+\_\+response} (Response \$resp, callable \$fallback=N\+U\+LL)
+\item 
+static \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_ae27d5b503d177b503c4797ab4dd077a9}{assert\+\_\+success} (Response \$resp, string \$message=N\+U\+LL, callable \$cleanup=N\+U\+LL)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a52f812d808cc57bdadca2587a031ec55}{\$client} = N\+U\+LL
+\item 
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_aae17c145c9c4370e4ee2dfe18ba10972}{\$sessions} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file A\+P\+I\+Interface.\+php.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_abed318dd391fefec1148901f0dd696f9}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_abed318dd391fefec1148901f0dd696f9}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$host,  }\item[{bool}]{\$dump\+\_\+zombie\+\_\+info = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+Construct the \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface}{A\+P\+I\+Interface} object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$host} & The hostname to use for the Guzzle client. \\
+\hline
+bool & {\em \$dump\+\_\+zombie\+\_\+info} & Whether to dump information about zombie sessions when the script exits. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file A\+P\+I\+Interface.\+php.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_aa7fa5c284db7062b8f8fcc016f92b302}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_aa7fa5c284db7062b8f8fcc016f92b302}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!add\+\_\+session@{add\+\_\+session}}
+\index{add\+\_\+session@{add\+\_\+session}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{add\+\_\+session()}{add\_session()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::add\+\_\+session (\begin{DoxyParamCaption}\item[{\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APISession}{A\+P\+I\+Session}}]{\$session }\end{DoxyParamCaption})}
+
+Add an \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APISession}{A\+P\+I\+Session} object to the internal sessions array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APISession}{A\+P\+I\+Session} & {\em \$session} & The \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APISession}{A\+P\+I\+Session} object to add. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 283 of file A\+P\+I\+Interface.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_ae27d5b503d177b503c4797ab4dd077a9}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_ae27d5b503d177b503c4797ab4dd077a9}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!assert\+\_\+success@{assert\+\_\+success}}
+\index{assert\+\_\+success@{assert\+\_\+success}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{assert\+\_\+success()}{assert\_success()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::assert\+\_\+success (\begin{DoxyParamCaption}\item[{Response}]{\$resp,  }\item[{string}]{\$message = {\ttfamily NULL},  }\item[{callable}]{\$cleanup = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Assert that an A\+PI call succeeded.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Response & {\em \$resp} & The A\+PI response. \\
+\hline
+string & {\em \$message} & An optional message to print if the call failed. \\
+\hline
+callable & {\em \$cleanup} & An optional cleanup hook to run before throwing an exception. The exception object thrown is passed as the first argument.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response The original response object.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the call failed. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 239 of file A\+P\+I\+Interface.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_aaee5adad4f40c475eaa472b624dd1c25}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_aaee5adad4f40c475eaa472b624dd1c25}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!authenticate\+\_\+request@{authenticate\+\_\+request}}
+\index{authenticate\+\_\+request@{authenticate\+\_\+request}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{authenticate\+\_\+request()}{authenticate\_request()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::authenticate\+\_\+request (\begin{DoxyParamCaption}\item[{Request}]{\$req }\end{DoxyParamCaption})}
+
+Add the current authentication token to a Request. If the A\+PI is not authenticated, no action is taken.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request & {\em \$req} & The Request object to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Request The modified Request. 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file A\+P\+I\+Interface.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a4922d43f3978e809ea26fae489e88277}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a4922d43f3978e809ea26fae489e88277}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!call@{call}}
+\index{call@{call}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::call (\begin{DoxyParamCaption}\item[{string}]{\$method,  }\item[{string}]{\$url,  }\item[{}]{\$data,  }\item[{array}]{\$headers = {\ttfamily \mbox{[}\mbox{]}},  }\item[{bool}]{\$use\+\_\+auth = {\ttfamily FALSE},  }\item[{callable}]{\$fallback\+\_\+encoder = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+A wrapper for \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_ad2962eb1c1c57d2b7c4e76ef376dc595}{A\+P\+I\+Interface\+::call\+\_\+return\+\_\+raw\+\_\+response()} that decodes the response.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_ad2962eb1c1c57d2b7c4e76ef376dc595}{A\+P\+I\+Interface\+::call\+\_\+return\+\_\+raw\+\_\+response()} 
+\end{DoxySeeAlso}
+
+
+Definition at line 58 of file A\+P\+I\+Interface.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_ad2962eb1c1c57d2b7c4e76ef376dc595}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_ad2962eb1c1c57d2b7c4e76ef376dc595}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!call\+\_\+return\+\_\+raw\+\_\+response@{call\+\_\+return\+\_\+raw\+\_\+response}}
+\index{call\+\_\+return\+\_\+raw\+\_\+response@{call\+\_\+return\+\_\+raw\+\_\+response}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{call\+\_\+return\+\_\+raw\+\_\+response()}{call\_return\_raw\_response()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::call\+\_\+return\+\_\+raw\+\_\+response (\begin{DoxyParamCaption}\item[{string}]{\$method,  }\item[{string}]{\$url,  }\item[{}]{\$data,  }\item[{array}]{\$headers = {\ttfamily \mbox{[}\mbox{]}},  }\item[{bool}]{\$use\+\_\+auth = {\ttfamily FALSE},  }\item[{callable}]{\$fallback\+\_\+encoder = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 91 of file A\+P\+I\+Interface.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a7488fc7def8ea478483e3334b0906517}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a7488fc7def8ea478483e3334b0906517}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!decode\+\_\+raw\+\_\+response@{decode\+\_\+raw\+\_\+response}}
+\index{decode\+\_\+raw\+\_\+response@{decode\+\_\+raw\+\_\+response}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{decode\+\_\+raw\+\_\+response()}{decode\_raw\_response()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::decode\+\_\+raw\+\_\+response (\begin{DoxyParamCaption}\item[{Response}]{\$resp,  }\item[{callable}]{\$fallback = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Decode raw response data into a suitable datatype.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Response & {\em \$resp} & The Response object to use. \\
+\hline
+callable & {\em \$fallback} & A fallback decoder function to use for mimetypes other than application/json. The default is strval().\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterfaceException}{A\+P\+I\+Interface\+Exception}} & if the response is malformed J\+S\+ON.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+mixed The decoded response data. 
+\end{DoxyReturn}
+
+
+Definition at line 199 of file A\+P\+I\+Interface.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_ad37b605173dc47cb56ea75cf65ec1e18}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_ad37b605173dc47cb56ea75cf65ec1e18}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!encode\+\_\+raw\+\_\+request@{encode\+\_\+raw\+\_\+request}}
+\index{encode\+\_\+raw\+\_\+request@{encode\+\_\+raw\+\_\+request}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{encode\+\_\+raw\+\_\+request()}{encode\_raw\_request()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::encode\+\_\+raw\+\_\+request (\begin{DoxyParamCaption}\item[{string}]{\$method,  }\item[{string}]{\$url,  }\item[{}]{\$data,  }\item[{array}]{\$headers,  }\item[{}]{\$fallback = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Encode raw request data into a Request object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & The H\+T\+TP method to use. \\
+\hline
+string & {\em \$url} & The A\+PI endpoint U\+RL. \\
+\hline
+mized & {\em \$data} & The data to send to the endpoint. \\
+\hline
+array & {\em \$headers} & And associative array of headers. \\
+\hline
+callable & {\em \$fallback} & A fallback function to use for encoding for datatypes other than string, array, object, N\+U\+LL and Stream\+Interface. The default is strval().\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Request The created Request object. 
+\end{DoxyReturn}
+
+
+Definition at line 143 of file A\+P\+I\+Interface.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a8ab272b9afcb2f6835ef082464e61ec7}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a8ab272b9afcb2f6835ef082464e61ec7}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!get\+\_\+session@{get\+\_\+session}}
+\index{get\+\_\+session@{get\+\_\+session}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{get\+\_\+session()}{get\_session()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::get\+\_\+session (\begin{DoxyParamCaption}\item[{int}]{\$n = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Get a session by its index in \$this-\/$>$sessions. If \$n === N\+U\+LL, the last session is returned.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$n} & The index of the session to get. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 302 of file A\+P\+I\+Interface.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a4208eec9f6b0baf114732a4b0790de38}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a4208eec9f6b0baf114732a4b0790de38}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!login@{login}}
+\index{login@{login}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::login (\begin{DoxyParamCaption}\item[{string}]{\$user,  }\item[{string}]{\$pass }\end{DoxyParamCaption})}
+
+Log in to the A\+PI. This function always creates a permanent session.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$user} & The username to use. \\
+\hline
+string & {\em \$pass} & The password to use.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterfaceException}{A\+P\+I\+Interface\+Exception}} & if the login fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 314 of file A\+P\+I\+Interface.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_acf56932b37c278f1f82c4e754926478c}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_acf56932b37c278f1f82c4e754926478c}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!logout@{logout}}
+\index{logout@{logout}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::logout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Log out from the A\+PI. 
+
+Definition at line 345 of file A\+P\+I\+Interface.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a30d3c3b05f1f1874a6051938a8630fa4}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a30d3c3b05f1f1874a6051938a8630fa4}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!pop\+\_\+session@{pop\+\_\+session}}
+\index{pop\+\_\+session@{pop\+\_\+session}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{pop\+\_\+session()}{pop\_session()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::pop\+\_\+session (\begin{DoxyParamCaption}\item[{int}]{\$count = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Pop sessions from the internal sessions array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$count} & The number of sessions to pop. Default = 1. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 292 of file A\+P\+I\+Interface.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a0049321b0683529a56c098e368026376}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a0049321b0683529a56c098e368026376}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!pop\+\_\+sessions\+\_\+of@{pop\+\_\+sessions\+\_\+of}}
+\index{pop\+\_\+sessions\+\_\+of@{pop\+\_\+sessions\+\_\+of}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{pop\+\_\+sessions\+\_\+of()}{pop\_sessions\_of()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::pop\+\_\+sessions\+\_\+of (\begin{DoxyParamCaption}\item[{string}]{\$user }\end{DoxyParamCaption})}
+
+Pop all sessions of a user from the internal sessions array. You should use this function after manually calling auth\+\_\+logout\+\_\+other.\+php.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$user} & The username to match. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 269 of file A\+P\+I\+Interface.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a6b7ea59abeb97427bff353ee40845523}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a6b7ea59abeb97427bff353ee40845523}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!report\+\_\+zombie\+\_\+sessions@{report\+\_\+zombie\+\_\+sessions}}
+\index{report\+\_\+zombie\+\_\+sessions@{report\+\_\+zombie\+\_\+sessions}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{report\+\_\+zombie\+\_\+sessions()}{report\_zombie\_sessions()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::report\+\_\+zombie\+\_\+sessions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Dump a summary of all zombie sessions. 
+
+Definition at line 43 of file A\+P\+I\+Interface.\+php.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a52f812d808cc57bdadca2587a031ec55}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_a52f812d808cc57bdadca2587a031ec55}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!\$client@{\$client}}
+\index{\$client@{\$client}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{\$client}{$client}}
+{\footnotesize\ttfamily libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::\$client = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 19 of file A\+P\+I\+Interface.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_aae17c145c9c4370e4ee2dfe18ba10972}\label{classlibresignage_1_1tests_1_1common_1_1classes_1_1APIInterface_aae17c145c9c4370e4ee2dfe18ba10972}} 
+\index{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}!\$sessions@{\$sessions}}
+\index{\$sessions@{\$sessions}!libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface@{libresignage\+::tests\+::common\+::classes\+::\+A\+P\+I\+Interface}}
+\subsubsection{\texorpdfstring{\$sessions}{$sessions}}
+{\footnotesize\ttfamily libresignage\textbackslash{}tests\textbackslash{}common\textbackslash{}classes\textbackslash{}\+A\+P\+I\+Interface\+::\$sessions = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 20 of file A\+P\+I\+Interface.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/common/classes/\hyperlink{APIInterface_8php}{A\+P\+I\+Interface.\+php}\end{DoxyCompactItemize}

@@ -1,0 +1,127 @@
+\hypertarget{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex}{}\section{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}exportable\textbackslash{}migration\textbackslash{}Migration\+Index Class Reference}
+\label{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex}\index{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}exportable\textbackslash{}migration\textbackslash{}\+Migration\+Index@{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}exportable\textbackslash{}migration\textbackslash{}\+Migration\+Index}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_a69281bc35f46a64f826e78654be01621}{\+\_\+\+\_\+construct} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_a6c98a176d3de5a895ba2fbd3fa0ff28d}{load} (string \$file)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_aef2dee1cea61f7371ba5610d6465e93f}{get} (string \$class, string \$version)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_afe20683824d726b46868c6d0e254891a}{write} (string \$file, string \$dir)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_acd0b16e4362f32fb782a3c202969e38f}{sort\+\_\+index} (array \&\$index)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class representing a migration class index. 
+
+Definition at line 12 of file Migration\+Index.\+php.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_a69281bc35f46a64f826e78654be01621}\label{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_a69281bc35f46a64f826e78654be01621}} 
+\index{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index@{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index@{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}exportable\textbackslash{}migration\textbackslash{}\+Migration\+Index\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Construct a new \hyperlink{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex}{Migration\+Index}. 
+
+Definition at line 16 of file Migration\+Index.\+php.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_aef2dee1cea61f7371ba5610d6465e93f}\label{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_aef2dee1cea61f7371ba5610d6465e93f}} 
+\index{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index@{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index}!get@{get}}
+\index{get@{get}!libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index@{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}exportable\textbackslash{}migration\textbackslash{}\+Migration\+Index\+::get (\begin{DoxyParamCaption}\item[{string}]{\$class,  }\item[{string}]{\$version }\end{DoxyParamCaption})}
+
+Get a migration index entry for a data version for a class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & The origin classname. \\
+\hline
+string & {\em \$from} & The origin version.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Migration\+Index\+Entry$\vert$\+N\+U\+LL The corresponding entry or N\+U\+LL if not found. 
+\end{DoxyReturn}
+
+
+Definition at line 90 of file Migration\+Index.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_a6c98a176d3de5a895ba2fbd3fa0ff28d}\label{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_a6c98a176d3de5a895ba2fbd3fa0ff28d}} 
+\index{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index@{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index}!load@{load}}
+\index{load@{load}!libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index@{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}exportable\textbackslash{}migration\textbackslash{}\+Migration\+Index\+::load (\begin{DoxyParamCaption}\item[{string}]{\$file }\end{DoxyParamCaption})}
+
+Load the migration index from file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & The filepath of the index file.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Migration\+Exception} & If the index file doesn\textquotesingle{}t exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 27 of file Migration\+Index.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_acd0b16e4362f32fb782a3c202969e38f}\label{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_acd0b16e4362f32fb782a3c202969e38f}} 
+\index{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index@{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index}!sort\+\_\+index@{sort\+\_\+index}}
+\index{sort\+\_\+index@{sort\+\_\+index}!libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index@{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index}}
+\subsubsection{\texorpdfstring{sort\+\_\+index()}{sort\_index()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}exportable\textbackslash{}migration\textbackslash{}\+Migration\+Index\+::sort\+\_\+index (\begin{DoxyParamCaption}\item[{array \&}]{\$index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sort a migration index by the keys, ie. version numbers.
+
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE on success or F\+A\+L\+SE on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file Migration\+Index.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_afe20683824d726b46868c6d0e254891a}\label{classlibresignage_1_1common_1_1php_1_1exportable_1_1migration_1_1MigrationIndex_afe20683824d726b46868c6d0e254891a}} 
+\index{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index@{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index}!write@{write}}
+\index{write@{write}!libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index@{libresignage\+::common\+::php\+::exportable\+::migration\+::\+Migration\+Index}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}exportable\textbackslash{}migration\textbackslash{}\+Migration\+Index\+::write (\begin{DoxyParamCaption}\item[{string}]{\$file,  }\item[{string}]{\$dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Write a new migration index file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$file} & The filepath where the index is written. \\
+\hline
+string & {\em \$dir} & The directory path that\textquotesingle{}s scanned for migration definitions.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The number of migration definition classes exported. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Migration\+Index.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/common/php/exportable/migration/\hyperlink{MigrationIndex_8php}{Migration\+Index.\+php}\end{DoxyCompactItemize}

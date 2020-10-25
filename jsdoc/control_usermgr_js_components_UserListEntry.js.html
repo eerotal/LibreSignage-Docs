@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: control/usermgr/js/components/UserListEntry.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: control/usermgr/js/components/UserListEntry.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var MultiSelect = require('libresignage/ui/components/MultiSelect');
+var StrValidator = require('libresignage/ui/validator/StrValidator');
+var DropConfirm = require('libresignage/ui/components/DropConfirm');
+var BaseComponent = require('libresignage/ui/components/BaseComponent');
+
+/**
+* UserListEntry component for UserList.
+*/
+class UserListEntry extends BaseComponent {
+	/**
+	* Construct a new UserListEntry object.
+	*
+	* @param {APIInterface} api       An APIInterface object.
+	* @param {User}         user      The User object to use for the entry.
+	* @param {HTMLElement}  container The container element of the entry.
+	*/
+	constructor(api, user, container) {
+		super();
+
+		this.api = api;
+		this.user = user;
+		this.container = container;
+		this.entry_node = null;
+
+		this.init_state({
+			'remove_pending': false,
+			'save_pending': false
+		});
+	}
+
+	/**
+	* Make the DOM node for a UserListEntry.
+	*
+	* @param {string} name     The name of the user.
+	* @param {string} password The password of the user (if known).
+	*/
+	static make_entry_node(name, password) {
+		let div = document.createElement('DIV');
+		div.id = `user-list-entry-${name}`;
+		div.class = 'card';
+
+		div.innerHTML = `
+			&lt;div
+				class="card-header"
+				id="heading-${name}">
+				&lt;a class="link-nostyle"
+					data-toggle="collapse"
+					href="#collapse-${name}"
+					aria-expanded="true"
+					aria-controls="collapse-${name}">
+					&lt;i class="fas fa-caret-down">&lt;/i>&amp;nbsp;${name}
+				&lt;/a>
+			&lt;/div>
+			&lt;div
+				class="collapse"
+				id="collapse-${name}"
+				aria-labelledby="heading-${name}"
+				data-parent="#users-table">
+				&lt;div class="card-body">
+					&lt;table class="input-container">
+						&lt;tr>
+							&lt;td>
+								&lt;label
+									for="${name}-name">
+									Username
+								&lt;/label>
+							&lt;/td>
+							&lt;td>
+								&lt;input
+									type="input"
+									id="${name}-name"
+									class="form-control"
+									value="${name}"
+									disabled>
+								&lt;/input>
+							&lt;/td>
+						&lt;/tr>
+						&lt;tr>
+							&lt;td>
+								&lt;label
+									for="${name}-password">
+									Password
+								&lt;/label>
+							&lt;/td>
+							&lt;td>
+								&lt;input
+									type="input"
+									id="${name}-password"
+									class="form-control"
+									value="${password}"
+									disabled>
+								&lt;/input>
+							&lt;/td>
+						&lt;/tr>
+						&lt;tr>
+							&lt;td>
+								&lt;label
+									for="${name}-groups">
+									Groups
+								&lt;/label>
+							&lt;/td>
+							&lt;td>
+								&lt;div id="${name}-groups-group">&lt;/div>
+							&lt;/td>
+						&lt;/tr>
+						&lt;tr>
+						&lt;/tr>
+					&lt;/table>
+					&lt;div class="btn-container">
+						&lt;button
+							id="btn-user-save-${name}"
+							class="btn-user-save btn btn-success">
+							&lt;i class="fas fa-save">&lt;/i>
+						&lt;/button>
+						&lt;div id="btn-user-remove-${name}"
+							class="btn-user-remove">
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+		`;
+
+		return div;
+	}
+
+	/**
+	* Render a UserListEntry.
+	*/
+	render() {
+		let name = this.user.get_user();
+		let pass_show = "";
+
+		if (this.user.get_password() != null) {
+			pass_show = this.user.get_password();
+		} else if (this.user.is_passwordless()) {
+			pass_show = "(No password)";
+		} else {
+			pass_show = "**********";
+		}
+
+		// Create the DOM element for the entry.
+		this.entry_node = UserListEntry.make_entry_node(name, pass_show);
+		this.container.appendChild(this.entry_node);
+
+		// Initialize the groups MultiSelect.
+		this.groups = new MultiSelect(
+			`${name}-groups-group`,
+			`${name}-groups`,
+			[
+				new StrValidator(
+					{
+						min: 1,
+						max: null,
+						regex: null
+					}, '', true
+				),
+				new StrValidator(
+					{
+						min: null,
+						max: this.api.limits.MAX_USER_GROUP_LEN,
+						regex: null
+					}, 'The group name is too long.'
+				),
+				new StrValidator(
+					{
+						min: null,
+						max: null,
+						regex: /^[A-Za-z0-9_]*$/
+					}, 'The group name contains invalid characters.'
+				)
+			],
+			{
+				nodups: true,
+				maxopts: this.api.limits.MAX_USER_GROUPS
+			}
+		)
+		this.groups.set(this.user.get_groups());
+
+		// Initialize the remove button DropConfirm.
+		this.remove = new DropConfirm(
+			document.querySelector(`#btn-user-remove-${name}`)
+		);
+		this.remove.set_button_html('&lt;i class="fas fa-trash-alt">&lt;/i>');
+		this.remove.set_content_html('Remove user?');
+
+		// Initialize the remove DropConfirm event handling.
+		document.querySelector(`#btn-user-remove-${name}`).addEventListener(
+			'component.dropconfirm.confirm',
+			() => {
+				this.state('remove_pending', true);
+				this.entry_node.dispatchEvent(
+					new Event('component.userlistentry.remove')
+				);
+			}
+		);
+
+		// Initialize the save button event handling.
+		document.querySelector(`#btn-user-save-${name}`).addEventListener(
+			'click',
+			() => {
+				this.state('save_pending', true);
+				this.entry_node.dispatchEvent(
+					new Event('component.userlistentry.save')
+				);
+			}
+		);
+	}
+
+	/**
+	* Get the User object of a UserListEntry.
+	*
+	* @return {User} A User object.
+	*/
+	get_user() {
+		return this.user;
+	}
+
+	/**
+	* Get new User groups as an array.
+	*
+	* @param {string[]} New User groups for a User.
+	*/
+	get_new_groups() {
+		return this.groups.get_selected();
+	}
+
+	/**
+	* Get the root DOM element of a UserListEntry.
+	*
+	* @return {HTMLElement} The root HTMLElement.
+	*/
+	get_element() {
+		return document.querySelector(
+			`#user-list-entry-${this.user.get_user()}`
+		);
+	}
+}
+module.exports = UserListEntry;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-libresignage_api.html">libresignage/api</a></li><li><a href="module-libresignage_misc.html">libresignage/misc</a></li><li><a href="module-libresignage_queue.html">libresignage/queue</a></li><li><a href="module-libresignage_slide.html">libresignage/slide</a></li><li><a href="module-libresignage_ui_components.html">libresignage/ui/components</a></li><li><a href="module-libresignage_ui_components_Dialog.html">libresignage/ui/components/Dialog</a></li><li><a href="module-libresignage_ui_controller.html">libresignage/ui/controller</a></li><li><a href="module-libresignage_ui_validator.html">libresignage/ui/validator</a></li><li><a href="module-libresignage_user.html">libresignage/user</a></li><li><a href="module-libresignage_util.html">libresignage/util</a></li></ul><h3>Namespaces</h3><ul><li><a href="module-libresignage_api.APIEndpoints.html">APIEndpoints</a></li><li><a href="module-libresignage_api.HTTPStatus.html">HTTPStatus</a></li><li><a href="module-libresignage_slide.Animations.html">Animations</a></li></ul><h3>Classes</h3><ul><li><a href="APIInterface.html">APIInterface</a></li><li><a href="AssetList.html">AssetList</a></li><li><a href="AssetUploader.html">AssetUploader</a></li><li><a href="AssetUploaderController.html">AssetUploaderController</a></li><li><a href="ControlPanelController.html">ControlPanelController</a></li><li><a href="ControlPanelView.html">ControlPanelView</a></li><li><a href="DisplayController.html">DisplayController</a></li><li><a href="DisplayView.html">DisplayView</a></li><li><a href="EditorController.html">EditorController</a></li><li><a href="LoginController.html">LoginController</a></li><li><a href="LoginView.html">LoginView</a></li><li><a href="LogoutController.html">LogoutController</a></li><li><a href="LogoutView.html">LogoutView</a></li><li><a href="module-libresignage_api.APIError.html">APIError</a></li><li><a href="module-libresignage_api.APISession.html">APISession</a></li><li><a href="module-libresignage_misc.Shortcut.html">Shortcut</a></li><li><a href="module-libresignage_misc.ShortcutController.html">ShortcutController</a></li><li><a href="module-libresignage_misc.Timeout.html">Timeout</a></li><li><a href="module-libresignage_queue.Queue.html">Queue</a></li><li><a href="module-libresignage_queue.SlideList.html">SlideList</a></li><li><a href="module-libresignage_queue.SlideListIterator.html">SlideListIterator</a></li><li><a href="module-libresignage_slide.Slide.html">Slide</a></li><li><a href="module-libresignage_ui_components.BaseComponent.html">BaseComponent</a></li><li><a href="module-libresignage_ui_components.DropConfirm.html">DropConfirm</a></li><li><a href="module-libresignage_ui_components.DropSelect.html">DropSelect</a></li><li><a href="module-libresignage_ui_components.MultiSelect.html">MultiSelect</a></li><li><a href="module-libresignage_ui_components.Popup.html">Popup</a></li><li><a href="module-libresignage_ui_components_Dialog.AlertDialog.html">AlertDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.APIErrorDialog.html">APIErrorDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.BaseDialog.html">BaseDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.ConfirmDialog.html">ConfirmDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.PromptDialog.html">PromptDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.SelectDialog.html">SelectDialog</a></li><li><a href="module-libresignage_ui_controller.UIButton.html">UIButton</a></li><li><a href="module-libresignage_ui_controller.UIElem.html">UIElem</a></li><li><a href="module-libresignage_ui_controller.UIInput.html">UIInput</a></li><li><a href="module-libresignage_ui_controller.UIStatic.html">UIStatic</a></li><li><a href="module-libresignage_ui_validator.BaseValidator.html">BaseValidator</a></li><li><a href="module-libresignage_ui_validator.BlacklistValidator.html">BlacklistValidator</a></li><li><a href="module-libresignage_ui_validator.EqValidator.html">EqValidator</a></li><li><a href="module-libresignage_ui_validator.FileSelectorValidator.html">FileSelectorValidator</a></li><li><a href="module-libresignage_ui_validator.NumValidator.html">NumValidator</a></li><li><a href="module-libresignage_ui_validator.StrValidator.html">StrValidator</a></li><li><a href="module-libresignage_ui_validator.ValidatorController.html">ValidatorController</a></li><li><a href="module-libresignage_ui_validator.ValidatorSelector.html">ValidatorSelector</a></li><li><a href="module-libresignage_ui_validator.ValidatorTrigger.html">ValidatorTrigger</a></li><li><a href="module-libresignage_ui_validator.WhitelistValidator.html">WhitelistValidator</a></li><li><a href="module-libresignage_user.Quota.html">Quota</a></li><li><a href="module-libresignage_user.User.html">User</a></li><li><a href="module-libresignage_util.Cookie.html">Cookie</a></li><li><a href="module-libresignage_util.UIUtil.html">UIUtil</a></li><li><a href="module-libresignage_util.Util.html">Util</a></li><li><a href="Preview.html">Preview</a></li><li><a href="QueueSelector.html">QueueSelector</a></li><li><a href="SessionList.html">SessionList</a></li><li><a href="SlideAsset.html">SlideAsset</a></li><li><a href="Timeline.html">Timeline</a></li><li><a href="UIController.html">UIController</a></li><li><a href="UserController.html">UserController</a></li><li><a href="UserList.html">UserList</a></li><li><a href="UserListEntry.html">UserListEntry</a></li><li><a href="UserManagerController.html">UserManagerController</a></li><li><a href="UserManagerView.html">UserManagerView</a></li><li><a href="UserValidators.html">UserValidators</a></li><li><a href="UserView.html">UserView</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun Oct 25 2020 10:27:27 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

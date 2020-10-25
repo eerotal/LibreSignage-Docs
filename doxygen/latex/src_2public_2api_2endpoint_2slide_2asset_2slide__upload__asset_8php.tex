@@ -1,0 +1,81 @@
+\hypertarget{src_2public_2api_2endpoint_2slide_2asset_2slide__upload__asset_8php}{}\section{src/public/api/endpoint/slide/asset/slide\+\_\+upload\+\_\+asset.php File Reference}
+\label{src_2public_2api_2endpoint_2slide_2asset_2slide__upload__asset_8php}\index{src/public/api/endpoint/slide/asset/slide\+\_\+upload\+\_\+asset.\+php@{src/public/api/endpoint/slide/asset/slide\+\_\+upload\+\_\+asset.\+php}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1slide_1_1asset}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}slide\textbackslash{}asset}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1slide_1_1asset_afc32bfc0e78ad6a761685aff9d0f1809}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}slide\textbackslash{}asset\+::\+U\+P\+L\+O\+A\+D\+\_\+\+E\+R\+R\+\_\+\+E\+X\+I\+S\+TS} = -\/1
+\item 
+const \hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1slide_1_1asset_a0d1e56bfad2c1a2132a4f3e23050983b}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}slide\textbackslash{}asset\+::\+U\+P\+L\+O\+A\+D\+\_\+\+E\+R\+R\+\_\+\+I\+N\+T\+E\+R\+N\+AL} = -\/2
+\item 
+const \hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1slide_1_1asset_a347dbb92e7094848d6b67477471431f9}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}slide\textbackslash{}asset\+::\+U\+P\+L\+O\+A\+D\+\_\+\+E\+R\+R\+\_\+\+B\+A\+D\+\_\+\+R\+E\+Q\+U\+E\+ST} = -\/3
+\item 
+const \hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1slide_1_1asset_a11462e6b8d458961fbfde1d8c1bf0b8c}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}slide\textbackslash{}asset\+::\+U\+P\+L\+O\+A\+D\+\_\+\+E\+R\+R\+\_\+\+B\+A\+D\+\_\+\+F\+I\+L\+E\+T\+Y\+PE} = -\/4
+\item 
+const \hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1slide_1_1asset_ac3f206ae3a66f2d8b53038412b62108c}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}slide\textbackslash{}asset\+::\+U\+P\+L\+O\+A\+D\+\_\+\+E\+R\+R\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+A\+S\+S\+E\+TS} = -\/5
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Upload a slide asset.
+
+If debugging is enabled, the {\ttfamily upload\+\_\+errors} field of the returned data contains an error code for all failed uploads. Positive integers indicate P\+HP upload errors and negative integers are Libre\+Signage specific errors. Below is a list of the negative error codes.
+
+
+\begin{DoxyItemize}
+\item -\/1 = {\ttfamily move\+\_\+uploaded\+\_\+file()} failed.
+\item -\/2 = Asset filename invalid.
+\item -\/3 = Invalid asset file type.
+\item -\/4 = Asset already exists.
+\item -\/5 = Too many slide assets.
+\end{DoxyItemize}
+
+\href{http://php.net/manual/en/features.file-upload.errors.php}{\tt You can find the P\+HP errors here.}
+
+This A\+PI endpoint only accepts asset filenames that have a length less than or equal to the server limit {\ttfamily S\+L\+I\+D\+E\+\_\+\+A\+S\+S\+E\+T\+\_\+\+N\+A\+M\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN}. The asset names may only contain the characters A-\/Z, a-\/z, 0-\/9, ., \+\_\+ and -\/. The accepted filetypes are defined in the server limit {\ttfamily S\+L\+I\+D\+E\+\_\+\+A\+S\+S\+E\+T\+\_\+\+V\+A\+L\+I\+D\+\_\+\+M\+I\+M\+ES}.
+
+\begin{DoxyParagraph}{H\+T\+TP Method}
+P\+O\+ST 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Authentication}
+By token 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Allowed groups}
+{\ttfamily admin$\vert$editor} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Rate limiting}
+This endpoint is rate limited.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Parameters}
+multipart/form-\/data
+\begin{DoxyItemize}
+\item {\ttfamily file} {\bfseries 0...n} The file(s) to upload. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily string} {\bfseries body} The J\+S\+ON encoded request body. See below. \mbox{[}{\itshape required}\mbox{]}
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{J\+S\+ON body}
+application/json
+\begin{DoxyItemize}
+\item {\ttfamily string} {\bfseries id} The ID of the slide. \mbox{[}{\itshape required}\mbox{]}
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Response}
+application/json
+\begin{DoxyItemize}
+\item {\ttfamily int} {\bfseries failed} The number of failed uploads.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Status}
+
+\begin{DoxyItemize}
+\item {\bfseries 200} On success.
+\item {\bfseries 401} If the caller is not allowed to upload assets to the slide.
+\item {\bfseries 404} If the slide doesn\textquotesingle{}t exist.
+\item {\bfseries 424} If the slide is not locked.
+\item {\bfseries 424} If the slide is locked by another session 
+\end{DoxyItemize}
+\end{DoxyParagraph}

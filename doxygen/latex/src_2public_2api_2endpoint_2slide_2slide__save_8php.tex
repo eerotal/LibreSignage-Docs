@@ -1,0 +1,90 @@
+\hypertarget{src_2public_2api_2endpoint_2slide_2slide__save_8php}{}\section{src/public/api/endpoint/slide/slide\+\_\+save.php File Reference}
+\label{src_2public_2api_2endpoint_2slide_2slide__save_8php}\index{src/public/api/endpoint/slide/slide\+\_\+save.\+php@{src/public/api/endpoint/slide/slide\+\_\+save.\+php}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1slide}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}slide}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1slide_acd9b331303687c167e2101971e0a1968}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}slide\+::set\+\_\+slide\+\_\+data} (Slide \$slide, \$data, bool \$owner)
+\item 
+\hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1slide_a77dd0fedf73d886c2c4c08f72fbe1715}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}slide\+::create\+\_\+slide} (User \$caller, Session \$session, Slide \$slide, \$data)
+\item 
+\hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1slide_a0083bc7dc1513e4a25549e74cca6521d}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}slide\+::modify\+\_\+slide} (Session \$session, Slide \$slide, \$data, bool \$owner)
+\item 
+\hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1slide_a720121a1a9d64869e0980f74c6740766}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}slide\+::finish} (Slide \$slide)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Save a slide. Whether a user is allowed to access this A\+PI endpoint depends on the parameters passed to the endpoint.
+
+Permissions
+\begin{DoxyItemize}
+\item {\ttfamily id} != null
+\begin{DoxyItemize}
+\item Allow if the caller is in the admin group or the caller is the owner of the slide and is in the editor group.
+\item Otherwise allow restricted access if the caller is in the collaborators array of the slide. In this case the queue\+\_\+name and collaborators parameters of the A\+PI call are silently discarded.
+\end{DoxyItemize}
+\item {\ttfamily id} == null
+\begin{DoxyItemize}
+\item Allow if the caller is in the admin or editor groups.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+This endpoint only allows slide modification if the caller has locked the slide by calling {\ttfamily slide\+\_\+lock\+\_\+acquire.\+php} first. If the slide is not locked or is locked by someone else, the \textquotesingle{}424 Failed Dependency\textquotesingle{} status code is returned. If a new slide is created, the slide is automatically locked for the caller.
+
+\begin{DoxyParagraph}{Note!}
+This endpoint accepts a few unused parameters to simplify implementing the client interface for this endpoint. Specifically, clients {\itshape must} be able to send all data received from {\ttfamily slide\+\_\+get.\+php} back to this endpoint, even if it\textquotesingle{}s not actually used. This makes it possible to implement a simple Object Oriented interface that just sends all data fields in the client side Slide object to this endpoint without filtering what can be sent.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{H\+T\+TP Method}
+P\+O\+ST 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Authentication}
+By token 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Allowed groups}
+{\ttfamily admin$\vert$editor} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Rate limiting}
+This endpoint is rate limited.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Parameters}
+application/json
+\begin{DoxyItemize}
+\item {\ttfamily string} {\bfseries id} The ID of the slide to modify or N\+U\+LL for new. \mbox{[}{\itshape optional}\mbox{]}
+\item {\ttfamily string} {\bfseries name} The new name of the slide. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily int} {\bfseries index} The new 0-\/based index of the slide. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily int} {\bfseries duration} The new slide duration in seconds. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily string} {\bfseries markup} The new markup of the slide. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily bool} {\bfseries enabled} Whether the slide is enabled or not. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily bool} {\bfseries sched} Whether scheduling is enabled or not. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily int} {\bfseries sched\+\_\+t\+\_\+s} The start unix timestamp of scheduling. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily int} {\bfseries sched\+\_\+t\+\_\+e} The end unix timestamp of scheduling. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily int} {\bfseries animation} The new ID of the slide transition animation. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily string} {\bfseries queue\+\_\+name} The new queue name of the slide. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily array} {\bfseries collaborators} An array of collaborator usernames. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily mixed} {\bfseries owner} Unused. \mbox{[}{\itshape optional}\mbox{]}
+\item {\ttfamily mixed} {\bfseries lock} Unused. \mbox{[}{\itshape optional}\mbox{]}
+\item {\ttfamily mixed} {\bfseries assets} Unused. \mbox{[}{\itshape optional}\mbox{]}
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Response}
+application/json
+\begin{DoxyItemize}
+\item {\ttfamily Slide} {\bfseries slide} The saved slide object.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Status}
+
+\begin{DoxyItemize}
+\item {\bfseries 200} On success.
+\item {\bfseries 400} If the request parameters are invalid.
+\item {\bfseries 401} If the caller is not allowed to modify or create a slide.
+\item {\bfseries 403} If the slide quota was reached.
+\item {\bfseries 404} If the id parameter is defined and no such slide exists.
+\item {\bfseries 424} If the slide corresponding to id is not locked. 
+\end{DoxyItemize}
+\end{DoxyParagraph}

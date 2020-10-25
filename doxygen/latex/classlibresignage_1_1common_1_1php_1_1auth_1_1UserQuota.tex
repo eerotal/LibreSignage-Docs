@@ -1,0 +1,332 @@
+\hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota}{}\section{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}User\+Quota Class Reference}
+\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota}\index{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota@{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota}}
+
+
+Inheritance diagram for libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}User\+Quota\+:
+% FIG 0
+
+
+Collaboration diagram for libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}User\+Quota\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_ab5bcb5536493282f478610e42e3b5962}{\+\_\+\+\_\+construct} (array \$limits=N\+U\+LL)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a0d95ddbaa8afffd95ebb58342f250ef0}{\+\_\+\+\_\+exportable\+\_\+set} (string \$name, \$value)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a394f430d75d902acaf70f7150833fdf9}{\+\_\+\+\_\+exportable\+\_\+get} (string \$name)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a08275d00c5190a2c95917c0c7df12bbe}{\+\_\+\+\_\+exportable\+\_\+write} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a98f246213ad32fa5ca902f630ae24f43}{has\+\_\+quota} (string \$key, int \$amount=1)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a4430e4c5ab28cc6c7e04d7c8f54b3868}{use\+\_\+quota} (string \$key, int \$amount=1)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a9a8ea1c65e5effba6989c5e58c0d77a5}{set\+\_\+used} (string \$key, int \$used)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a38f394bc87fd5163519e3477f9d05d78}{free\+\_\+quota} (string \$key, int \$amount=1)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a26ffb607251b12621337212939f6c82c}{has\+\_\+state} (string \$key)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a6e7e8aa1e60e87c3f54bede17b77808c}{set\+\_\+state} (string \$key, \$value)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_aadba4ee57bd0e8d07df9e0352f5c59c4}{get\+\_\+state} (string \$key)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a8e3b03eb87d39c9064953d128985f157}{get\+\_\+description} (string \$key)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a29c6a821577a73acb335e7dad401494d}{get\+\_\+limit} (string \$key)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_aec342e48a63daa2d4c60e6fd89a987ec}{get\+\_\+used} (string \$key, int \$amount)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a6c19112d42ad2a383cceed1e48b015b3}{\+\_\+\+\_\+exportable\+\_\+private} ()
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a9a72cda3548e2dd6af3e4fdf2b143f05}{\+\_\+\+\_\+exportable\+\_\+public} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a589023237166f30a20525b3123908570}{\$limits} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_aff940a2bb6411ad5eda9628a50458daf}{\$used} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_ab725193e53a4d5f221820584bff856e3}{\$state} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for handling user quotas. 
+
+Definition at line 14 of file User\+Quota.\+php.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_ab5bcb5536493282f478610e42e3b5962}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_ab5bcb5536493282f478610e42e3b5962}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$limits = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file User\+Quota.\+php.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a394f430d75d902acaf70f7150833fdf9}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a394f430d75d902acaf70f7150833fdf9}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!\+\_\+\+\_\+exportable\+\_\+get@{\+\_\+\+\_\+exportable\+\_\+get}}
+\index{\+\_\+\+\_\+exportable\+\_\+get@{\+\_\+\+\_\+exportable\+\_\+get}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+get()}{\_\_exportable\_get()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::\+\_\+\+\_\+exportable\+\_\+get (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a6c19112d42ad2a383cceed1e48b015b3}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a6c19112d42ad2a383cceed1e48b015b3}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!\+\_\+\+\_\+exportable\+\_\+private@{\+\_\+\+\_\+exportable\+\_\+private}}
+\index{\+\_\+\+\_\+exportable\+\_\+private@{\+\_\+\+\_\+exportable\+\_\+private}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+private()}{\_\_exportable\_private()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::\+\_\+\+\_\+exportable\+\_\+private (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 35 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a9a72cda3548e2dd6af3e4fdf2b143f05}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a9a72cda3548e2dd6af3e4fdf2b143f05}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!\+\_\+\+\_\+exportable\+\_\+public@{\+\_\+\+\_\+exportable\+\_\+public}}
+\index{\+\_\+\+\_\+exportable\+\_\+public@{\+\_\+\+\_\+exportable\+\_\+public}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+public()}{\_\_exportable\_public()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::\+\_\+\+\_\+exportable\+\_\+public (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 39 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a0d95ddbaa8afffd95ebb58342f250ef0}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a0d95ddbaa8afffd95ebb58342f250ef0}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!\+\_\+\+\_\+exportable\+\_\+set@{\+\_\+\+\_\+exportable\+\_\+set}}
+\index{\+\_\+\+\_\+exportable\+\_\+set@{\+\_\+\+\_\+exportable\+\_\+set}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+set()}{\_\_exportable\_set()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::\+\_\+\+\_\+exportable\+\_\+set (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a08275d00c5190a2c95917c0c7df12bbe}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a08275d00c5190a2c95917c0c7df12bbe}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!\+\_\+\+\_\+exportable\+\_\+write@{\+\_\+\+\_\+exportable\+\_\+write}}
+\index{\+\_\+\+\_\+exportable\+\_\+write@{\+\_\+\+\_\+exportable\+\_\+write}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+write()}{\_\_exportable\_write()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::\+\_\+\+\_\+exportable\+\_\+write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a38f394bc87fd5163519e3477f9d05d78}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a38f394bc87fd5163519e3477f9d05d78}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!free\+\_\+quota@{free\+\_\+quota}}
+\index{free\+\_\+quota@{free\+\_\+quota}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{free\+\_\+quota()}{free\_quota()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::free\+\_\+quota (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{int}]{\$amount = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Free quota from \$key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The key to use. \\
+\hline
+int & {\em \$amount} & (default\+: 1) The amount of quota to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a8e3b03eb87d39c9064953d128985f157}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a8e3b03eb87d39c9064953d128985f157}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!get\+\_\+description@{get\+\_\+description}}
+\index{get\+\_\+description@{get\+\_\+description}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{get\+\_\+description()}{get\_description()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::get\+\_\+description (\begin{DoxyParamCaption}\item[{string}]{\$key }\end{DoxyParamCaption})}
+
+
+
+Definition at line 117 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a29c6a821577a73acb335e7dad401494d}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a29c6a821577a73acb335e7dad401494d}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!get\+\_\+limit@{get\+\_\+limit}}
+\index{get\+\_\+limit@{get\+\_\+limit}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{get\+\_\+limit()}{get\_limit()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::get\+\_\+limit (\begin{DoxyParamCaption}\item[{string}]{\$key }\end{DoxyParamCaption})}
+
+
+
+Definition at line 121 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_aadba4ee57bd0e8d07df9e0352f5c59c4}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_aadba4ee57bd0e8d07df9e0352f5c59c4}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!get\+\_\+state@{get\+\_\+state}}
+\index{get\+\_\+state@{get\+\_\+state}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{get\+\_\+state()}{get\_state()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::get\+\_\+state (\begin{DoxyParamCaption}\item[{string}]{\$key }\end{DoxyParamCaption})}
+
+
+
+Definition at line 113 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_aec342e48a63daa2d4c60e6fd89a987ec}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_aec342e48a63daa2d4c60e6fd89a987ec}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!get\+\_\+used@{get\+\_\+used}}
+\index{get\+\_\+used@{get\+\_\+used}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{get\+\_\+used()}{get\_used()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::get\+\_\+used (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{int}]{\$amount }\end{DoxyParamCaption})}
+
+
+
+Definition at line 125 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a98f246213ad32fa5ca902f630ae24f43}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a98f246213ad32fa5ca902f630ae24f43}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!has\+\_\+quota@{has\+\_\+quota}}
+\index{has\+\_\+quota@{has\+\_\+quota}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{has\+\_\+quota()}{has\_quota()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::has\+\_\+quota (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{int}]{\$amount = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Check whether there\textquotesingle{}s quota left.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The key to check. \\
+\hline
+int & {\em \$amount} & (default\+: 1) The amount of quota to require.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE = Quota left, F\+A\+L\+SE = No quota left. 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a26ffb607251b12621337212939f6c82c}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a26ffb607251b12621337212939f6c82c}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!has\+\_\+state@{has\+\_\+state}}
+\index{has\+\_\+state@{has\+\_\+state}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{has\+\_\+state()}{has\_state()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::has\+\_\+state (\begin{DoxyParamCaption}\item[{string}]{\$key }\end{DoxyParamCaption})}
+
+Check whether this \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota}{User\+Quota} object has the state value \$key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The key to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE = Exists, F\+A\+L\+SE = Doesn\textquotesingle{}t exist. 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a6e7e8aa1e60e87c3f54bede17b77808c}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a6e7e8aa1e60e87c3f54bede17b77808c}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!set\+\_\+state@{set\+\_\+state}}
+\index{set\+\_\+state@{set\+\_\+state}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{set\+\_\+state()}{set\_state()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::set\+\_\+state (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set a state value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The state value to set. \\
+\hline
+int & {\em \$value} & The state value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 109 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a9a8ea1c65e5effba6989c5e58c0d77a5}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a9a8ea1c65e5effba6989c5e58c0d77a5}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!set\+\_\+used@{set\+\_\+used}}
+\index{set\+\_\+used@{set\+\_\+used}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{set\+\_\+used()}{set\_used()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::set\+\_\+used (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{int}]{\$used }\end{DoxyParamCaption})}
+
+Set the amount of used quota.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The quota to set. \\
+\hline
+int & {\em \$used} & The amount of used quota. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 76 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a4430e4c5ab28cc6c7e04d7c8f54b3868}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a4430e4c5ab28cc6c7e04d7c8f54b3868}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!use\+\_\+quota@{use\+\_\+quota}}
+\index{use\+\_\+quota@{use\+\_\+quota}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{use\+\_\+quota()}{use\_quota()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::use\+\_\+quota (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{int}]{\$amount = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Try to use quota.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The key to use. \\
+\hline
+int & {\em \$amount} & (default\+: 1) The amount of quota to use.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1QuotaException}{Quota\+Exception}} & if there\textquotesingle{}s not enough quota left. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 63 of file User\+Quota.\+php.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a589023237166f30a20525b3123908570}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_a589023237166f30a20525b3123908570}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!\$limits@{\$limits}}
+\index{\$limits@{\$limits}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{\$limits}{$limits}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::\$limits = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 15 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_ab725193e53a4d5f221820584bff856e3}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_ab725193e53a4d5f221820584bff856e3}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!\$state@{\$state}}
+\index{\$state@{\$state}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{\$state}{$state}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::\$state = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 17 of file User\+Quota.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_aff940a2bb6411ad5eda9628a50458daf}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1UserQuota_aff940a2bb6411ad5eda9628a50458daf}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}!\$used@{\$used}}
+\index{\$used@{\$used}!libresignage\+::common\+::php\+::auth\+::\+User\+Quota@{libresignage\+::common\+::php\+::auth\+::\+User\+Quota}}
+\subsubsection{\texorpdfstring{\$used}{$used}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+User\+Quota\+::\$used = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 16 of file User\+Quota.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/common/php/auth/\hyperlink{UserQuota_8php}{User\+Quota.\+php}\end{DoxyCompactItemize}

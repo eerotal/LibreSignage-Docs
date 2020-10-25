@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: control/editor/js/components/assetuploader/AssetList.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: control/editor/js/components/assetuploader/AssetList.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var UIUtil = require('libresignage/util/UIUtil');
+var Assert = require('assert');
+
+/**
+* A class representing the list of assets in an AssetUploader window.
+*/
+class AssetList {
+	/**
+	* Construct a new AssetList object.
+	*
+	* @param {HTMLElement} container The container element where the
+	*                                AssetList is created.
+	*/
+	constructor(container) {
+		this.container = container;
+		this.slide = null;
+		this.selected = null;
+	}
+
+	/**
+	* Create a HTML DIV node for a thumbnail.
+	*
+	* @param {string} asset_name The name of the asset.
+	* @param {string} url        The URL of the asset thumbnail.
+	*
+	* @return {HTMLElement} The created HTML DOM node.
+	*/
+	static make_thumb_node(asset_name, url) {
+		let div = document.createElement('div');
+		div.classList.add('thumb');
+		div.innerHTML = `
+			&lt;div class="thumb-inner default-border">
+				&lt;div class="thumb-img-wrapper">
+					&lt;img src="${url}">&lt;/img>
+				&lt;/div>
+				&lt;div class="thumb-label-wrapper">
+					&lt;div class="thumb-rm-wrapper">
+						&lt;button class="btn btn-danger small-btn btn-remove"
+								type="button">
+							&lt;i class="fas fa-times">&lt;/i>
+						&lt;/button>
+					&lt;/div>
+					&lt;div class="thumb-label">${asset_name}&lt;/div>
+				&lt;/div>
+			&lt;/div>
+		`;
+		return div;
+	}
+
+	/**
+	* Show the asset list for a slide.
+	*
+	* @param {Slide} slide The slide to show the asset list for.
+	*/
+	show(slide) {
+		this.slide = slide;
+		this.update();
+	}
+
+	/**
+	* Hide the asset list.
+	*/
+	hide() {
+		this.slide = null;
+		this.update();
+	}
+
+	/**
+	* Get the selected filename.
+	*
+	* @return {string|null} The filename or null if nothing is selected.
+	*/
+	get_selection() {
+		return this.selected;
+	}
+
+	/**
+	* Deselect the current selection.
+	*/
+	deselect() {
+		this.selection = null;
+	}
+
+	/**
+	* Update the asset list content.
+	*/
+	update() {
+		this.container.innerHTML = '';
+		if (this.slide == null) { return; }
+
+		for (let a of Object.values(this.slide.get('assets'))) {
+			let url = null;
+
+			// Use the asset thumbnail if it exists and a placeholder otherwise.
+			if (this.slide.get('assets')[a.filename].has_thumb()) {
+				url = this.slide.get('assets')[a.filename].get_thumb_url();
+			} else {
+				url = UIUtil.fa_svg_uri('solid', 'image');
+			}
+
+			let div = AssetList.make_thumb_node(a.filename, url);
+			this.container.appendChild(div);
+
+			// Attach event listeners for the select and remove actions.
+			div.addEventListener('click', () => {
+				this.selected = a.filename;
+				this.container.dispatchEvent(
+					new Event('component.assetlist.select')
+				);
+			});
+			div.querySelector('.btn-remove')
+				.addEventListener('click', e => {
+					this.container.dispatchEvent(
+						new Event('component.assetlist.remove')
+					);
+					e.preventDefault();
+				});
+		}
+	}
+}
+module.exports = AssetList;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-libresignage_api.html">libresignage/api</a></li><li><a href="module-libresignage_misc.html">libresignage/misc</a></li><li><a href="module-libresignage_queue.html">libresignage/queue</a></li><li><a href="module-libresignage_slide.html">libresignage/slide</a></li><li><a href="module-libresignage_ui_components.html">libresignage/ui/components</a></li><li><a href="module-libresignage_ui_components_Dialog.html">libresignage/ui/components/Dialog</a></li><li><a href="module-libresignage_ui_controller.html">libresignage/ui/controller</a></li><li><a href="module-libresignage_ui_validator.html">libresignage/ui/validator</a></li><li><a href="module-libresignage_user.html">libresignage/user</a></li><li><a href="module-libresignage_util.html">libresignage/util</a></li></ul><h3>Namespaces</h3><ul><li><a href="module-libresignage_api.APIEndpoints.html">APIEndpoints</a></li><li><a href="module-libresignage_api.HTTPStatus.html">HTTPStatus</a></li><li><a href="module-libresignage_slide.Animations.html">Animations</a></li></ul><h3>Classes</h3><ul><li><a href="APIInterface.html">APIInterface</a></li><li><a href="AssetList.html">AssetList</a></li><li><a href="AssetUploader.html">AssetUploader</a></li><li><a href="AssetUploaderController.html">AssetUploaderController</a></li><li><a href="ControlPanelController.html">ControlPanelController</a></li><li><a href="ControlPanelView.html">ControlPanelView</a></li><li><a href="DisplayController.html">DisplayController</a></li><li><a href="DisplayView.html">DisplayView</a></li><li><a href="EditorController.html">EditorController</a></li><li><a href="LoginController.html">LoginController</a></li><li><a href="LoginView.html">LoginView</a></li><li><a href="LogoutController.html">LogoutController</a></li><li><a href="LogoutView.html">LogoutView</a></li><li><a href="module-libresignage_api.APIError.html">APIError</a></li><li><a href="module-libresignage_api.APISession.html">APISession</a></li><li><a href="module-libresignage_misc.Shortcut.html">Shortcut</a></li><li><a href="module-libresignage_misc.ShortcutController.html">ShortcutController</a></li><li><a href="module-libresignage_misc.Timeout.html">Timeout</a></li><li><a href="module-libresignage_queue.Queue.html">Queue</a></li><li><a href="module-libresignage_queue.SlideList.html">SlideList</a></li><li><a href="module-libresignage_queue.SlideListIterator.html">SlideListIterator</a></li><li><a href="module-libresignage_slide.Slide.html">Slide</a></li><li><a href="module-libresignage_ui_components.BaseComponent.html">BaseComponent</a></li><li><a href="module-libresignage_ui_components.DropConfirm.html">DropConfirm</a></li><li><a href="module-libresignage_ui_components.DropSelect.html">DropSelect</a></li><li><a href="module-libresignage_ui_components.MultiSelect.html">MultiSelect</a></li><li><a href="module-libresignage_ui_components.Popup.html">Popup</a></li><li><a href="module-libresignage_ui_components_Dialog.AlertDialog.html">AlertDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.APIErrorDialog.html">APIErrorDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.BaseDialog.html">BaseDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.ConfirmDialog.html">ConfirmDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.PromptDialog.html">PromptDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.SelectDialog.html">SelectDialog</a></li><li><a href="module-libresignage_ui_controller.UIButton.html">UIButton</a></li><li><a href="module-libresignage_ui_controller.UIElem.html">UIElem</a></li><li><a href="module-libresignage_ui_controller.UIInput.html">UIInput</a></li><li><a href="module-libresignage_ui_controller.UIStatic.html">UIStatic</a></li><li><a href="module-libresignage_ui_validator.BaseValidator.html">BaseValidator</a></li><li><a href="module-libresignage_ui_validator.BlacklistValidator.html">BlacklistValidator</a></li><li><a href="module-libresignage_ui_validator.EqValidator.html">EqValidator</a></li><li><a href="module-libresignage_ui_validator.FileSelectorValidator.html">FileSelectorValidator</a></li><li><a href="module-libresignage_ui_validator.NumValidator.html">NumValidator</a></li><li><a href="module-libresignage_ui_validator.StrValidator.html">StrValidator</a></li><li><a href="module-libresignage_ui_validator.ValidatorController.html">ValidatorController</a></li><li><a href="module-libresignage_ui_validator.ValidatorSelector.html">ValidatorSelector</a></li><li><a href="module-libresignage_ui_validator.ValidatorTrigger.html">ValidatorTrigger</a></li><li><a href="module-libresignage_ui_validator.WhitelistValidator.html">WhitelistValidator</a></li><li><a href="module-libresignage_user.Quota.html">Quota</a></li><li><a href="module-libresignage_user.User.html">User</a></li><li><a href="module-libresignage_util.Cookie.html">Cookie</a></li><li><a href="module-libresignage_util.UIUtil.html">UIUtil</a></li><li><a href="module-libresignage_util.Util.html">Util</a></li><li><a href="Preview.html">Preview</a></li><li><a href="QueueSelector.html">QueueSelector</a></li><li><a href="SessionList.html">SessionList</a></li><li><a href="SlideAsset.html">SlideAsset</a></li><li><a href="Timeline.html">Timeline</a></li><li><a href="UIController.html">UIController</a></li><li><a href="UserController.html">UserController</a></li><li><a href="UserList.html">UserList</a></li><li><a href="UserListEntry.html">UserListEntry</a></li><li><a href="UserManagerController.html">UserManagerController</a></li><li><a href="UserManagerView.html">UserManagerView</a></li><li><a href="UserValidators.html">UserValidators</a></li><li><a href="UserView.html">UserView</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun Oct 25 2020 10:27:27 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

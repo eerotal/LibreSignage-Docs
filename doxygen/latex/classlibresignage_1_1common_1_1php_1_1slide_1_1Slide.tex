@@ -1,0 +1,1455 @@
+\hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide}{}\section{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}Slide Class Reference}
+\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide}\index{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide@{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide}}
+
+
+Inheritance diagram for libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}Slide\+:
+% FIG 0
+
+
+Collaboration diagram for libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}Slide\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a38aeea7172aec28507ab7aa359c9e314}{\+\_\+\+\_\+exportable\+\_\+set} (string \$name, \$value)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a8e259a425560d1c8f537ab9327dee137}{\+\_\+\+\_\+exportable\+\_\+get} (string \$name)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a86940669cd20640a43f98147381c52af}{\+\_\+\+\_\+exportable\+\_\+write} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a7f4a62d13085b3b8e63ca303a77d9a66}{load} (string \$id)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a793ec38db84338d4014696b046b4dc11}{dup} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ab6e0fba0384a41c75f45dacb6b0e2140}{gen\+\_\+id} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a43eebecde5d49b67e5adc11e71ae01ff}{set\+\_\+id} (string \$id)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a716abb23dbf92eb6a0b4a5c6e8a0ff94}{set\+\_\+markup} (string \$markup)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a331db9d6bda9ffd93facd1bce07e1acc}{set\+\_\+name} (string \$name)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_af2d0394d707a7afaac709c7bf457f324}{set\+\_\+index} (int \$index)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad3ac64a4c8b60be6a2e7db43c5939f6f}{set\+\_\+duration} (int \$duration)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a04d9f34445019f283a2cf78cbdd4ff6f}{set\+\_\+owner} (string \$owner)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a6f97a01838aa170b2296fe0c4fe7b49e}{set\+\_\+enabled} (bool \$enabled)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad97c51e4324ffbddb791d1a906a2c3fd}{set\+\_\+sched} (bool \$sched)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_acedb1a9ed68015ee252811cc48fbc45b}{set\+\_\+sched\+\_\+t\+\_\+s} (int \$tstamp)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a8437d82f436d281dea67da2ba5862623}{set\+\_\+sched\+\_\+t\+\_\+e} (int \$tstamp)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a516b1bc8fe4f5b52b91d3c628d1a49c6}{set\+\_\+animation} (int \$anim)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a1868fb299bad4a5e0f7202083d0b8b05}{set\+\_\+queue} (string \$name)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a183057a153ef40efb966511410403812}{set\+\_\+collaborators} (array \$collaborators)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a829b130a5fd9824d2599f036cc3d7fc0}{set\+\_\+lock} (\$lock)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ae63f0ae212c667424e2559153715ce57}{lock\+\_\+acquire} (\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Session}{Session} \$session)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a1f353f30f6318dbd71ec62716121075b}{lock\+\_\+release} (\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Session}{Session} \$session)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a11ae713abb81d2e02757dc6d1cdd9a2c}{is\+\_\+locked\+\_\+by} (\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Session}{Session} \$session)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aa8eba48377d0306ce4dda607f4e38d49}{store\+\_\+uploaded\+\_\+asset} (Uploaded\+File \$file)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a571c25b85b2e7aeae3fecc99ec3f3ede}{remove\+\_\+uploaded\+\_\+asset} (string \$name)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a2e1a7edc723974a4ba294c10a9ba7365}{get\+\_\+uploaded\+\_\+asset} (string \$name)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a45e9454acc11165831dda2e3ede656d6}{has\+\_\+uploaded\+\_\+asset} (string \$name)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a02f20b916577d56fdeb51c1f5378cda0}{set\+\_\+assets} (array \$assets)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a7610b627863b0d9774a76194b117c748}{update\+\_\+sched\+\_\+enabled} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aa9616c19d59570ab081cd1e0bdd66600}{can\+\_\+modify} (\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User}{User} \$user)
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a41efc7a55cef4e78c2c3ca37153f7b57}{write} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a2aafb685a415694294a30a0f13114e5a}{remove} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_af8398f77d3e70b772232f7d19af4ad11}{get\+\_\+id} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_af5b851d97dd81043d5aa9181355b3697}{get\+\_\+markup} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a84a460e07e920a8715bdea6d933ab1fc}{get\+\_\+name} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a33727209617169eb07aab0cea174c926}{get\+\_\+index} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad926feee9c40b3be2948f1ae510d650a}{get\+\_\+duration} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a669c623cd4d0e3f45074833632f1ac63}{get\+\_\+owner} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_adc30342c97db0b11c55c922540bf638e}{get\+\_\+enabled} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a95cb583ef47fb4e4cd7772a7bf453639}{get\+\_\+sched} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ac432c3305f8444ef0e864961592d02e3}{get\+\_\+sched\+\_\+t\+\_\+s} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a4dabab6c2fd214090c5e17debaf330ba}{get\+\_\+sched\+\_\+t\+\_\+e} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_afebda5baca0de598672e044bf501da1f}{get\+\_\+animation} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a216396afd9782b9cfbb22360e1a2f293}{get\+\_\+queue\+\_\+name} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a72d940727cdea31f36758233cde898d0}{get\+\_\+collaborators} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_afb3afe8589ffccf1251fb9fb3e091165}{get\+\_\+lock} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad54a91fed0c69f7a42e01f4f663fd736}{get\+\_\+assets} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ae7036cca0603c2e90f6ffa64234f70c6}{get\+\_\+queue} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_afa1f0aa9b6b11b00094ecbc2db017965}{\+\_\+\+\_\+exportable\+\_\+private} ()
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a5e72ba73379a39540bae30d8cbfc39ae}{\+\_\+\+\_\+exportable\+\_\+public} ()
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a060058082585b1ed9b7226f01ad376cc}{validate\+\_\+id} (string \$id)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a390a7bca0562fb0945cd694c6f7e7dcd}{validate\+\_\+markup} (string \$markup)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ae4f4b8ee16cabd48cab20d1ec62d5639}{validate\+\_\+name} (string \$name)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a77792fc7026c05a530644dddf5eadc45}{validate\+\_\+index} (int \$index)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a3723b3c7b0c291cdfe26381af7fd5a28}{validate\+\_\+duration} (int \$duration)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a7e32cde7136c18a7150381650b6758a6}{validate\+\_\+owner} (string \$owner)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad72fcaca412b7c9afe31cd5902b42457}{validate\+\_\+sched\+\_\+t\+\_\+s} (int \$tstamp)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_acd01eb2b7ebb3e65969995d7893b8cff}{validate\+\_\+sched\+\_\+t\+\_\+e} (int \$tstamp)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a5f6d4c1788c842d8f840bd6f3d8c4dca}{validate\+\_\+animation} (int \$anim)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a47e245fb24508ab3a69ba3571c601c33}{validate\+\_\+queue} (string \$name)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a24d9d8a3e7fafb5fe6fc904b71ea732d}{validate\+\_\+collaborators} (array \$collaborators)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a11ba3a6fead2f889211a368a70b56a08}{get\+\_\+dir\+\_\+path} (string \$id)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a347881c12e3a389c8b4f3397328e8378}{get\+\_\+conf\+\_\+path} (string \$id)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a33bc0e5eadddc415740b36f1dded4159}{get\+\_\+asset\+\_\+path} (string \$id)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a234a166c9a496c6484629bae1f078318}{list\+\_\+ids} ()
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aac4106d3da3ec25c0bf52e5b050cf336}{list} ()
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a1b2ac4d07a7a9b2e2bf67bcbbaee0130}{exists} (string \$id)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a5af3cec71f1be426c13a795e6fc9defb}{lock\+\_\+cleanup} ()
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a8c452cd038e3f3a464568729e842429f}{assert\+\_\+ready} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a7dd7de937f3bc73a1aadf56ca594fbdd}{\$id} = N\+U\+LL
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aa2936e4fd6eb208ce09d3d6987351d93}{\$name} = N\+U\+LL
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad580560a42d379b63233bcd624d2025d}{\$index} = N\+U\+LL
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a2d650e91ab7423234d24955dff565cb8}{\$duration} = N\+U\+LL
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a254e9bd551ecdd771d99f50c43efb754}{\$markup} = N\+U\+LL
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aa70f5dd34e3605dfd0d298046eaa6e9d}{\$owner} = N\+U\+LL
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a819f22b6bc82f1a6961429ffea950e6e}{\$enabled} = F\+A\+L\+SE
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a8c6a04863a8424b9dc6957a843abe143}{\$sched} = F\+A\+L\+SE
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a976bff4c51294f1ab1ed91a84f993627}{\$sched\+\_\+t\+\_\+s} = 0
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_adfcc309e69b9dd59eb92413fa1076d7e}{\$sched\+\_\+t\+\_\+e} = 0
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aecc8d50d071e37690946af8f814f9ff4}{\$animation} = 0
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_af93ffac0cc6478cb95f66772785b08c8}{\$queue\+\_\+name} = N\+U\+LL
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_acbc85425ac21b86ca870a8902b9f4594}{\$collaborators} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a94f554fe33375075dcfa3981750aedc2}{\$lock} = N\+U\+LL
+\item 
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a2b746a6bfd18a1eca435c987bfc381b9}{\$assets} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 21 of file Slide.\+php.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a8e259a425560d1c8f537ab9327dee137}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a8e259a425560d1c8f537ab9327dee137}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\+\_\+\+\_\+exportable\+\_\+get@{\+\_\+\+\_\+exportable\+\_\+get}}
+\index{\+\_\+\+\_\+exportable\+\_\+get@{\+\_\+\+\_\+exportable\+\_\+get}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+get()}{\_\_exportable\_get()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\+\_\+\+\_\+exportable\+\_\+get (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_afa1f0aa9b6b11b00094ecbc2db017965}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_afa1f0aa9b6b11b00094ecbc2db017965}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\+\_\+\+\_\+exportable\+\_\+private@{\+\_\+\+\_\+exportable\+\_\+private}}
+\index{\+\_\+\+\_\+exportable\+\_\+private@{\+\_\+\+\_\+exportable\+\_\+private}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+private()}{\_\_exportable\_private()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\+\_\+\+\_\+exportable\+\_\+private (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 50 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a5e72ba73379a39540bae30d8cbfc39ae}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a5e72ba73379a39540bae30d8cbfc39ae}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\+\_\+\+\_\+exportable\+\_\+public@{\+\_\+\+\_\+exportable\+\_\+public}}
+\index{\+\_\+\+\_\+exportable\+\_\+public@{\+\_\+\+\_\+exportable\+\_\+public}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+public()}{\_\_exportable\_public()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\+\_\+\+\_\+exportable\+\_\+public (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 70 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a38aeea7172aec28507ab7aa359c9e314}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a38aeea7172aec28507ab7aa359c9e314}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\+\_\+\+\_\+exportable\+\_\+set@{\+\_\+\+\_\+exportable\+\_\+set}}
+\index{\+\_\+\+\_\+exportable\+\_\+set@{\+\_\+\+\_\+exportable\+\_\+set}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+set()}{\_\_exportable\_set()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\+\_\+\+\_\+exportable\+\_\+set (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a86940669cd20640a43f98147381c52af}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a86940669cd20640a43f98147381c52af}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\+\_\+\+\_\+exportable\+\_\+write@{\+\_\+\+\_\+exportable\+\_\+write}}
+\index{\+\_\+\+\_\+exportable\+\_\+write@{\+\_\+\+\_\+exportable\+\_\+write}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+exportable\+\_\+write()}{\_\_exportable\_write()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\+\_\+\+\_\+exportable\+\_\+write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a8c452cd038e3f3a464568729e842429f}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a8c452cd038e3f3a464568729e842429f}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!assert\+\_\+ready@{assert\+\_\+ready}}
+\index{assert\+\_\+ready@{assert\+\_\+ready}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{assert\+\_\+ready()}{assert\_ready()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::assert\+\_\+ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Throw an exception if the slide is not ready. Use this in functions that access files to prevent trying to access nonexistent files.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Int\+Exception} & if the slide is not ready. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 688 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aa9616c19d59570ab081cd1e0bdd66600}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aa9616c19d59570ab081cd1e0bdd66600}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!can\+\_\+modify@{can\+\_\+modify}}
+\index{can\+\_\+modify@{can\+\_\+modify}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{can\+\_\+modify()}{can\_modify()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::can\+\_\+modify (\begin{DoxyParamCaption}\item[{\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User}{User}}]{\$user }\end{DoxyParamCaption})}
+
+Check whether \$user can modify the loaded slide.
+
+
+\begin{DoxyParams}[1]{Parameters}
+User & {\em \$user} & The user to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE = Can modify, F\+A\+L\+SE = Can\textquotesingle{}t modify. 
+\end{DoxyReturn}
+
+
+Definition at line 664 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a793ec38db84338d4014696b046b4dc11}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a793ec38db84338d4014696b046b4dc11}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!dup@{dup}}
+\index{dup@{dup}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{dup()}{dup()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::dup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Duplicate the loaded slide.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide}{Slide} The duplicate slide. 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a1b2ac4d07a7a9b2e2bf67bcbbaee0130}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a1b2ac4d07a7a9b2e2bf67bcbbaee0130}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!exists@{exists}}
+\index{exists@{exists}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::exists (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Check whether a slide exists.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The ID of the slide to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE if \$id exists, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 812 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ab6e0fba0384a41c75f45dacb6b0e2140}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ab6e0fba0384a41c75f45dacb6b0e2140}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!gen\+\_\+id@{gen\+\_\+id}}
+\index{gen\+\_\+id@{gen\+\_\+id}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{gen\+\_\+id()}{gen\_id()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::gen\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Generate a new ID for a slide. 
+
+Definition at line 139 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_afebda5baca0de598672e044bf501da1f}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_afebda5baca0de598672e044bf501da1f}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+animation@{get\+\_\+animation}}
+\index{get\+\_\+animation@{get\+\_\+animation}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+animation()}{get\_animation()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 754 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a33bc0e5eadddc415740b36f1dded4159}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a33bc0e5eadddc415740b36f1dded4159}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+asset\+\_\+path@{get\+\_\+asset\+\_\+path}}
+\index{get\+\_\+asset\+\_\+path@{get\+\_\+asset\+\_\+path}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+asset\+\_\+path()}{get\_asset\_path()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+asset\+\_\+path (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 740 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad54a91fed0c69f7a42e01f4f663fd736}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad54a91fed0c69f7a42e01f4f663fd736}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+assets@{get\+\_\+assets}}
+\index{get\+\_\+assets@{get\+\_\+assets}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+assets()}{get\_assets()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 758 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a72d940727cdea31f36758233cde898d0}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a72d940727cdea31f36758233cde898d0}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+collaborators@{get\+\_\+collaborators}}
+\index{get\+\_\+collaborators@{get\+\_\+collaborators}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+collaborators()}{get\_collaborators()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+collaborators (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 756 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a347881c12e3a389c8b4f3397328e8378}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a347881c12e3a389c8b4f3397328e8378}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+conf\+\_\+path@{get\+\_\+conf\+\_\+path}}
+\index{get\+\_\+conf\+\_\+path@{get\+\_\+conf\+\_\+path}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+conf\+\_\+path()}{get\_conf\_path()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+conf\+\_\+path (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 736 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a11ba3a6fead2f889211a368a70b56a08}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a11ba3a6fead2f889211a368a70b56a08}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+dir\+\_\+path@{get\+\_\+dir\+\_\+path}}
+\index{get\+\_\+dir\+\_\+path@{get\+\_\+dir\+\_\+path}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+dir\+\_\+path()}{get\_dir\_path()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+dir\+\_\+path (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 728 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad926feee9c40b3be2948f1ae510d650a}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad926feee9c40b3be2948f1ae510d650a}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+duration@{get\+\_\+duration}}
+\index{get\+\_\+duration@{get\+\_\+duration}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+duration()}{get\_duration()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 748 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_adc30342c97db0b11c55c922540bf638e}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_adc30342c97db0b11c55c922540bf638e}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+enabled@{get\+\_\+enabled}}
+\index{get\+\_\+enabled@{get\+\_\+enabled}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+enabled()}{get\_enabled()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 750 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_af8398f77d3e70b772232f7d19af4ad11}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_af8398f77d3e70b772232f7d19af4ad11}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+id@{get\+\_\+id}}
+\index{get\+\_\+id@{get\+\_\+id}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+id()}{get\_id()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 744 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a33727209617169eb07aab0cea174c926}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a33727209617169eb07aab0cea174c926}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+index@{get\+\_\+index}}
+\index{get\+\_\+index@{get\+\_\+index}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+index()}{get\_index()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 747 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_afb3afe8589ffccf1251fb9fb3e091165}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_afb3afe8589ffccf1251fb9fb3e091165}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+lock@{get\+\_\+lock}}
+\index{get\+\_\+lock@{get\+\_\+lock}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+lock()}{get\_lock()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 757 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_af5b851d97dd81043d5aa9181355b3697}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_af5b851d97dd81043d5aa9181355b3697}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+markup@{get\+\_\+markup}}
+\index{get\+\_\+markup@{get\+\_\+markup}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+markup()}{get\_markup()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+markup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 745 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a84a460e07e920a8715bdea6d933ab1fc}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a84a460e07e920a8715bdea6d933ab1fc}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+name()}{get\_name()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 746 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a669c623cd4d0e3f45074833632f1ac63}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a669c623cd4d0e3f45074833632f1ac63}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+owner@{get\+\_\+owner}}
+\index{get\+\_\+owner@{get\+\_\+owner}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+owner()}{get\_owner()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 749 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ae7036cca0603c2e90f6ffa64234f70c6}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ae7036cca0603c2e90f6ffa64234f70c6}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+queue@{get\+\_\+queue}}
+\index{get\+\_\+queue@{get\+\_\+queue}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+queue()}{get\_queue()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 760 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a216396afd9782b9cfbb22360e1a2f293}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a216396afd9782b9cfbb22360e1a2f293}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+queue\+\_\+name@{get\+\_\+queue\+\_\+name}}
+\index{get\+\_\+queue\+\_\+name@{get\+\_\+queue\+\_\+name}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+queue\+\_\+name()}{get\_queue\_name()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+queue\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 755 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a95cb583ef47fb4e4cd7772a7bf453639}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a95cb583ef47fb4e4cd7772a7bf453639}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+sched@{get\+\_\+sched}}
+\index{get\+\_\+sched@{get\+\_\+sched}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+sched()}{get\_sched()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+sched (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 751 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a4dabab6c2fd214090c5e17debaf330ba}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a4dabab6c2fd214090c5e17debaf330ba}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+sched\+\_\+t\+\_\+e@{get\+\_\+sched\+\_\+t\+\_\+e}}
+\index{get\+\_\+sched\+\_\+t\+\_\+e@{get\+\_\+sched\+\_\+t\+\_\+e}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+sched\+\_\+t\+\_\+e()}{get\_sched\_t\_e()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+sched\+\_\+t\+\_\+e (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 753 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ac432c3305f8444ef0e864961592d02e3}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ac432c3305f8444ef0e864961592d02e3}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+sched\+\_\+t\+\_\+s@{get\+\_\+sched\+\_\+t\+\_\+s}}
+\index{get\+\_\+sched\+\_\+t\+\_\+s@{get\+\_\+sched\+\_\+t\+\_\+s}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+sched\+\_\+t\+\_\+s()}{get\_sched\_t\_s()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+sched\+\_\+t\+\_\+s (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 752 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a2e1a7edc723974a4ba294c10a9ba7365}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a2e1a7edc723974a4ba294c10a9ba7365}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!get\+\_\+uploaded\+\_\+asset@{get\+\_\+uploaded\+\_\+asset}}
+\index{get\+\_\+uploaded\+\_\+asset@{get\+\_\+uploaded\+\_\+asset}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{get\+\_\+uploaded\+\_\+asset()}{get\_uploaded\_asset()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::get\+\_\+uploaded\+\_\+asset (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Get the \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1SlideAsset}{Slide\+Asset} named \$name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name of the asset.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if the asset doesn\textquotesingle{}t exist.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1SlideAsset}{Slide\+Asset} The requested asset. 
+\end{DoxyReturn}
+
+
+Definition at line 620 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a45e9454acc11165831dda2e3ede656d6}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a45e9454acc11165831dda2e3ede656d6}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!has\+\_\+uploaded\+\_\+asset@{has\+\_\+uploaded\+\_\+asset}}
+\index{has\+\_\+uploaded\+\_\+asset@{has\+\_\+uploaded\+\_\+asset}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{has\+\_\+uploaded\+\_\+asset()}{has\_uploaded\_asset()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::has\+\_\+uploaded\+\_\+asset (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 627 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a11ae713abb81d2e02757dc6d1cdd9a2c}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a11ae713abb81d2e02757dc6d1cdd9a2c}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!is\+\_\+locked\+\_\+by@{is\+\_\+locked\+\_\+by}}
+\index{is\+\_\+locked\+\_\+by@{is\+\_\+locked\+\_\+by}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{is\+\_\+locked\+\_\+by()}{is\_locked\_by()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::is\+\_\+locked\+\_\+by (\begin{DoxyParamCaption}\item[{\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Session}{Session}}]{\$session }\end{DoxyParamCaption})}
+
+Check whether a slide is locked by a session.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Session & {\em \$session} & The session to check the lock against.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool T\+R\+UE if the slide is locked by \$session and F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 554 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aac4106d3da3ec25c0bf52e5b050cf336}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aac4106d3da3ec25c0bf52e5b050cf336}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!list@{list}}
+\index{list@{list}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{list()}{list()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+List all \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide}{Slide} objects.
+
+\begin{DoxyReturn}{Returns}
+array An array of \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide}{Slide} objects. 
+\end{DoxyReturn}
+
+
+Definition at line 792 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a234a166c9a496c6484629bae1f078318}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a234a166c9a496c6484629bae1f078318}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!list\+\_\+ids@{list\+\_\+ids}}
+\index{list\+\_\+ids@{list\+\_\+ids}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{list\+\_\+ids()}{list\_ids()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::list\+\_\+ids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+List all existing \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide}{Slide} I\+Ds.
+
+\begin{DoxyReturn}{Returns}
+array An array of \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide}{Slide} I\+Ds. 
+\end{DoxyReturn}
+
+
+Definition at line 771 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a7f4a62d13085b3b8e63ca303a77d9a66}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a7f4a62d13085b3b8e63ca303a77d9a66}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!load@{load}}
+\index{load@{load}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::load (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Load a slide from file.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a060058082585b1ed9b7226f01ad376cc}{Slide\+::validate\+\_\+id()} for validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1slide_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The ID of the slide to load. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 97 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ae63f0ae212c667424e2559153715ce57}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ae63f0ae212c667424e2559153715ce57}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!lock\+\_\+acquire@{lock\+\_\+acquire}}
+\index{lock\+\_\+acquire@{lock\+\_\+acquire}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{lock\+\_\+acquire()}{lock\_acquire()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::lock\+\_\+acquire (\begin{DoxyParamCaption}\item[{\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Session}{Session}}]{\$session }\end{DoxyParamCaption})}
+
+Attempt to lock this slide.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Session & {\em \$session} & The Session to lock the slide for. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Slide\+Lock\+Exception} & if the slide is already locked by another user. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 519 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a5af3cec71f1be426c13a795e6fc9defb}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a5af3cec71f1be426c13a795e6fc9defb}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!lock\+\_\+cleanup@{lock\+\_\+cleanup}}
+\index{lock\+\_\+cleanup@{lock\+\_\+cleanup}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{lock\+\_\+cleanup()}{lock\_cleanup()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::lock\+\_\+cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Cleanup expired slide locks. 
+
+Definition at line 502 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a1f353f30f6318dbd71ec62716121075b}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a1f353f30f6318dbd71ec62716121075b}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!lock\+\_\+release@{lock\+\_\+release}}
+\index{lock\+\_\+release@{lock\+\_\+release}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{lock\+\_\+release()}{lock\_release()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::lock\+\_\+release (\begin{DoxyParamCaption}\item[{\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Session}{Session}}]{\$session }\end{DoxyParamCaption})}
+
+Attempt to unlock this slide.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Session & {\em \$session} & The Session object of the caller. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Slide\+Lock\+Exception} & if the slide is locked by another user. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 535 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a2aafb685a415694294a30a0f13114e5a}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a2aafb685a415694294a30a0f13114e5a}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!remove@{remove}}
+\index{remove@{remove}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Remove the loaded slide from file. 
+
+Definition at line 716 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a571c25b85b2e7aeae3fecc99ec3f3ede}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a571c25b85b2e7aeae3fecc99ec3f3ede}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!remove\+\_\+uploaded\+\_\+asset@{remove\+\_\+uploaded\+\_\+asset}}
+\index{remove\+\_\+uploaded\+\_\+asset@{remove\+\_\+uploaded\+\_\+asset}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{remove\+\_\+uploaded\+\_\+asset()}{remove\_uploaded\_asset()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::remove\+\_\+uploaded\+\_\+asset (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Remove an uploaded asset from a slide.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name of the asset.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if the assetdoesn\textquotesingle{}t exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 598 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a516b1bc8fe4f5b52b91d3c628d1a49c6}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a516b1bc8fe4f5b52b91d3c628d1a49c6}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+animation@{set\+\_\+animation}}
+\index{set\+\_\+animation@{set\+\_\+animation}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+animation()}{set\_animation()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+animation (\begin{DoxyParamCaption}\item[{int}]{\$anim }\end{DoxyParamCaption})}
+
+Set the slide animation ID.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a5f6d4c1788c842d8f840bd6f3d8c4dca}{Slide\+::validate\+\_\+animation()} for validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1slide_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$anim} & The ID of the slide animation. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 406 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a02f20b916577d56fdeb51c1f5378cda0}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a02f20b916577d56fdeb51c1f5378cda0}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+assets@{set\+\_\+assets}}
+\index{set\+\_\+assets@{set\+\_\+assets}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+assets()}{set\_assets()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+assets (\begin{DoxyParamCaption}\item[{array}]{\$assets }\end{DoxyParamCaption})}
+
+
+
+Definition at line 636 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a183057a153ef40efb966511410403812}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a183057a153ef40efb966511410403812}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+collaborators@{set\+\_\+collaborators}}
+\index{set\+\_\+collaborators@{set\+\_\+collaborators}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+collaborators()}{set\_collaborators()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+collaborators (\begin{DoxyParamCaption}\item[{array}]{\$collaborators }\end{DoxyParamCaption})}
+
+Set the slide collaborators.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a24d9d8a3e7fafb5fe6fc904b71ea732d}{Slide\+::validate\+\_\+collaborators()} for validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1slide_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if the slide owner is not set. \\
+\hline
+{\em Arg\+Exception} & if the slide owner is a collaborator.\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$collaborators} & An array of collaborator usernames. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 479 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad3ac64a4c8b60be6a2e7db43c5939f6f}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad3ac64a4c8b60be6a2e7db43c5939f6f}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+duration@{set\+\_\+duration}}
+\index{set\+\_\+duration@{set\+\_\+duration}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+duration()}{set\_duration()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+duration (\begin{DoxyParamCaption}\item[{int}]{\$duration }\end{DoxyParamCaption})}
+
+Set the slide duration.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a3723b3c7b0c291cdfe26381af7fd5a28}{Slide\+::validate\+\_\+duration()} for validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1slide_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$duration} & The slide duration in seconds. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 283 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a6f97a01838aa170b2296fe0c4fe7b49e}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a6f97a01838aa170b2296fe0c4fe7b49e}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+enabled@{set\+\_\+enabled}}
+\index{set\+\_\+enabled@{set\+\_\+enabled}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+enabled()}{set\_enabled()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+enabled (\begin{DoxyParamCaption}\item[{bool}]{\$enabled }\end{DoxyParamCaption})}
+
+Set whether the slide is enabled or not.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$enabled} & T\+R\+UE = Enabled, F\+A\+L\+SE = Disabled. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 319 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a43eebecde5d49b67e5adc11e71ae01ff}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a43eebecde5d49b67e5adc11e71ae01ff}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+id@{set\+\_\+id}}
+\index{set\+\_\+id@{set\+\_\+id}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+id()}{set\_id()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+id (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Set the slide id. The ID must already exist to make sure I\+Ds are always generated server-\/side.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a060058082585b1ed9b7226f01ad376cc}{Slide\+::validate\+\_\+id()} for validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1slide_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The ID to set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 167 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_af2d0394d707a7afaac709c7bf457f324}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_af2d0394d707a7afaac709c7bf457f324}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+index@{set\+\_\+index}}
+\index{set\+\_\+index@{set\+\_\+index}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+index()}{set\_index()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{\$index }\end{DoxyParamCaption})}
+
+Set the slide index.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a77792fc7026c05a530644dddf5eadc45}{Slide\+::validate\+\_\+index()} for validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1slide_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$index} & The slide index. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 254 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a829b130a5fd9824d2599f036cc3d7fc0}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a829b130a5fd9824d2599f036cc3d7fc0}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+lock@{set\+\_\+lock}}
+\index{set\+\_\+lock@{set\+\_\+lock}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+lock()}{set\_lock()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+lock (\begin{DoxyParamCaption}\item[{}]{\$lock }\end{DoxyParamCaption})}
+
+Set the slide lock object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$lock} & The \hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1SlideLock}{Slide\+Lock} object. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 495 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a716abb23dbf92eb6a0b4a5c6e8a0ff94}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a716abb23dbf92eb6a0b4a5c6e8a0ff94}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+markup@{set\+\_\+markup}}
+\index{set\+\_\+markup@{set\+\_\+markup}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+markup()}{set\_markup()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+markup (\begin{DoxyParamCaption}\item[{string}]{\$markup }\end{DoxyParamCaption})}
+
+Set the slide markup.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a390a7bca0562fb0945cd694c6f7e7dcd}{Slide\+::validate\+\_\+markup()} for validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1slide_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$markup} & The slide markup. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 192 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a331db9d6bda9ffd93facd1bce07e1acc}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a331db9d6bda9ffd93facd1bce07e1acc}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+name@{set\+\_\+name}}
+\index{set\+\_\+name@{set\+\_\+name}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+name()}{set\_name()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Set the slide name.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a390a7bca0562fb0945cd694c6f7e7dcd}{Slide\+::validate\+\_\+markup()} for validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1slide_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The slide name. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 229 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a04d9f34445019f283a2cf78cbdd4ff6f}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a04d9f34445019f283a2cf78cbdd4ff6f}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+owner@{set\+\_\+owner}}
+\index{set\+\_\+owner@{set\+\_\+owner}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+owner()}{set\_owner()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+owner (\begin{DoxyParamCaption}\item[{string}]{\$owner }\end{DoxyParamCaption})}
+
+Set the slide owner.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a7e32cde7136c18a7150381650b6758a6}{Slide\+::validate\+\_\+owner()} for validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1slide_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$owner} & The slide owner. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 309 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a1868fb299bad4a5e0f7202083d0b8b05}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a1868fb299bad4a5e0f7202083d0b8b05}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+queue@{set\+\_\+queue}}
+\index{set\+\_\+queue@{set\+\_\+queue}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+queue()}{set\_queue()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+queue (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Set the slide queue.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a47e245fb24508ab3a69ba3571c601c33}{Slide\+::validate\+\_\+queue()} for validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1slide_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The queue name. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 431 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad97c51e4324ffbddb791d1a906a2c3fd}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad97c51e4324ffbddb791d1a906a2c3fd}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+sched@{set\+\_\+sched}}
+\index{set\+\_\+sched@{set\+\_\+sched}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+sched()}{set\_sched()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+sched (\begin{DoxyParamCaption}\item[{bool}]{\$sched }\end{DoxyParamCaption})}
+
+Set whether the slide is scheduled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$sched} & T\+R\+UE = Scheduled, F\+A\+L\+SE = Normal. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 328 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a8437d82f436d281dea67da2ba5862623}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a8437d82f436d281dea67da2ba5862623}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+sched\+\_\+t\+\_\+e@{set\+\_\+sched\+\_\+t\+\_\+e}}
+\index{set\+\_\+sched\+\_\+t\+\_\+e@{set\+\_\+sched\+\_\+t\+\_\+e}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+sched\+\_\+t\+\_\+e()}{set\_sched\_t\_e()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+sched\+\_\+t\+\_\+e (\begin{DoxyParamCaption}\item[{int}]{\$tstamp }\end{DoxyParamCaption})}
+
+Set the slide schedule end time.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_acd01eb2b7ebb3e65969995d7893b8cff}{Slide\+::validate\+\_\+sched\+\_\+t\+\_\+e()} for validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1slide_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$tstamp} & The ending timestamp in seconds. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 381 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_acedb1a9ed68015ee252811cc48fbc45b}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_acedb1a9ed68015ee252811cc48fbc45b}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!set\+\_\+sched\+\_\+t\+\_\+s@{set\+\_\+sched\+\_\+t\+\_\+s}}
+\index{set\+\_\+sched\+\_\+t\+\_\+s@{set\+\_\+sched\+\_\+t\+\_\+s}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{set\+\_\+sched\+\_\+t\+\_\+s()}{set\_sched\_t\_s()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::set\+\_\+sched\+\_\+t\+\_\+s (\begin{DoxyParamCaption}\item[{int}]{\$tstamp }\end{DoxyParamCaption})}
+
+Set the slide schedule start time.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad72fcaca412b7c9afe31cd5902b42457}{Slide\+::validate\+\_\+sched\+\_\+t\+\_\+s()} for validation \hyperlink{namespacelibresignage_1_1common_1_1php_1_1slide_1_1exceptions}{exceptions}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$tstamp} & The starting timestamp in seconds. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 354 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aa8eba48377d0306ce4dda607f4e38d49}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aa8eba48377d0306ce4dda607f4e38d49}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!store\+\_\+uploaded\+\_\+asset@{store\+\_\+uploaded\+\_\+asset}}
+\index{store\+\_\+uploaded\+\_\+asset@{store\+\_\+uploaded\+\_\+asset}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{store\+\_\+uploaded\+\_\+asset()}{store\_uploaded\_asset()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::store\+\_\+uploaded\+\_\+asset (\begin{DoxyParamCaption}\item[{Uploaded\+File}]{\$file }\end{DoxyParamCaption})}
+
+Store an uploaded asset in the \textquotesingle{}assets\textquotesingle{} directory of this slide. This function also generates a thumbnail for the asset.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Uploaded\+File & {\em \$file} & The upload data from \$\+\_\+\+F\+I\+LE.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Limit\+Exception} & if the asset limit S\+L\+I\+D\+E\+\_\+\+M\+A\+X\+\_\+\+A\+S\+S\+E\+TS is reached.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1slide_1_1SlideAsset_a8adbbe02cacb64e1556745b902dcb1c6}{Slide\+Asset\+::new()} for additional \hyperlink{namespacelibresignage_1_1common_1_1php_1_1slide_1_1exceptions}{exceptions}. 
+\end{DoxySeeAlso}
+
+
+Definition at line 572 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a7610b627863b0d9774a76194b117c748}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a7610b627863b0d9774a76194b117c748}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!update\+\_\+sched\+\_\+enabled@{update\+\_\+sched\+\_\+enabled}}
+\index{update\+\_\+sched\+\_\+enabled@{update\+\_\+sched\+\_\+enabled}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{update\+\_\+sched\+\_\+enabled()}{update\_sched\_enabled()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::update\+\_\+sched\+\_\+enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Update \$this-\/$>$enabled based on whether a scheduled slide should be enabled. This function overrides manual control of \$this-\/$>$enabled. 
+
+Definition at line 645 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a5f6d4c1788c842d8f840bd6f3d8c4dca}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a5f6d4c1788c842d8f840bd6f3d8c4dca}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!validate\+\_\+animation@{validate\+\_\+animation}}
+\index{validate\+\_\+animation@{validate\+\_\+animation}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{validate\+\_\+animation()}{validate\_animation()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::validate\+\_\+animation (\begin{DoxyParamCaption}\item[{int}]{\$anim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Validate the slide animation ID.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$anim} & The ID of the slide animation.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if \$anim $<$ 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 393 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a24d9d8a3e7fafb5fe6fc904b71ea732d}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a24d9d8a3e7fafb5fe6fc904b71ea732d}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!validate\+\_\+collaborators@{validate\+\_\+collaborators}}
+\index{validate\+\_\+collaborators@{validate\+\_\+collaborators}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{validate\+\_\+collaborators()}{validate\_collaborators()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::validate\+\_\+collaborators (\begin{DoxyParamCaption}\item[{array}]{\$collaborators }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Validate the slide collaborators.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$collaborators} & An array of collaborator usernames.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if count(\$collaborators) $>$ S\+L\+I\+D\+E\+\_\+\+M\+A\+X\+\_\+\+C\+O\+L\+L\+AB. \\
+\hline
+{\em Arg\+Exception} & if a collaborator doesn\textquotesingle{}t exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 458 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a3723b3c7b0c291cdfe26381af7fd5a28}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a3723b3c7b0c291cdfe26381af7fd5a28}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!validate\+\_\+duration@{validate\+\_\+duration}}
+\index{validate\+\_\+duration@{validate\+\_\+duration}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{validate\+\_\+duration()}{validate\_duration()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::validate\+\_\+duration (\begin{DoxyParamCaption}\item[{int}]{\$duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Validate the slide duration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$duration} & The slide duration in seconds.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if \$duration $<$ S\+L\+I\+D\+E\+\_\+\+M\+I\+N\+\_\+\+D\+U\+R\+A\+T\+I\+ON or \$duration $>$ S\+L\+I\+D\+E\+\_\+\+M\+A\+X\+\_\+\+D\+U\+R\+A\+T\+I\+ON. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 267 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a060058082585b1ed9b7226f01ad376cc}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a060058082585b1ed9b7226f01ad376cc}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!validate\+\_\+id@{validate\+\_\+id}}
+\index{validate\+\_\+id@{validate\+\_\+id}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{validate\+\_\+id()}{validate\_id()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::validate\+\_\+id (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Validate the slide ID \$id. This function checks that \$id already exists to make sure I\+Ds are always generated server-\/side; a non-\/existent ID is considered invalid even for unsaved slides.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The ID to validate.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Slide\+Not\+Found\+Exception} & if the ID doesn\textquotesingle{}t already exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 153 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a77792fc7026c05a530644dddf5eadc45}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a77792fc7026c05a530644dddf5eadc45}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!validate\+\_\+index@{validate\+\_\+index}}
+\index{validate\+\_\+index@{validate\+\_\+index}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{validate\+\_\+index()}{validate\_index()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::validate\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{\$index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Validate the slide index.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$index} & The slide index.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if \$index $<$ 0 or \$index $>$ S\+L\+I\+D\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+D\+EX. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 241 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a390a7bca0562fb0945cd694c6f7e7dcd}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a390a7bca0562fb0945cd694c6f7e7dcd}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!validate\+\_\+markup@{validate\+\_\+markup}}
+\index{validate\+\_\+markup@{validate\+\_\+markup}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{validate\+\_\+markup()}{validate\_markup()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::validate\+\_\+markup (\begin{DoxyParamCaption}\item[{string}]{\$markup }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Validate the slide markup.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$markup} & The slide markup.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if the markup is longer than S\+L\+I\+D\+E\+\_\+\+M\+A\+R\+K\+U\+P\+\_\+\+M\+A\+X\+\_\+\+L\+EN chars. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 179 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ae4f4b8ee16cabd48cab20d1ec62d5639}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ae4f4b8ee16cabd48cab20d1ec62d5639}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!validate\+\_\+name@{validate\+\_\+name}}
+\index{validate\+\_\+name@{validate\+\_\+name}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{validate\+\_\+name()}{validate\_name()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::validate\+\_\+name (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Validate the slide name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The slide name.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if the slide name contains invalid characters. \\
+\hline
+{\em Int\+Exception} & if preg\+\_\+match() fails. \\
+\hline
+{\em Arg\+Exception} & if the slide name is empty. \\
+\hline
+{\em Arg\+Exception} & if the slide name is longer than S\+L\+I\+D\+E\+\_\+\+N\+A\+M\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN chars. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 207 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a7e32cde7136c18a7150381650b6758a6}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a7e32cde7136c18a7150381650b6758a6}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!validate\+\_\+owner@{validate\+\_\+owner}}
+\index{validate\+\_\+owner@{validate\+\_\+owner}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{validate\+\_\+owner()}{validate\_owner()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::validate\+\_\+owner (\begin{DoxyParamCaption}\item[{string}]{\$owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Validate the slide owner.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$owner} & The slide owner.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if the user \$owner doesn\textquotesingle{}t exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 295 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a47e245fb24508ab3a69ba3571c601c33}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a47e245fb24508ab3a69ba3571c601c33}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!validate\+\_\+queue@{validate\+\_\+queue}}
+\index{validate\+\_\+queue@{validate\+\_\+queue}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{validate\+\_\+queue()}{validate\_queue()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::validate\+\_\+queue (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Validate the slide queue.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The queue name.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if a queue named \$name doesn\textquotesingle{}t exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 418 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_acd01eb2b7ebb3e65969995d7893b8cff}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_acd01eb2b7ebb3e65969995d7893b8cff}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!validate\+\_\+sched\+\_\+t\+\_\+e@{validate\+\_\+sched\+\_\+t\+\_\+e}}
+\index{validate\+\_\+sched\+\_\+t\+\_\+e@{validate\+\_\+sched\+\_\+t\+\_\+e}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{validate\+\_\+sched\+\_\+t\+\_\+e()}{validate\_sched\_t\_e()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::validate\+\_\+sched\+\_\+t\+\_\+e (\begin{DoxyParamCaption}\item[{int}]{\$tstamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Validate the slide schedule end time.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$tstamp} & The ending timestamp in seconds.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if \$tstamp $<$ 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 366 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad72fcaca412b7c9afe31cd5902b42457}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad72fcaca412b7c9afe31cd5902b42457}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!validate\+\_\+sched\+\_\+t\+\_\+s@{validate\+\_\+sched\+\_\+t\+\_\+s}}
+\index{validate\+\_\+sched\+\_\+t\+\_\+s@{validate\+\_\+sched\+\_\+t\+\_\+s}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{validate\+\_\+sched\+\_\+t\+\_\+s()}{validate\_sched\_t\_s()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::validate\+\_\+sched\+\_\+t\+\_\+s (\begin{DoxyParamCaption}\item[{int}]{\$tstamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Validate the slide schedule start time.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$tstamp} & The starting timestamp in seconds.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Arg\+Exception} & if \$tstamp $<$ 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 339 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a41efc7a55cef4e78c2c3ca37153f7b57}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a41efc7a55cef4e78c2c3ca37153f7b57}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!write@{write}}
+\index{write@{write}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Write slide data to file. 
+
+Definition at line 698 of file Slide.\+php.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aecc8d50d071e37690946af8f814f9ff4}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aecc8d50d071e37690946af8f814f9ff4}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$animation@{\$animation}}
+\index{\$animation@{\$animation}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$animation}{$animation}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$animation = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 32 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a2b746a6bfd18a1eca435c987bfc381b9}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a2b746a6bfd18a1eca435c987bfc381b9}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$assets@{\$assets}}
+\index{\$assets@{\$assets}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$assets}{$assets}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$assets = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 36 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_acbc85425ac21b86ca870a8902b9f4594}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_acbc85425ac21b86ca870a8902b9f4594}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$collaborators@{\$collaborators}}
+\index{\$collaborators@{\$collaborators}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$collaborators}{$collaborators}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$collaborators = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 34 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a2d650e91ab7423234d24955dff565cb8}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a2d650e91ab7423234d24955dff565cb8}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$duration@{\$duration}}
+\index{\$duration@{\$duration}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$duration}{$duration}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$duration = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 25 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a819f22b6bc82f1a6961429ffea950e6e}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a819f22b6bc82f1a6961429ffea950e6e}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$enabled@{\$enabled}}
+\index{\$enabled@{\$enabled}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$enabled}{$enabled}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$enabled = F\+A\+L\+SE\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 28 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a7dd7de937f3bc73a1aadf56ca594fbdd}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a7dd7de937f3bc73a1aadf56ca594fbdd}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$id@{\$id}}
+\index{\$id@{\$id}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$id}{$id}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$id = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 22 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad580560a42d379b63233bcd624d2025d}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_ad580560a42d379b63233bcd624d2025d}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$index@{\$index}}
+\index{\$index@{\$index}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$index}{$index}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$index = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 24 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a94f554fe33375075dcfa3981750aedc2}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a94f554fe33375075dcfa3981750aedc2}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$lock@{\$lock}}
+\index{\$lock@{\$lock}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$lock}{$lock}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$lock = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 35 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a254e9bd551ecdd771d99f50c43efb754}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a254e9bd551ecdd771d99f50c43efb754}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$markup@{\$markup}}
+\index{\$markup@{\$markup}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$markup}{$markup}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$markup = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 26 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aa2936e4fd6eb208ce09d3d6987351d93}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aa2936e4fd6eb208ce09d3d6987351d93}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$name@{\$name}}
+\index{\$name@{\$name}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$name}{$name}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$name = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 23 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aa70f5dd34e3605dfd0d298046eaa6e9d}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_aa70f5dd34e3605dfd0d298046eaa6e9d}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$owner@{\$owner}}
+\index{\$owner@{\$owner}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$owner}{$owner}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$owner = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 27 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_af93ffac0cc6478cb95f66772785b08c8}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_af93ffac0cc6478cb95f66772785b08c8}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$queue\+\_\+name@{\$queue\+\_\+name}}
+\index{\$queue\+\_\+name@{\$queue\+\_\+name}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$queue\+\_\+name}{$queue\_name}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$queue\+\_\+name = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 33 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a8c6a04863a8424b9dc6957a843abe143}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a8c6a04863a8424b9dc6957a843abe143}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$sched@{\$sched}}
+\index{\$sched@{\$sched}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$sched}{$sched}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$sched = F\+A\+L\+SE\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 29 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_adfcc309e69b9dd59eb92413fa1076d7e}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_adfcc309e69b9dd59eb92413fa1076d7e}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$sched\+\_\+t\+\_\+e@{\$sched\+\_\+t\+\_\+e}}
+\index{\$sched\+\_\+t\+\_\+e@{\$sched\+\_\+t\+\_\+e}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$sched\+\_\+t\+\_\+e}{$sched\_t\_e}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$sched\+\_\+t\+\_\+e = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 31 of file Slide.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a976bff4c51294f1ab1ed91a84f993627}\label{classlibresignage_1_1common_1_1php_1_1slide_1_1Slide_a976bff4c51294f1ab1ed91a84f993627}} 
+\index{libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}!\$sched\+\_\+t\+\_\+s@{\$sched\+\_\+t\+\_\+s}}
+\index{\$sched\+\_\+t\+\_\+s@{\$sched\+\_\+t\+\_\+s}!libresignage\+::common\+::php\+::slide\+::\+Slide@{libresignage\+::common\+::php\+::slide\+::\+Slide}}
+\subsubsection{\texorpdfstring{\$sched\+\_\+t\+\_\+s}{$sched\_t\_s}}
+{\footnotesize\ttfamily libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}slide\textbackslash{}\+Slide\+::\$sched\+\_\+t\+\_\+s = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 30 of file Slide.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/common/php/slide/\hyperlink{Slide_8php}{Slide.\+php}\end{DoxyCompactItemize}

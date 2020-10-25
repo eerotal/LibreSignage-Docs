@@ -1,0 +1,60 @@
+\hypertarget{src_2public_2api_2endpoint_2user_2user__save_8php}{}\section{src/public/api/endpoint/user/user\+\_\+save.php File Reference}
+\label{src_2public_2api_2endpoint_2user_2user__save_8php}\index{src/public/api/endpoint/user/user\+\_\+save.\+php@{src/public/api/endpoint/user/user\+\_\+save.\+php}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelibresignage_1_1api_1_1endpoint_1_1user}{libresignage\textbackslash{}api\textbackslash{}endpoint\textbackslash{}user}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Save a user.
+
+
+\begin{DoxyItemize}
+\item The operation is permitted if
+\begin{DoxyItemize}
+\item The caller is in the group {\itshape admin} and {\itshape pass} is N\+U\+LL or unset in the request, ie. the caller is not trying to set the password of the user. This prevents the admin from taking over an account.
+\item The caller is the user that\textquotesingle{}s being saved and {\itshape groups} is N\+U\+LL, unset or equal to the current user groups, ie. the caller is not trying to set groups. This prevents privilege escalation.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{H\+T\+TP Method}
+P\+O\+ST 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Authentication}
+By token 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Allowed groups}
+{\ttfamily A\+LL} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Rate limiting}
+This endpoint is rate limited.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Parameters}
+application/json
+\begin{DoxyItemize}
+\item {\ttfamily string} {\bfseries user} The name of the user to save. \mbox{[}{\itshape required}\mbox{]}
+\item {\ttfamily string$\vert$\+N\+U\+LL} {\bfseries pass} The new password of the user. \mbox{[}{\itshape optional}\mbox{]}
+\item {\ttfamily array$\vert$\+N\+U\+LL} {\bfseries groups} The new groups of the user. \mbox{[}{\itshape optional}\mbox{]}
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Response}
+application/json
+\begin{DoxyItemize}
+\item {\ttfamily object} {\bfseries user}
+\begin{DoxyItemize}
+\item {\ttfamily string} {\bfseries name} The name of the saved user.
+\item {\ttfamily array} {\bfseries groups} The new groups of the user.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Status}
+
+\begin{DoxyItemize}
+\item {\bfseries 200} On success
+\item {\bfseries 400} If the request parameters are invalid.
+\item {\bfseries 401} If the caller is not allowed to save the user data. See above.
+\item {\bfseries 404} If the user is not found. 
+\end{DoxyItemize}
+\end{DoxyParagraph}

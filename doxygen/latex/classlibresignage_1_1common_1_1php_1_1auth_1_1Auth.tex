@@ -1,0 +1,138 @@
+\hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth}{}\section{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}Auth Class Reference}
+\label{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth}\index{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+Auth@{libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+Auth}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a398fad430d9d4c1a4dad69461fa36616}{verify\+\_\+creds} (string \$user, string \$pass)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a6557d3a404668af8036f3055369ca168}{verify\+\_\+token} (string \$tok)
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_aef510d03645d2c2bc43b516f66806717}{verify\+\_\+cookie} ()
+\item 
+static \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a6e841f3f246174d63e6b7caa14273726}{web\+\_\+auth} (array \$user\+\_\+wl=N\+U\+LL, array \$group\+\_\+wl=N\+U\+LL, bool \$redir=F\+A\+L\+SE, string \$token=N\+U\+LL)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_af2912ac55975aa9795023c917bcd5e62}{T\+O\+K\+E\+N\+\_\+\+H\+E\+A\+D\+ER} = \textquotesingle{}\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth}{Auth}-\/Token\textquotesingle{}
+\item 
+const \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a9754d3a2963e6400671d1393a190b98f}{T\+O\+K\+E\+N\+\_\+\+C\+O\+O\+K\+IE} = \textquotesingle{}session\+\_\+token\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class with functions for authenticating users. 
+
+Definition at line 13 of file Auth.\+php.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_aef510d03645d2c2bc43b516f66806717}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_aef510d03645d2c2bc43b516f66806717}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+Auth@{libresignage\+::common\+::php\+::auth\+::\+Auth}!verify\+\_\+cookie@{verify\+\_\+cookie}}
+\index{verify\+\_\+cookie@{verify\+\_\+cookie}!libresignage\+::common\+::php\+::auth\+::\+Auth@{libresignage\+::common\+::php\+::auth\+::\+Auth}}
+\subsubsection{\texorpdfstring{verify\+\_\+cookie()}{verify\_cookie()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+Auth\+::verify\+\_\+cookie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Verify an authentication token supplied in a cookie.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a6557d3a404668af8036f3055369ca168}{Auth\+::verify\+\_\+token()} for \hyperlink{quota_200-default_8php_ae057f510746f2e7dcbd7d8ccfaf92a45}{return} values. 
+\end{DoxySeeAlso}
+
+
+Definition at line 71 of file Auth.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a398fad430d9d4c1a4dad69461fa36616}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a398fad430d9d4c1a4dad69461fa36616}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+Auth@{libresignage\+::common\+::php\+::auth\+::\+Auth}!verify\+\_\+creds@{verify\+\_\+creds}}
+\index{verify\+\_\+creds@{verify\+\_\+creds}!libresignage\+::common\+::php\+::auth\+::\+Auth@{libresignage\+::common\+::php\+::auth\+::\+Auth}}
+\subsubsection{\texorpdfstring{verify\+\_\+creds()}{verify\_creds()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+Auth\+::verify\+\_\+creds (\begin{DoxyParamCaption}\item[{string}]{\$user,  }\item[{string}]{\$pass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Verify the supplied login credentials and return the corresponding \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User}{User} object if the credentials are valid. N\+U\+LL is returned otherwise.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$user} & The username. \\
+\hline
+string & {\em \$pass} & The password.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User$\vert$\+N\+U\+LL A \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User}{User} object or N\+U\+LL if the creds were invalid. 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file Auth.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a6557d3a404668af8036f3055369ca168}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a6557d3a404668af8036f3055369ca168}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+Auth@{libresignage\+::common\+::php\+::auth\+::\+Auth}!verify\+\_\+token@{verify\+\_\+token}}
+\index{verify\+\_\+token@{verify\+\_\+token}!libresignage\+::common\+::php\+::auth\+::\+Auth@{libresignage\+::common\+::php\+::auth\+::\+Auth}}
+\subsubsection{\texorpdfstring{verify\+\_\+token()}{verify\_token()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+Auth\+::verify\+\_\+token (\begin{DoxyParamCaption}\item[{string}]{\$tok }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Verify an authentication token.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$tok} & The token to verify.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$\+N\+U\+LL An array with the keys \textquotesingle{}session\textquotesingle{} and \textquotesingle{}user\textquotesingle{}. \textquotesingle{}session\textquotesingle{} is the matching \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Session}{Session} object and \textquotesingle{}user\textquotesingle{} is the corresponding \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1User}{User} object. N\+U\+LL is returned if not session matched \$tok. 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Auth.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a6e841f3f246174d63e6b7caa14273726}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a6e841f3f246174d63e6b7caa14273726}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+Auth@{libresignage\+::common\+::php\+::auth\+::\+Auth}!web\+\_\+auth@{web\+\_\+auth}}
+\index{web\+\_\+auth@{web\+\_\+auth}!libresignage\+::common\+::php\+::auth\+::\+Auth@{libresignage\+::common\+::php\+::auth\+::\+Auth}}
+\subsubsection{\texorpdfstring{web\+\_\+auth()}{web\_auth()}}
+{\footnotesize\ttfamily static libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+Auth\+::web\+\_\+auth (\begin{DoxyParamCaption}\item[{array}]{\$user\+\_\+wl = {\ttfamily NULL},  }\item[{array}]{\$group\+\_\+wl = {\ttfamily NULL},  }\item[{bool}]{\$redir = {\ttfamily FALSE},  }\item[{string}]{\$token = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Ensure a user is authenticated and has permission to access a resource. This function is intended to be called at the beginning of web interface pages to only grant access for specific users and/or groups.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$user\+\_\+wl} & An array of whitelisted users. \\
+\hline
+array & {\em \$group\+\_\+wl} & An array of whitelisted groups. \\
+\hline
+bool & {\em \$redir} & If T\+R\+UE, clients are redirected to error pages if they don\textquotesingle{}t have permission to access a page. \\
+\hline
+string & {\em \$token} & An authentication token to use. If left unspecified, the token is read from the \hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a9754d3a2963e6400671d1393a190b98f}{Auth\+::\+T\+O\+K\+E\+N\+\_\+\+C\+O\+O\+K\+IE} cookie. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 94 of file Auth.\+php.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a9754d3a2963e6400671d1393a190b98f}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_a9754d3a2963e6400671d1393a190b98f}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+Auth@{libresignage\+::common\+::php\+::auth\+::\+Auth}!T\+O\+K\+E\+N\+\_\+\+C\+O\+O\+K\+IE@{T\+O\+K\+E\+N\+\_\+\+C\+O\+O\+K\+IE}}
+\index{T\+O\+K\+E\+N\+\_\+\+C\+O\+O\+K\+IE@{T\+O\+K\+E\+N\+\_\+\+C\+O\+O\+K\+IE}!libresignage\+::common\+::php\+::auth\+::\+Auth@{libresignage\+::common\+::php\+::auth\+::\+Auth}}
+\subsubsection{\texorpdfstring{T\+O\+K\+E\+N\+\_\+\+C\+O\+O\+K\+IE}{TOKEN\_COOKIE}}
+{\footnotesize\ttfamily const libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+Auth\+::\+T\+O\+K\+E\+N\+\_\+\+C\+O\+O\+K\+IE = \textquotesingle{}session\+\_\+token\textquotesingle{}}
+
+
+
+Definition at line 15 of file Auth.\+php.
+
+\mbox{\Hypertarget{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_af2912ac55975aa9795023c917bcd5e62}\label{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth_af2912ac55975aa9795023c917bcd5e62}} 
+\index{libresignage\+::common\+::php\+::auth\+::\+Auth@{libresignage\+::common\+::php\+::auth\+::\+Auth}!T\+O\+K\+E\+N\+\_\+\+H\+E\+A\+D\+ER@{T\+O\+K\+E\+N\+\_\+\+H\+E\+A\+D\+ER}}
+\index{T\+O\+K\+E\+N\+\_\+\+H\+E\+A\+D\+ER@{T\+O\+K\+E\+N\+\_\+\+H\+E\+A\+D\+ER}!libresignage\+::common\+::php\+::auth\+::\+Auth@{libresignage\+::common\+::php\+::auth\+::\+Auth}}
+\subsubsection{\texorpdfstring{T\+O\+K\+E\+N\+\_\+\+H\+E\+A\+D\+ER}{TOKEN\_HEADER}}
+{\footnotesize\ttfamily const libresignage\textbackslash{}common\textbackslash{}php\textbackslash{}auth\textbackslash{}\+Auth\+::\+T\+O\+K\+E\+N\+\_\+\+H\+E\+A\+D\+ER = \textquotesingle{}\hyperlink{classlibresignage_1_1common_1_1php_1_1auth_1_1Auth}{Auth}-\/Token\textquotesingle{}}
+
+
+
+Definition at line 14 of file Auth.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/common/php/auth/\hyperlink{Auth_8php}{Auth.\+php}\end{DoxyCompactItemize}

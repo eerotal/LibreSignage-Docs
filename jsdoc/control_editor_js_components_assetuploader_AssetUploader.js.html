@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: control/editor/js/components/assetuploader/AssetUploader.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: control/editor/js/components/assetuploader/AssetUploader.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var AssetUploaderController = require('./AssetUploaderController.js');
+var AssetList = require('./AssetList.js');
+
+var ValidatorSelector = require('libresignage/ui/validator/ValidatorSelector');
+var ValidatorTrigger = require('libresignage/ui/validator/ValidatorTrigger');
+var FileSelectorValidator = require('libresignage/ui/validator/FileSelectorValidator');
+var Assert = require('assert');
+var UIController = require('libresignage/ui/controller/UIController')
+var UIInput = require('libresignage/ui/controller/UIInput')
+var UIButton = require('libresignage/ui/controller/UIButton');
+var UIStatic = require('libresignage/ui/controller/UIStatic');
+var Popup = require('libresignage/ui/components/Popup');
+var APIErrorDialog = require('libresignage/ui/components/Dialog/APIErrorDialog');
+
+/**
+* A view class for the AssetUploader popup.
+*/
+class AssetUploader {
+	/**
+	* Construct a new AssetUploader object.
+	*
+	* @param {HTMLElement} container The container element where the popup
+	*                                is created.
+	* @param {APIInterface} api      An APIInterface object.
+	*/
+	constructor(container, api) {
+		this.controller = new AssetUploaderController(api);
+		this.container = container;
+		this.popup = new Popup(container);
+		this.assetlist = new AssetList(
+			this.container.querySelector('.filelist')
+		);
+
+		this.inputs = new UIController({
+			files: new UIInput({
+				elem: this.container.querySelector('.filesel'),
+				cond: d => (
+					d.slide.loaded
+					&amp;&amp; d.slide.locked
+					&amp;&amp; (d.slide.owned || d.slide.collaborate)
+					&amp;&amp; !d.slide.filelimit
+				),
+				enabler: null,
+				attach: {
+					input: () => this.update_file_selector_label()
+				},
+				defer: () => !this.ready,
+				mod: null,
+				getter: e => e.files,
+				setter: null,
+				clearer: e => {
+					e.value = '';
+					e.dispatchEvent(new Event('input'));
+				}
+			}),
+			filelist: new UIInput({
+				elem: this.container.querySelector('.filelist'),
+				cond: d => true,
+				enabler: null,
+				attach: {
+					'component.assetlist.select': e => {
+						this.select_asset(this.assetlist.get_selection());
+					},
+					'component.assetlist.remove': async (e, data) => {
+						await this.remove_asset(this.assetlist.get_selection());
+					}
+				},
+				defer: () => !this.ready,
+				mod: null,
+				setter: null,
+				getter: null,
+				clearer: null
+			}),
+			filelink: new UIInput({
+				elem: this.container.querySelector('.file-link-input'),
+				cond: d => true,
+				enabler: null,
+				attach: null,
+				defer: () => !this.ready,
+				mod: null,
+				setter: (e, val) => e.value = val,
+				getter: e => e.value,
+				clearer: e => e.value = ''
+			})
+		});
+		this.buttons = new UIController({
+			upload: new UIButton({
+				elem: this.container.querySelector('.upload-btn'),
+				cond: d => (
+					d.slide.loaded
+					&amp;&amp; d.slide.locked
+					&amp;&amp; (d.slide.owned || d.slide.collaborate)
+					&amp;&amp; !d.slide.uploading
+					&amp;&amp; this.inputs.get('files').get().length != 0
+				),
+				enabler: null,
+				attach: {
+					click: () => this.upload_assets()
+				},
+				defer: () => !this.ready
+			})
+		});
+		this.statics = new UIController({
+			popup: new UIStatic({
+				elem: this.container,
+				cond: d => true,
+				enabler: null,
+				attach: {
+					'component.popup.close': () => this.clear()
+				},
+				defer: () => !this.ready,
+				setter: null,
+				getter: null,
+				clearer: null
+			}),
+			files_label: new UIStatic({
+				elem: this.container.querySelector('.filesel-label'),
+				cond: d => true,
+				enabler: null,
+				attach: null,
+				defer: () => !this.ready,
+				setter: null,
+				getter: null,
+				clearer: null
+			}),
+			files_limit_label: new UIStatic({
+				elem: this.container.querySelector('.file-limit-label-row'),
+				cond: d => (
+					d.slide.loaded
+					&amp;&amp; d.slide.locked
+					&amp;&amp; (d.slide.owned || d.slide.collaborate)
+					&amp;&amp; d.slide.filelimit
+				),
+				enabler: (elem, s) => {
+					elem.style.display = s ? 'block' : 'none'
+				},
+				attach: null,
+				defer: () => !this.ready,
+				setter: null,
+				getter: null,
+				clearer: null
+			})
+		});
+
+		let f_mimes = this.controller.get_valid_file_mime_types();
+		let f_regex = this.controller.get_valid_filename_regex();
+		let f_max_len = this.controller.get_max_filename_len();
+
+		// Create validators for the file selector.
+		this.fileval_sel = new ValidatorSelector(
+			this.container.querySelector('.filesel'),
+			this.container.querySelector('.filesel-cont'),
+			[new FileSelectorValidator(
+				{
+					mimes: Object.values(f_mimes),
+					name_len: null,
+					regex: null,
+					minfiles: null,
+					bl: null
+				},
+				`Invalid file type. The allowed types are: ` +
+				`${Object.keys(f_mimes).join(', ')}.`
+			),
+			new FileSelectorValidator(
+				{
+					mimes: null,
+					name_len: f_max_len,
+					regex: null,
+					minfiles: null,
+					bl: null
+				},
+				`Filename too long. The maximum length ` +
+				`is ${f_max_len} characters.`
+			),
+			new FileSelectorValidator(
+				{
+					mimes: null,
+					name_len: null,
+					regex: f_regex,
+					minfiles: null,
+					bl: null
+				},
+				"Invalid characters in filename. " +
+				"A-Z, a-z, 0-9, ., _, - and space are allowed."
+			),
+			new FileSelectorValidator(
+				{
+					mimes: null,
+					name_len: null,
+					regex: null,
+					minfiles: null,
+					bl: () => {
+						// Create and return the uploaded files blacklist.
+						if (this.controller.get_state().slide.loaded) {
+							return Object.values(this.controller.get_assets())
+								.map(x => x.get_filename());
+						}
+					}
+				}, 'At least one of the selected files already exists.'
+			),
+			new FileSelectorValidator(
+				{
+					mimes: null,
+					name_len: null,
+					regex: null,
+					minfiles: 1,
+					bl: null
+				}, '', true
+			)]
+		);
+
+		// Create a validator trigger.
+		this.fileval_trig = new ValidatorTrigger(
+			[this.fileval_sel],
+			() => this.update()
+		);
+
+		this.ready = true;
+	}
+
+	/**
+	* Open the asset uploader for a Slide.
+	*
+	* @param {Slide} slide The Slide to open the AssetUploader for.
+	*/
+	show(slide) {
+		Assert.ok(slide != null, "No slide specified.");
+		this.controller.open(slide);
+		this.assetlist.show(slide);
+		this.popup.visible(true);
+		this.update();
+	}
+
+	/**
+	* Clear the asset uploader.
+	*/
+	clear() {
+		this.inputs.all(function() { this.clear(); });
+		this.assetlist.hide();
+		this.controller.close();
+	}
+
+	/**
+	* Upload the currently selected files.
+	*
+	* This function also handles indicating uploads in progress in the UI.
+	*/
+	async upload_assets() {
+		let selector = this.inputs.get('files');
+		this.indicate_upload_begin();
+		try {
+			let tmp = this.controller.upload_assets(selector.get());
+			this.update(); // Disable the upload button.
+			await tmp;
+		} catch (e) {
+			this.indicate_upload_end();
+			this.update();
+			new APIErrorDialog(e);
+			return;
+		}
+		selector.clear();
+		this.indicate_upload_end();
+		this.update();
+	}
+
+	/**
+	* Show the upload in progess -indicator.
+	*/
+	indicate_upload_begin() {
+		this.buttons.get('upload')
+			.get_elem()
+			.classList
+			.add('uploading');
+	}
+
+	/**
+	* Clear the upload in progress -indicator.
+	*/
+	indicate_upload_end() {
+		this.buttons.get('upload')
+			.get_elem()
+			.classList
+			.remove('uploading');
+	}
+
+	/**
+	* Remove an asset.
+	*
+	* @param {string} name The name of the asset to remove.
+	*/
+	async remove_asset(name) {
+		try {
+			await this.controller.remove_asset(name);
+		} catch (e) {
+			new APIErrorDialog(e);
+		}
+		this.deselect_asset();
+		this.update();
+	}
+
+	/**
+	* Select an asset.
+	*
+	* @param {string} name The name of the asset to select.
+	*/
+	select_asset(name) {
+		this.inputs.get('filelink').set(
+			window.location.origin
+			+ this.controller.get_assets()[name].get_url()
+		);
+	}
+
+	/**
+	* Deselect an asset.
+	*/
+	deselect_asset() {
+		this.assetlist.deselect();
+		this.inputs.get('filelink').clear();
+	}
+
+	/**
+	* Update the file selector label with the selected
+	* filenames.
+	*/
+	update_file_selector_label() {
+		let names = [];
+		let elem = this.inputs.get('files').get_elem();
+		if (elem.files.length != 0) {
+			for (let f of elem.files) { names.push(f.name); }
+			this.statics.get('files_label').set(names.join(', '));
+		} else {
+			this.statics.get('files_label').set('Choose a file');
+		}
+	}
+
+	/**
+	* Update the UI of the asset uploader.
+	*/
+	update() {
+		this.inputs.all(
+			function(d) { this.state(d); },
+			this.controller.get_state()
+		);
+		this.buttons.all(
+			function(d) { this.state(d); },
+			this.controller.get_state()
+		);
+		this.statics.all(
+			function(d) { this.state(d); },
+			this.controller.get_state()
+		);
+		this.assetlist.update();
+	}
+}
+module.exports = AssetUploader;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-libresignage_api.html">libresignage/api</a></li><li><a href="module-libresignage_misc.html">libresignage/misc</a></li><li><a href="module-libresignage_queue.html">libresignage/queue</a></li><li><a href="module-libresignage_slide.html">libresignage/slide</a></li><li><a href="module-libresignage_ui_components.html">libresignage/ui/components</a></li><li><a href="module-libresignage_ui_components_Dialog.html">libresignage/ui/components/Dialog</a></li><li><a href="module-libresignage_ui_controller.html">libresignage/ui/controller</a></li><li><a href="module-libresignage_ui_validator.html">libresignage/ui/validator</a></li><li><a href="module-libresignage_user.html">libresignage/user</a></li><li><a href="module-libresignage_util.html">libresignage/util</a></li></ul><h3>Namespaces</h3><ul><li><a href="module-libresignage_api.APIEndpoints.html">APIEndpoints</a></li><li><a href="module-libresignage_api.HTTPStatus.html">HTTPStatus</a></li><li><a href="module-libresignage_slide.Animations.html">Animations</a></li></ul><h3>Classes</h3><ul><li><a href="APIInterface.html">APIInterface</a></li><li><a href="AssetList.html">AssetList</a></li><li><a href="AssetUploader.html">AssetUploader</a></li><li><a href="AssetUploaderController.html">AssetUploaderController</a></li><li><a href="ControlPanelController.html">ControlPanelController</a></li><li><a href="ControlPanelView.html">ControlPanelView</a></li><li><a href="DisplayController.html">DisplayController</a></li><li><a href="DisplayView.html">DisplayView</a></li><li><a href="EditorController.html">EditorController</a></li><li><a href="LoginController.html">LoginController</a></li><li><a href="LoginView.html">LoginView</a></li><li><a href="LogoutController.html">LogoutController</a></li><li><a href="LogoutView.html">LogoutView</a></li><li><a href="module-libresignage_api.APIError.html">APIError</a></li><li><a href="module-libresignage_api.APISession.html">APISession</a></li><li><a href="module-libresignage_misc.Shortcut.html">Shortcut</a></li><li><a href="module-libresignage_misc.ShortcutController.html">ShortcutController</a></li><li><a href="module-libresignage_misc.Timeout.html">Timeout</a></li><li><a href="module-libresignage_queue.Queue.html">Queue</a></li><li><a href="module-libresignage_queue.SlideList.html">SlideList</a></li><li><a href="module-libresignage_queue.SlideListIterator.html">SlideListIterator</a></li><li><a href="module-libresignage_slide.Slide.html">Slide</a></li><li><a href="module-libresignage_ui_components.BaseComponent.html">BaseComponent</a></li><li><a href="module-libresignage_ui_components.DropConfirm.html">DropConfirm</a></li><li><a href="module-libresignage_ui_components.DropSelect.html">DropSelect</a></li><li><a href="module-libresignage_ui_components.MultiSelect.html">MultiSelect</a></li><li><a href="module-libresignage_ui_components.Popup.html">Popup</a></li><li><a href="module-libresignage_ui_components_Dialog.AlertDialog.html">AlertDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.APIErrorDialog.html">APIErrorDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.BaseDialog.html">BaseDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.ConfirmDialog.html">ConfirmDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.PromptDialog.html">PromptDialog</a></li><li><a href="module-libresignage_ui_components_Dialog.SelectDialog.html">SelectDialog</a></li><li><a href="module-libresignage_ui_controller.UIButton.html">UIButton</a></li><li><a href="module-libresignage_ui_controller.UIElem.html">UIElem</a></li><li><a href="module-libresignage_ui_controller.UIInput.html">UIInput</a></li><li><a href="module-libresignage_ui_controller.UIStatic.html">UIStatic</a></li><li><a href="module-libresignage_ui_validator.BaseValidator.html">BaseValidator</a></li><li><a href="module-libresignage_ui_validator.BlacklistValidator.html">BlacklistValidator</a></li><li><a href="module-libresignage_ui_validator.EqValidator.html">EqValidator</a></li><li><a href="module-libresignage_ui_validator.FileSelectorValidator.html">FileSelectorValidator</a></li><li><a href="module-libresignage_ui_validator.NumValidator.html">NumValidator</a></li><li><a href="module-libresignage_ui_validator.StrValidator.html">StrValidator</a></li><li><a href="module-libresignage_ui_validator.ValidatorController.html">ValidatorController</a></li><li><a href="module-libresignage_ui_validator.ValidatorSelector.html">ValidatorSelector</a></li><li><a href="module-libresignage_ui_validator.ValidatorTrigger.html">ValidatorTrigger</a></li><li><a href="module-libresignage_ui_validator.WhitelistValidator.html">WhitelistValidator</a></li><li><a href="module-libresignage_user.Quota.html">Quota</a></li><li><a href="module-libresignage_user.User.html">User</a></li><li><a href="module-libresignage_util.Cookie.html">Cookie</a></li><li><a href="module-libresignage_util.UIUtil.html">UIUtil</a></li><li><a href="module-libresignage_util.Util.html">Util</a></li><li><a href="Preview.html">Preview</a></li><li><a href="QueueSelector.html">QueueSelector</a></li><li><a href="SessionList.html">SessionList</a></li><li><a href="SlideAsset.html">SlideAsset</a></li><li><a href="Timeline.html">Timeline</a></li><li><a href="UIController.html">UIController</a></li><li><a href="UserController.html">UserController</a></li><li><a href="UserList.html">UserList</a></li><li><a href="UserListEntry.html">UserListEntry</a></li><li><a href="UserManagerController.html">UserManagerController</a></li><li><a href="UserManagerView.html">UserManagerView</a></li><li><a href="UserValidators.html">UserValidators</a></li><li><a href="UserView.html">UserView</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun Oct 25 2020 10:27:27 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
