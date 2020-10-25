@@ -1,8 +1,0 @@
-digraph "libresignage\common\php\thumbnail\VidThumbnailGenerator"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="libresignage\\common\l\\php\\thumbnail\\VidThumbnail\lGenerator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node1 [label="libresignage\\common\l\\php\\thumbnail\\ThumbnailGenerator\lInterface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacelibresignage_1_1common_1_1php_1_1thumbnail_1_1ThumbnailGeneratorInterface.html"];
-}
